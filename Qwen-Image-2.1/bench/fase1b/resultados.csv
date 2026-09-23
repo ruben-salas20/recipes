@@ -1,0 +1,5 @@
+nombre,modelo,prompt,W,H,pasos,cfg,seed,extra,exit,total_s,muestreo_s,s_por_paso,vae_s,ram_pico_gb,vram_reposo_mib,vram_pico_mib
+fa_p20,Q4_0-normal,anuncio,768,1344,20,1,42,"--diffusion-fa",0,192.97,139.46,6.97,21.10,9.37,1,5103
+fa_p15,Q4_0-normal,anuncio,768,1344,15,1,42,"--diffusion-fa",0,166.29,112.90,7.53,21.15,9.36,1,5103
+fa_res14mp,Q4_0-normal,anuncio,896,1568,25,1,42,"--diffusion-fa",0,293.25,236.95,9.48,23.79,9.39,1,5255
+fa_res24mp,Q4_0-normal,anuncio,1152,2048,25,1,42,"--diffusion-fa",0,501.92,426.43,17.06,47.49,9.42,1,5237

@@ -1,0 +1,92 @@
+{
+ "producto_s42": {
+  "A": "maxima",
+  "B": "rapida",
+  "C": "equilibrada"
+ },
+ "retrato_s42": {
+  "A": "rapida",
+  "B": "maxima",
+  "C": "equilibrada"
+ },
+ "medico_s42": {
+  "A": "maxima",
+  "B": "equilibrada",
+  "C": "rapida"
+ },
+ "anuncio_s42": {
+  "A": "maxima",
+  "B": "rapida",
+  "C": "equilibrada"
+ },
+ "ciudad_s42": {
+  "A": "equilibrada",
+  "B": "maxima",
+  "C": "rapida"
+ },
+ "anime_s42": {
+  "A": "equilibrada",
+  "B": "rapida",
+  "C": "maxima"
+ },
+ "producto_s7": {
+  "A": "equilibrada",
+  "B": "rapida",
+  "C": "maxima"
+ },
+ "retrato_s7": {
+  "A": "maxima",
+  "B": "rapida",
+  "C": "equilibrada"
+ },
+ "medico_s7": {
+  "A": "maxima",
+  "B": "equilibrada",
+  "C": "rapida"
+ },
+ "anuncio_s7": {
+  "A": "equilibrada",
+  "B": "maxima",
+  "C": "rapida"
+ },
+ "ciudad_s7": {
+  "A": "rapida",
+  "B": "equilibrada",
+  "C": "maxima"
+ },
+ "anime_s7": {
+  "A": "maxima",
+  "B": "rapida",
+  "C": "equilibrada"
+ },
+ "producto_s123": {
+  "A": "equilibrada",
+  "B": "rapida",
+  "C": "maxima"
+ },
+ "retrato_s123": {
+  "A": "rapida",
+  "B": "equilibrada",
+  "C": "maxima"
+ },
+ "medico_s123": {
+  "A": "rapida",
+  "B": "equilibrada",
+  "C": "maxima"
+ },
+ "anuncio_s123": {
+  "A": "rapida",
+  "B": "equilibrada",
+  "C": "maxima"
+ },
+ "ciudad_s123": {
+  "A": "equilibrada",
+  "B": "rapida",
+  "C": "maxima"
+ },
+ "anime_s123": {
+  "A": "rapida",
+  "B": "equilibrada",
+  "C": "maxima"
+ }
+}

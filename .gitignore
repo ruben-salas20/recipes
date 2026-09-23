@@ -1,0 +1,25 @@
+# Lista blanca: se ignora todo y solo se publica lo que aparece abajo.
+# Imágenes, logs, historial y notas internas se quedan en local.
+*
+!*/
+
+!/.gitignore
+!/LICENSE
+!/README.md
+
+!Qwen-Image-2.1/README.md
+!Qwen-Image-2.1/README.es.md
+!Qwen-Image-2.1/SHA256SUMS
+!Qwen-Image-2.1/assets/*.webp
+!Qwen-Image-2.1/prompts/*.tsv
+!Qwen-Image-2.1/scripts/bench.sh
+!Qwen-Image-2.1/scripts/fase1.sh
+!Qwen-Image-2.1/scripts/fase1b.sh
+!Qwen-Image-2.1/scripts/fase2.sh
+!Qwen-Image-2.1/scripts/tecnico.sh
+!Qwen-Image-2.1/bench/fase1/resultados.csv
+!Qwen-Image-2.1/bench/fase1b/resultados.csv
+!Qwen-Image-2.1/bench/fase2/resultados.csv
+!Qwen-Image-2.1/bench/tecnico/resultados.csv
+!Qwen-Image-2.1/bench/fase2/ciego/votos.json
+!Qwen-Image-2.1/bench/fase2/ciego/clave.json
