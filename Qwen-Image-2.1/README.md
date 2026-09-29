@@ -20,7 +20,7 @@ sd-cli \
   --vae qwen_image_2.1_vae_bf16.safetensors \
   --llm Qwen3VL-8B-Instruct-Q4_K_M.gguf \
   --offload-to-cpu --diffusion-fa \
-  --vae-tiling --vae-tile-size 24x24 \
+  --vae-tiling \
   --cfg-scale 1 --sampling-method euler --steps 25 \
   -W 1184 -H 1184 \
   -p "your prompt" -o out.png
@@ -42,7 +42,9 @@ Both recipes use Q4_0, flash attention and CFG 1. The time is wall clock for the
 
 ### 1. Build stable-diffusion.cpp with CUDA
 
-Qwen-Image 2.1 support landed on 2026-09-20. Anything from commit [`137f7409`](https://github.com/leejet/stable-diffusion.cpp/commit/137f7409) onwards should work; this guide was tested on `c92d73c`.
+Use commit [`0a9340c`](https://github.com/leejet/stable-diffusion.cpp/commit/0a9340c5) (2026-09-25) or later: it fixes the white patches described under Known issues. This guide was verified on `3f8527a`.
+
+> **Version note.** The measurements on this page were taken with `c92d73c` (2026-09-22). Since then sd.cpp has corrected Qwen-Image 2.1's noise schedule ([#2048](https://github.com/leejet/stable-diffusion.cpp/pull/2048)), so the same seed now gives a slightly different image. Speed and memory are unchanged in our checks; the quality numbers (text accuracy, blind test) have not been re-measured yet.
 
 ```bash
 git clone --recursive https://github.com/leejet/stable-diffusion.cpp
@@ -101,7 +103,7 @@ We generated 6 prompts × 3 seeds with three candidate recipes: 54 images. Raw d
 | Settings | 15 steps, ~1 MP | 25 steps, ~1.4 MP | 25 steps, ~2.4 MP |
 | Blind preference (18 comparisons) | 5 | **8** | 3 (+2 ties) |
 | Images with perfect text (9 with text) | 4 | **9** | 6 |
-| Images with the white-patch artifact | 4 / 18 | **1 / 18** | 7 / 18 |
+| Images with the white-patch artifact (fixed since, see Known issues) | 4 / 18 | 1 / 18 | 7 / 18 |
 | Time per image | 2 min 45 s | 4 min 50 s | 8 min 25 s |
 
 ![Ad button text across the three recipes](assets/text-accuracy.webp)
@@ -112,7 +114,6 @@ We generated 6 prompts × 3 seeds with three candidate recipes: 54 images. Raw d
 How much to trust this:
 - **Text accuracy (9/9) is the strongest result.** It is objective and the gap is clear. Text was checked letter by letter, visually, not with OCR.
 - **The blind preference is a signal, not proof.** Images were shown at the same size in random order, and one person voted. With 18 comparisons, 8 against 5 could be chance. What it does show is that the max recipe does not win.
-- **1/18 artifacts for the default recipe may be luck.** See Known issues.
 
 ## What it is good for
 
@@ -130,20 +131,19 @@ In short: good for textbook-style figures of big, familiar structures. Not relia
 
 ## Known issues
 
-**White patches (unresolved).** Some images get a hard-edged rectangle of pure white, 12–16 px wide:
+**White patches: fixed in sd.cpp [`0a9340c`](https://github.com/leejet/stable-diffusion.cpp/commit/0a9340c5) ([#2054](https://github.com/leejet/stable-diffusion.cpp/pull/2054)).** With earlier versions, some images got a hard-edged rectangle of pure white, 12–16 px wide:
 
 ![A white patch on a knee illustration](assets/white-patch.webp)
 
-- Frequency: 12 of 54 images in the recipe comparison. Default recipe 1/18, draft 4/18, max 7/18.
-- Always aligned to the model's 16 px grid; the same seed reproduces it exactly.
-- Ruled out: quantization (same patch with Q4_0, Q4_K and Q5_0), flash attention, sd.cpp version (`c678dfe` and `c92d73c` give identical output), GPU precision in the VAE, CPU offload.
-- Not ruled out yet: VAE tiling.
-- **Workaround:** check your images and regenerate the affected ones with a different seed.
+- **Cause:** FP16 overflow in the Qwen-Image 2.1 VAE's convolutions. The fix scales their inputs down and restores the outputs afterwards.
+- **Verified:** we regenerated 3 images that had patches, with the same seeds and settings, on `3f8527a`. All 3 came out clean, at the same speed. Upgrading is the whole fix; no flag is needed.
+- It affected 12 of our 54 comparison images, always aligned to the model's 16 px grid.
+- **A correction:** an earlier version of this page said GPU precision in the VAE had been ruled out, because decoding on the CPU gave the same patch. That conclusion was wrong: the overflow happens in FP16 convolutions on that path too, so the test did not isolate what we thought it did.
 
-We are still investigating and will report it upstream. [Issue #2024](https://github.com/leejet/stable-diffusion.cpp/issues/2024) (Metal, RGBA output) describes a different symptom that also follows the 16 px grid.
+Thanks to leejet for the fix and for answering our report on Hugging Face.
 
 **Other things to know:**
-- **Keep `--vae-tiling`.** Decoding a 1 MP image in one piece needs more than 6 GB and sd.cpp falls back to tiling anyway. **Never decode on the CPU without tiling:** at 1024² it used all 16 GB of RAM and the kernel killed the process.
+- **Keep `--vae-tiling`.** Decoding a 1 MP image in one piece needs more than 6 GB and sd.cpp falls back to tiling anyway. The default 256 px tiles are fine. Since [`19bbbca`](https://github.com/leejet/stable-diffusion.cpp/commit/19bbbca1), `--vae-tile-size` is measured in image pixels, not latent cells: if you copied `--vae-tile-size 24x24` from an older version of this page, remove it. **Never decode on the CPU without tiling:** at 1024² it used all 16 GB of RAM and the kernel killed the process.
 - **The first image after a reboot is ~1 minute slower** if the weights live on a hard disk: ~10 GB have to be read. After that they stay in the OS page cache and load in ~3 s.
 - **Don't benchmark while downloading.** Downloads to the same disk evict the cached weights; load time went from 3 s to 36 s in our tests.
 - **The VRAM column always shows ~5.1–5.2 GB.** sd.cpp fills whatever is free and streams the rest from RAM. It is what it uses, not what it needs; the minimum VRAM has not been measured.
@@ -169,7 +169,7 @@ Prompts are in [`prompts/`](prompts/). Every run appends one row to a `resultado
 | CPU / RAM | 6 cores, 16 GB |
 | Storage | Weights on a 7200 rpm hard disk |
 | OS | Ubuntu 24.04 |
-| sd.cpp | `c92d73c` (phase 2). `c678dfe` for phase 1 and the technical test; one image compared across both versions was bit-identical |
+| sd.cpp | Measurements: `c92d73c` (phase 2) and `c678dfe` (phase 1 and the technical test; one image compared across both was bit-identical). White-patch fix verified on `3f8527a` |
 
 ## License
 

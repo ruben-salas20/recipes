@@ -20,7 +20,7 @@ sd-cli \
   --vae qwen_image_2.1_vae_bf16.safetensors \
   --llm Qwen3VL-8B-Instruct-Q4_K_M.gguf \
   --offload-to-cpu --diffusion-fa \
-  --vae-tiling --vae-tile-size 24x24 \
+  --vae-tiling \
   --cfg-scale 1 --sampling-method euler --steps 25 \
   -W 1184 -H 1184 \
   -p "tu prompt" -o salida.png
@@ -42,7 +42,9 @@ Las dos recetas usan Q4_0, flash attention y CFG 1. El tiempo es de reloj e incl
 
 ### 1. Compilar stable-diffusion.cpp con CUDA
 
-El soporte de Qwen-Image 2.1 llegó el 2026-09-20. Debería funcionar cualquier versión desde el commit [`137f7409`](https://github.com/leejet/stable-diffusion.cpp/commit/137f7409); esta guía se probó con `c92d73c`.
+Usa el commit [`0a9340c`](https://github.com/leejet/stable-diffusion.cpp/commit/0a9340c5) (2026-09-25) o posterior: arregla las manchas blancas que se describen en Problemas conocidos. Esta guía se verificó con `3f8527a`.
+
+> **Nota de versión.** Las medidas de esta página se tomaron con `c92d73c` (2026-09-22). Desde entonces, sd.cpp corrigió el calendario de ruido de Qwen-Image 2.1 ([#2048](https://github.com/leejet/stable-diffusion.cpp/pull/2048)), así que la misma semilla da ahora una imagen ligeramente distinta. En nuestras comprobaciones, la velocidad y la memoria no cambian; los números de calidad (precisión del texto y prueba a ciegas) aún no se han vuelto a medir.
 
 ```bash
 git clone --recursive https://github.com/leejet/stable-diffusion.cpp
@@ -101,7 +103,7 @@ Generamos 6 prompts × 3 semillas con tres recetas candidatas: 54 imágenes. Dat
 | Ajustes | 15 pasos, ~1 MP | 25 pasos, ~1,4 MP | 25 pasos, ~2,4 MP |
 | Preferencia a ciegas (18 comparaciones) | 5 | **8** | 3 (+2 empates) |
 | Imágenes con el texto perfecto (9 con texto) | 4 | **9** | 6 |
-| Imágenes con la mancha blanca | 4 / 18 | **1 / 18** | 7 / 18 |
+| Imágenes con la mancha blanca (ya arreglada, ver Problemas conocidos) | 4 / 18 | 1 / 18 | 7 / 18 |
 | Tiempo por imagen | 2 min 45 s | 4 min 50 s | 8 min 25 s |
 
 ![Texto del botón del anuncio en las tres recetas](assets/text-accuracy.webp)
@@ -112,7 +114,6 @@ Generamos 6 prompts × 3 semillas con tres recetas candidatas: 54 imágenes. Dat
 Cuánto fiarse de esto:
 - **La precisión del texto (9/9) es el resultado más sólido.** Es objetivo y la diferencia es clara. El texto se revisó letra por letra a ojo, no con OCR.
 - **La preferencia a ciegas es una señal, no una prueba.** Las imágenes se mostraron al mismo tamaño y en orden aleatorio, y votó una sola persona. Con 18 comparaciones, 8 frente a 5 puede ser casualidad. Lo que sí muestra es que la receta máxima no gana.
-- **El 1/18 de manchas de la receta por defecto puede ser suerte.** Ver Problemas conocidos.
 
 ## Para qué sirve
 
@@ -130,20 +131,19 @@ En resumen: sirve para figuras de libro de texto de estructuras grandes y conoci
 
 ## Problemas conocidos
 
-**Manchas blancas (sin resolver).** Algunas imágenes salen con un rectángulo de blanco puro, de bordes duros y 12-16 px de ancho:
+**Manchas blancas: arregladas en sd.cpp [`0a9340c`](https://github.com/leejet/stable-diffusion.cpp/commit/0a9340c5) ([#2054](https://github.com/leejet/stable-diffusion.cpp/pull/2054)).** Con versiones anteriores, algunas imágenes salían con un rectángulo de blanco puro, de bordes duros y 12-16 px de ancho:
 
 ![Una mancha blanca en una ilustración de rodilla](assets/white-patch.webp)
 
-- Frecuencia: 12 de 54 imágenes en la comparación de recetas. Receta por defecto 1/18, borrador 4/18, máxima 7/18.
-- Siempre alineadas a la cuadrícula de 16 px del modelo; con la misma semilla se reproducen exactamente.
-- Descartado: la cuantización (misma mancha con Q4_0, Q4_K y Q5_0), flash attention, la versión de sd.cpp (`c678dfe` y `c92d73c` dan un resultado idéntico), la precisión del VAE en GPU y el offload a CPU.
-- Aún sin descartar: la decodificación del VAE por trozos.
-- **Solución provisional:** revisa las imágenes y regenera las afectadas con otra semilla.
+- **Causa:** desbordamiento en FP16 en las convoluciones del VAE de Qwen-Image 2.1. El arreglo reduce la escala de sus entradas y la restaura después.
+- **Verificado:** regeneramos 3 imágenes que tenían mancha, con las mismas semillas y ajustes, en `3f8527a`. Las 3 salieron limpias y a la misma velocidad. Basta con actualizar; no hace falta ninguna opción.
+- Afectó a 12 de nuestras 54 imágenes de comparación, siempre alineadas a la cuadrícula de 16 px del modelo.
+- **Una corrección:** una versión anterior de esta página decía que se había descartado la precisión del VAE en GPU, porque decodificar en CPU daba la misma mancha. Esa conclusión era errónea: el desbordamiento ocurre también en las convoluciones FP16 de ese camino, así que la prueba no aislaba lo que creíamos.
 
-Seguimos investigándolo y lo reportaremos a sd.cpp. El [issue #2024](https://github.com/leejet/stable-diffusion.cpp/issues/2024) (Metal, salida RGBA) describe otro síntoma que también sigue la cuadrícula de 16 px.
+Gracias a leejet por el arreglo y por contestar nuestro aviso en Hugging Face.
 
 **Otras cosas que conviene saber:**
-- **Mantén `--vae-tiling`.** Decodificar una imagen de 1 MP de una vez necesita más de 6 GB, y sd.cpp acaba recurriendo a los trozos igualmente. **Nunca decodifiques en CPU sin trozos:** a 1024² agotó los 16 GB de RAM y el kernel mató el proceso.
+- **Mantén `--vae-tiling`.** Decodificar una imagen de 1 MP de una vez necesita más de 6 GB, y sd.cpp acaba recurriendo a los trozos igualmente. Los trozos de 256 px por defecto funcionan bien. Desde [`19bbbca`](https://github.com/leejet/stable-diffusion.cpp/commit/19bbbca1), `--vae-tile-size` se mide en píxeles de la imagen, no en celdas del latente: si copiaste `--vae-tile-size 24x24` de una versión anterior de esta página, quítalo. **Nunca decodifiques en CPU sin trozos:** a 1024² agotó los 16 GB de RAM y el kernel mató el proceso.
 - **La primera imagen tras reiniciar tarda ~1 minuto más** si los pesos están en un disco duro mecánico, porque hay que leer ~10 GB. Después quedan en la caché del sistema y cargan en ~3 s.
 - **No midas mientras descargas.** Las descargas al mismo disco expulsan los pesos de la caché; en nuestras pruebas la carga pasó de 3 s a 36 s.
 - **La columna de VRAM siempre marca ~5,1-5,2 GB.** sd.cpp ocupa toda la memoria libre y trae el resto desde la RAM. Es lo que usa, no lo que necesita; la VRAM mínima no se ha medido.
@@ -169,7 +169,7 @@ Los prompts están en [`prompts/`](prompts/). Cada ejecución añade una fila a 
 | CPU / RAM | 6 núcleos, 16 GB |
 | Almacenamiento | Pesos en un disco duro de 7200 rpm |
 | Sistema | Ubuntu 24.04 |
-| sd.cpp | `c92d73c` (fase 2). `c678dfe` para la fase 1 y la prueba técnica; una imagen comparada entre las dos versiones salió idéntica bit a bit |
+| sd.cpp | Medidas: `c92d73c` (fase 2) y `c678dfe` (fase 1 y prueba técnica; una imagen comparada entre las dos salió idéntica bit a bit). Arreglo de las manchas verificado en `3f8527a` |
 
 ## Licencia
 
