@@ -8,6 +8,8 @@ set -u
 R=$(cd "$(dirname "$0")/.." && pwd)
 D=/data/ai-lab/models/qwen-image-2.1
 SD=~/.local/opt/sd.cpp/build/bin/sd-cli
+# Las medidas publicadas usaron sd.cpp c92d73c con --vae-tile-size 24x24 (celdas del latente = 192 px).
+# Desde 19bbbca el tamaño va en píxeles y desde 0a9340c ya no hace falta: el valor por defecto (256 px) va bien.
 
 ronda=$1 nombre=$2 modelo=$3 pasos=$4 pid=$5; shift 5
 linea=$(awk -F'\t' -v id="$pid" '$1==id' "${PROMPTS:-$R/prompts/estilos.tsv}")
@@ -32,7 +34,7 @@ vpid=$!
   --diffusion-model "$D/qwen-image-2.1-$modelo.gguf" \
   --vae "$D/qwen_image_2.1_vae_bf16.safetensors" \
   --llm "$D/Qwen3VL-8B-Instruct-Q4_K_M.gguf" \
-  ${OFFLOAD---offload-to-cpu} --vae-tiling --vae-tile-size 24x24 \
+  ${OFFLOAD---offload-to-cpu} --vae-tiling \
   --cfg-scale "$cfg" --sampling-method euler --steps "$pasos" \
   -W "$W" -H "$H" --seed "$seed" "${extra[@]}" \
   -p "$prompt" -o "$base.png" > "$base.log" 2>&1
