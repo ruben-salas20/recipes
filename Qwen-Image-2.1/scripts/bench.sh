@@ -1,9 +1,11 @@
 #!/bin/bash
 # Genera una imagen con una configuración y añade una fila al CSV de la ronda.
 # uso: bench.sh <ronda> <nombre> <modelo> <pasos> <prompt_id> [W H] [-- args extra de sd-cli]
-#   modelo: sufijo del fichero, p. ej. Q4_0-normal → qwen-image-2.1-Q4_0-normal.gguf
+#   modelo: sufijo del fichero, p. ej. Q4_0-normal → qwen-image-2.1-Q4_0-normal.gguf,
+#           o la ruta completa a un .gguf (p. ej. el turbo)
 #   W H: si se omiten, se usan los del prompt en prompts/estilos.tsv
-#   env: SEED (42), CFG (1), PROMPTS (prompts/estilos.tsv), OFFLOAD (--offload-to-cpu; vacío = sin offload)
+#   env: SEED (42), CFG (1), PROMPTS (prompts/estilos.tsv), OFFLOAD (--offload-to-cpu; vacío = sin offload),
+#        LLM (codificador de texto; por defecto el Q4_K_M)
 set -u
 R=$(cd "$(dirname "$0")/.." && pwd)
 D=/data/ai-lab/models/qwen-image-2.1
@@ -19,6 +21,7 @@ if [ $# -ge 2 ] && [ "$1" != "--" ]; then W=$1 H=$2; shift 2; fi
 [ "${1:-}" = "--" ] && shift
 extra=("$@")
 seed=${SEED:-42} cfg=${CFG:-1}
+if [[ $modelo == *.gguf ]]; then mf=$modelo; modelo=$(basename "$modelo" .gguf); else mf="$D/qwen-image-2.1-$modelo.gguf"; fi
 
 out="$R/bench/$ronda"; mkdir -p "$out"
 base="$out/${nombre}_${pid}_s${seed}"
@@ -31,9 +34,9 @@ nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits -lms 500 > "$ba
 vpid=$!
 
 /usr/bin/time -f "TIME %e %M" "$SD" \
-  --diffusion-model "$D/qwen-image-2.1-$modelo.gguf" \
+  --diffusion-model "$mf" \
   --vae "$D/qwen_image_2.1_vae_bf16.safetensors" \
-  --llm "$D/Qwen3VL-8B-Instruct-Q4_K_M.gguf" \
+  --llm "${LLM:-$D/Qwen3VL-8B-Instruct-Q4_K_M.gguf}" \
   ${OFFLOAD---offload-to-cpu} --vae-tiling \
   --cfg-scale "$cfg" --sampling-method euler --steps "$pasos" \
   -W "$W" -H "$H" --seed "$seed" "${extra[@]}" \
@@ -48,5 +51,6 @@ vram_pico=$(sort -n "$base.vram" | tail -1)
 s_paso=$( [ -n "$muestreo" ] && awk -v m="$muestreo" -v p="$pasos" 'BEGIN{printf "%.2f", m/p}')
 ram=$(awk -v k="${rss:-0}" 'BEGIN{printf "%.2f", k/1048576}')
 
-echo "$nombre,$modelo,$pid,$W,$H,$pasos,$cfg,$seed,\"${extra[*]}\",$rc,$total,$muestreo,$s_paso,$vae,$ram,$vram_reposo,$vram_pico" >> "$csv"
+extra_csv="${extra[*]}"; extra_csv=${extra_csv//,/;}; extra_csv=${extra_csv//\"/}  # sin comas ni comillas: una fila = 17 campos
+echo "$nombre,$modelo,$pid,$W,$H,$pasos,$cfg,$seed,$extra_csv,$rc,$total,$muestreo,$s_paso,$vae,$ram,$vram_reposo,$vram_pico" >> "$csv"
 echo "$nombre: exit=$rc total=${total}s muestreo=${muestreo}s (${s_paso}s/paso) vae=${vae}s ram=${ram}GB vram=${vram_pico}MiB"

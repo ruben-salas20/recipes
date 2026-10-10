@@ -1,0 +1,55 @@
+nombre,modelo,prompt,W,H,pasos,cfg,seed,extra,exit,total_s,muestreo_s,s_por_paso,vae_s,ram_pico_gb,vram_reposo_mib,vram_pico_mib
+normal,Q4_0-normal,producto,1184,1184,25,1,42,--diffusion-fa,0,272.58,214.78,8.59,25.12,9.38,1,5195
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,producto,1184,1184,8,1,42,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,139.52,88.76,11.10,25.42,9.40,1,5209
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,producto,1184,1184,8,1,42,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,151.29,72.89,9.11,23.88,5.24,1,5271
+normal,Q4_0-normal,retrato,896,1568,25,1,42,--diffusion-fa,0,273.82,214.33,8.57,26.18,9.38,1,5283
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,retrato,896,1568,8,1,42,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,145.27,88.60,11.07,24.54,9.41,1,5185
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,retrato,896,1568,8,1,42,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,159.85,79.88,9.98,26.13,5.23,1,5269
+normal,Q4_0-normal,medico,1184,1184,25,1,42,--diffusion-fa,0,272.98,214.49,8.58,25.51,9.39,1,5279
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,medico,1184,1184,8,1,42,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,145.77,87.79,10.97,25.45,9.39,1,5293
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,medico,1184,1184,8,1,42,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,153.77,74.29,9.29,25.43,5.22,1,5269
+normal,Q4_0-normal,anuncio,896,1568,25,1,42,--diffusion-fa,0,274.17,214.71,8.59,26.18,9.39,1,5199
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,anuncio,896,1568,8,1,42,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,146.93,88.61,11.08,26.10,9.40,1,5185
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,anuncio,896,1568,8,1,42,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,147.87,70.53,8.82,23.51,5.27,1,5271
+normal,Q4_0-normal,ciudad,1568,896,25,1,42,--diffusion-fa,0,273.16,214.22,8.57,26.17,9.37,1,5293
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,ciudad,1568,896,8,1,42,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,143.88,88.31,11.04,23.55,9.41,1,5195
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,ciudad,1568,896,8,1,42,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,151.11,71.10,8.89,26.13,5.24,1,5273
+normal,Q4_0-normal,anime,1184,1184,25,1,42,--diffusion-fa,0,272.42,214.05,8.56,25.52,9.39,1,5289
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,anime,1184,1184,8,1,42,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,144.93,88.28,11.04,25.43,9.39,1,5277
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,anime,1184,1184,8,1,42,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,161.44,82.07,10.26,25.41,5.23,1,5267
+normal,Q4_0-normal,producto,1184,1184,25,1,7,--diffusion-fa,0,272.47,214.04,8.56,25.67,9.39,1,5281
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,producto,1184,1184,8,1,7,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,146.59,87.97,11.00,25.44,9.40,1,5195
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,producto,1184,1184,8,1,7,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,164.06,83.90,10.49,25.61,5.24,1,5271
+normal,Q4_0-normal,retrato,896,1568,25,1,7,--diffusion-fa,0,272.47,214.00,8.56,26.18,9.37,1,5199
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,retrato,896,1568,8,1,7,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,147.48,88.67,11.08,26.10,9.40,1,5185
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,retrato,896,1568,8,1,7,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,154.53,74.39,9.30,26.32,5.25,1,5269
+normal,Q4_0-normal,medico,1184,1184,25,1,7,--diffusion-fa,0,272.56,214.21,8.57,25.49,9.39,1,5195
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,medico,1184,1184,8,1,7,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,146.57,88.27,11.03,25.44,9.39,1,5207
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,medico,1184,1184,8,1,7,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,153.77,74.52,9.31,25.40,5.22,1,5269
+normal,Q4_0-normal,anuncio,896,1568,25,1,7,--diffusion-fa,0,272.98,214.08,8.56,26.17,9.39,1,5199
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,anuncio,896,1568,8,1,7,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,146.43,88.67,11.08,26.10,9.40,1,5185
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,anuncio,896,1568,8,1,7,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,151.00,73.33,9.17,23.70,5.25,1,5271
+normal,Q4_0-normal,ciudad,1568,896,25,1,7,--diffusion-fa,0,273.19,213.85,8.55,26.14,9.37,1,5293
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,ciudad,1568,896,8,1,7,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,145.10,88.36,11.04,23.68,9.41,1,5195
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,ciudad,1568,896,8,1,7,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,151.04,70.83,8.85,26.10,5.23,1,5273
+normal,Q4_0-normal,anime,1184,1184,25,1,7,--diffusion-fa,0,272.20,213.84,8.55,25.51,9.36,1,5289
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,anime,1184,1184,8,1,7,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,145.53,88.11,11.01,25.43,9.39,1,5277
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,anime,1184,1184,8,1,7,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,147.16,70.10,8.76,23.20,5.23,1,5267
+normal,Q4_0-normal,producto,1184,1184,25,1,123,--diffusion-fa,0,272.75,214.23,8.57,25.45,9.40,1,5281
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,producto,1184,1184,8,1,123,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,144.10,88.56,11.07,23.17,9.41,1,5281
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,producto,1184,1184,8,1,123,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,149.45,70.08,8.76,25.41,5.23,1,5271
+normal,Q4_0-normal,retrato,896,1568,25,1,123,--diffusion-fa,0,273.42,213.96,8.56,26.15,9.39,1,5199
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,retrato,896,1568,8,1,123,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,146.31,88.44,11.05,26.08,9.40,1,5185
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,retrato,896,1568,8,1,123,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,148.76,70.71,8.84,23.87,5.25,1,5269
+normal,Q4_0-normal,medico,1184,1184,25,1,123,--diffusion-fa,0,272.30,214.11,8.56,25.45,9.39,1,5195
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,medico,1184,1184,8,1,123,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,143.84,88.62,11.08,23.19,9.41,1,5293
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,medico,1184,1184,8,1,123,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,150.62,70.82,8.85,25.39,5.23,1,5269
+normal,Q4_0-normal,anuncio,896,1568,25,1,123,--diffusion-fa,0,273.00,213.90,8.56,26.11,9.38,1,5199
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,anuncio,896,1568,8,1,123,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,146.92,88.49,11.06,26.05,9.41,1,5185
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,anuncio,896,1568,8,1,123,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,154.43,74.46,9.31,26.05,5.23,1,5271
+normal,Q4_0-normal,ciudad,1568,896,25,1,123,--diffusion-fa,0,272.71,213.44,8.54,26.10,9.37,1,5293
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,ciudad,1568,896,8,1,123,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,146.48,87.92,10.99,26.08,9.41,1,5247
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,ciudad,1568,896,8,1,123,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,147.57,69.67,8.71,23.65,5.24,1,5267
+normal,Q4_0-normal,anime,1184,1184,25,1,123,--diffusion-fa,0,271.89,213.41,8.54,25.68,9.36,1,5289
+turbo,Qwen-Image-2.1-Turbo-AD-Q4_K,anime,1184,1184,8,1,123,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0,0,142.47,88.21,11.03,22.99,9.41,1,5277
+turbo8,Qwen-Image-2.1-Turbo-AD-Q4_K,anime,1184,1184,8,1,123,--diffusion-fa --sigmas 1.0;0.978453;0.95418;0.926626;0.89508;0.845148;0.704534;0.414568;0.0 --params-backend te=disk;diffusion=cpu;vae=cpu,0,149.41,70.14,8.77,25.39,5.22,1,5267

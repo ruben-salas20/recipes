@@ -23,3 +23,17 @@
 !Qwen-Image-2.1/bench/tecnico/resultados.csv
 !Qwen-Image-2.1/bench/fase2/ciego/votos.json
 !Qwen-Image-2.1/bench/fase2/ciego/clave.json
+
+!Qwen-Image-2.1-Turbo/README.md
+!Qwen-Image-2.1-Turbo/README.es.md
+!Qwen-Image-2.1-Turbo/SHA256SUMS
+!Qwen-Image-2.1-Turbo/assets/*.webp
+!Qwen-Image-2.1-Turbo/prompts/*.tsv
+!Qwen-Image-2.1-Turbo/scripts/bench.sh
+!Qwen-Image-2.1-Turbo/scripts/turbo1.sh
+!Qwen-Image-2.1-Turbo/scripts/final.sh
+!Qwen-Image-2.1-Turbo/bench/turbo1/resultados.csv
+!Qwen-Image-2.1-Turbo/bench/final/resultados.csv
+!Qwen-Image-2.1-Turbo/bench/tecnico-turbo/resultados.csv
+!Qwen-Image-2.1-Turbo/bench/final/ciego/votos.json
+!Qwen-Image-2.1-Turbo/bench/final/ciego/clave.json
