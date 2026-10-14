@@ -150,6 +150,12 @@ Full hashes in [`SHA256SUMS`](SHA256SUMS). The draft file is called `2.6B` in Op
 
 ## Reproduce the measurements
 
+**Quick check on your machine:** [`../tools/quick-bench.py`](../tools/README.md) runs this recipe and measures prefill, decode and decode with a full context in a few minutes:
+
+```bash
+python3 ../tools/quick-bench.py minicpm5-2b gpu --models-dir ~/models   # or: cpu --threads <performance cores>
+```
+
 The scripts are in [`scripts/`](scripts/), named after the round they belong to, and each round's raw data is in [`bench/`](bench/) under the same name. Desktop rounds start with `2.3`, laptop rounds with `2.4`. The desktop scripts run inside the [llama-swap](https://github.com/mostlygeek/llama-swap) Docker image (`unified-cuda13`, llama.cpp b11580); the laptop scripts use the official CPU build b11588. The fidelity test (2.4c) used llama.cpp b11028 with CUDA on the desktop. The scripts assume the model paths of the test machines: edit the variables at the top.
 
 The coding benchmark results (one JSON per run, with the generated code) are in [`bench/3.2-minibench/`](bench/3.2-minibench/) and the agent test results in [`bench/3.3-pi/`](bench/3.3-pi/).

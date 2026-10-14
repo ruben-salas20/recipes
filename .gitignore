@@ -77,3 +77,10 @@
 !LFM2.5-2.6B/bench/2.6b-calidad/*.log
 !LFM2.5-2.6B/bench/2.6c-verifica-calidad/*.log
 !LFM2.5-24B-A2B/bench/2.1f-gguf-nuevo/*.log
+
+!tools/quick-bench.py
+!tools/README.md
+!tools/README.es.md
+!/CONTRIBUTING.md
+!/.github/ISSUE_TEMPLATE/results.yml
+!tools/results/*.json

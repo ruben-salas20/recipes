@@ -1,0 +1,132 @@
+{
+  "tool": "quick-bench",
+  "date": "2026-10-14T04:14:52",
+  "recipe": "lfm2.5-24b-a2b",
+  "machine": "cpu",
+  "system": {
+    "os": "Linux-7.2.5-3-omarchy-x86_64-with-glibc2.44",
+    "python": "3.14.8",
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13620H",
+    "logical_cpus": 16,
+    "ram_gb": 23.1,
+    "gpu": "none detected",
+    "llama_cpp": "b11588 (7f51953d7)"
+  },
+  "command": [
+    "--host",
+    "127.0.0.1",
+    "-m",
+    "~/models/LFM2.5-24B-A2B-QAD-Q4_0.gguf",
+    "-lm",
+    "none",
+    "-np",
+    "1",
+    "-c",
+    "131072",
+    "-fa",
+    "on",
+    "--temp",
+    "0.1",
+    "--top-k",
+    "50",
+    "--repeat-penalty",
+    "1.05",
+    "-t",
+    "6",
+    "-C",
+    "0x555",
+    "--cpu-strict",
+    "1",
+    "--port",
+    "42513"
+  ],
+  "files_sha256": {},
+  "load_seconds": 43.1,
+  "memory": {
+    "rss_gb": 15.89
+  },
+  "results": [
+    {
+      "prompt_tokens": 77,
+      "prefill_tok_s": 64.3,
+      "decode_tok_s": 25.5,
+      "decode_min": 25.4,
+      "decode_max": 26.4,
+      "runs": [
+        {
+          "prompt_tokens": 79,
+          "prefill_tok_s": 83.6,
+          "decode_tokens": 256,
+          "decode_tok_s": 26.4
+        },
+        {
+          "prompt_tokens": 77,
+          "prefill_tok_s": 63.0,
+          "decode_tokens": 256,
+          "decode_tok_s": 25.4
+        },
+        {
+          "prompt_tokens": 74,
+          "prefill_tok_s": 64.3,
+          "decode_tokens": 256,
+          "decode_tok_s": 25.5
+        }
+      ]
+    },
+    {
+      "prompt_tokens": 2048,
+      "prefill_tok_s": 69.8,
+      "decode_tok_s": 23.4,
+      "decode_min": 23.4,
+      "decode_max": 23.5,
+      "runs": [
+        {
+          "prompt_tokens": 2135,
+          "prefill_tok_s": 68.8,
+          "decode_tokens": 256,
+          "decode_tok_s": 23.4
+        },
+        {
+          "prompt_tokens": 2133,
+          "prefill_tok_s": 69.8,
+          "decode_tokens": 256,
+          "decode_tok_s": 23.5
+        },
+        {
+          "prompt_tokens": 2130,
+          "prefill_tok_s": 69.8,
+          "decode_tokens": 256,
+          "decode_tok_s": 23.4
+        }
+      ]
+    },
+    {
+      "prompt_tokens": 8192,
+      "prefill_tok_s": 63.5,
+      "decode_tok_s": 15.9,
+      "decode_min": 15.4,
+      "decode_max": 15.9,
+      "runs": [
+        {
+          "prompt_tokens": 8279,
+          "prefill_tok_s": 63.5,
+          "decode_tokens": 256,
+          "decode_tok_s": 15.9
+        },
+        {
+          "prompt_tokens": 8276,
+          "prefill_tok_s": 63.7,
+          "decode_tokens": 256,
+          "decode_tok_s": 15.9
+        },
+        {
+          "prompt_tokens": 8274,
+          "prefill_tok_s": 63.5,
+          "decode_tokens": 256,
+          "decode_tok_s": 15.4
+        }
+      ]
+    }
+  ],
+  "reference": "26-30 tok/s decode, ~72 tok/s prefill on an i7-13620H"
+}

@@ -1,0 +1,75 @@
+name: Share results
+description: Ran a recipe on your hardware? Share the numbers.
+title: "Results: <model> on <your hardware>"
+labels: ["results"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing! Results that do not match the recipe are as useful as the ones that do.
+        The quickest way to get comparable numbers is [`tools/quick-bench.py`](https://github.com/ruben-salas20/recipes/blob/main/tools/README.md).
+
+        *¿Has probado una receta en tu equipo? Puedes escribir en español.*
+  - type: dropdown
+    id: recipe
+    attributes:
+      label: Recipe
+      options:
+        - LFM2.5-24B-A2B
+        - MiniCPM5-2B
+        - LFM2.5-2.6B
+        - Qwen-Image 2.1
+        - Qwen-Image 2.1 Turbo
+    validations:
+      required: true
+  - type: dropdown
+    id: variant
+    attributes:
+      label: Variant
+      options:
+        - GPU recipe
+        - CPU-only recipe
+        - My own flags (explain below)
+    validations:
+      required: true
+  - type: input
+    id: gpu
+    attributes:
+      label: GPU and VRAM
+      placeholder: "RTX 4060 8 GB, or: none (CPU only)"
+    validations:
+      required: true
+  - type: input
+    id: cpu-ram
+    attributes:
+      label: CPU and RAM
+      placeholder: "Ryzen 7 7840HS, 32 GB DDR5"
+    validations:
+      required: true
+  - type: input
+    id: llama-cpp
+    attributes:
+      label: llama.cpp (or stable-diffusion.cpp) version
+      description: The output of `llama-server --version`.
+      placeholder: "version: 0.6.0-dev (build 11588, commit 7f51953d7)"
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Results
+      description: Paste the Markdown table that quick-bench prints, or your own numbers. You can drag the JSON file here too.
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: Changes from the recipe
+      description: Any flag, quantization, context size or model file you changed. Write "none" if you ran it as published.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Laptop on battery or hot, other programs using the GPU, problems you hit, what you use the model for.

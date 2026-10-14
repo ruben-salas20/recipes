@@ -141,6 +141,12 @@ Hashes completos en [`SHA256SUMS`](SHA256SUMS).
 
 ## Reproducir las medidas
 
+**Comprobación rápida en tu máquina:** [`../tools/quick-bench.py`](../tools/README.es.md) ejecuta esta receta y mide la lectura del prompt, la generación y la generación con el contexto lleno en pocos minutos:
+
+```bash
+python3 ../tools/quick-bench.py lfm2.5-2.6b gpu --models-dir ~/models   # o: cpu --threads <núcleos de rendimiento>
+```
+
 Los scripts están en [`scripts/`](scripts/), con el nombre de la ronda a la que pertenecen, y los datos en bruto de cada ronda, en [`bench/`](bench/) con el mismo nombre. Las rondas del sobremesa empiezan por `2.5` y las del portátil, por `2.6` (y `2.0`, una prueba de RAM). Los scripts del sobremesa corren dentro de la imagen Docker de [llama-swap](https://github.com/mostlygeek/llama-swap) (`unified-cuda13`, llama.cpp b11580); los del portátil usan la compilación oficial para CPU b11588. La prueba de fidelidad (2.6b) usó llama.cpp b11028 con CUDA en el sobremesa, y la 2.6c repitió parte en el portátil. Los scripts suponen las rutas de los modelos de las máquinas de prueba: edita las variables del principio.
 
 Los resultados del mini-benchmark (un JSON por pasada, con el código generado) están en [`bench/3.2-minibench/`](bench/3.2-minibench/) y los de la prueba de agente, en [`bench/3.3-pi/`](bench/3.3-pi/).
