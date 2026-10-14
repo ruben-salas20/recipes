@@ -1,0 +1,5 @@
+modo,momento,vmrss_mib,rssanon_mib,rssfile_mib,kv_mib
+lm-auto,arrancado,7791,6248,1543,
+lm-auto,tras_peticion,7798,6254,1543,
+lm-none,arrancado,6973,6956,16,
+lm-none,tras_peticion,6979,6962,17,

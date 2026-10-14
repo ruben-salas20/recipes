@@ -1,0 +1,13 @@
+config,tarea,rep,prompt_n,prompt_tps,predicted_n,predicted_tps,draft_n,draft_n_accepted,finish_reason,vram_mib
+64k-q8-q8,02_iniciales,0,225,1970.8,516,98.42,641,367,stop,4393
+64k-q8-q8,03_palindromo_alfanumerico,0,252,2215.1,846,99.99,995,610,stop,4393
+64k-q8-q8,04_aplanar_listas,0,265,2320.2,996,109.54,1297,759,stop,4393
+64k-q8-q8,06_csv_ventas,0,404,2356.9,2048,88.43,2597,1408,length,4393
+64k-q8-q8,07_fechas_flexibles,0,433,2470.7,1261,98.78,1556,912,stop,4393
+64k-q8-q8,08_bug_promedio_movil,0,299,2436.8,751,105.28,919,558,stop,4393
+128k-q4-q4,02_iniciales,0,225,1926.5,461,95.65,608,329,stop,4615
+128k-q4-q4,03_palindromo_alfanumerico,0,252,2185.2,837,103.18,1113,624,stop,4615
+128k-q4-q4,04_aplanar_listas,0,265,2200.5,1960,93.73,2515,1397,stop,4615
+128k-q4-q4,06_csv_ventas,0,404,2415.0,2048,79.29,2653,1328,length,4615
+128k-q4-q4,07_fechas_flexibles,0,433,2361.6,2048,91.37,2471,1437,length,4615
+128k-q4-q4,08_bug_promedio_movil,0,299,2444.9,1007,97.53,1317,732,stop,4615

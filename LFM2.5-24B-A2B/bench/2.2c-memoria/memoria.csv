@@ -1,0 +1,7 @@
+modo,momento,vmrss_mib,rssanon_mib,rssfile_mib,rssshmem_mib,repack_mib,kv_mib,compute_mib,carga_s
+lm-auto,arrancado,12842,7962,4879,0,,,,
+lm-auto,tras_peticion,16690,12036,4653,0,,,,
+lm-none,arrancado,15604,15586,17,0,,,,
+lm-none,tras_peticion,15606,15588,17,0,,,,
+lm-auto-norepack,arrancado,15534,2633,12900,0,,,,
+lm-auto-norepack,tras_peticion,15568,2638,12929,0,,,,
