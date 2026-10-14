@@ -103,7 +103,7 @@ El mini-benchmark de código son 11 funciones de Python corregidas con tests de 
   <img alt="Agente de código con Pi: tareas aprobadas sobre 9" src="assets/agent.es.webp">
 </picture>
 
-- **Mini-benchmark: 7,0 / 11** (8, 6 y 7), el mejor de los tres modelos, aunque solo por 0,7 tareas. Aprobó la tarea de fechas y la de la caché LRU en las 3 pasadas; los dos modelos pequeños no aprobaron nunca la primera y la segunda solo 3 veces de 12. En cambio, falló siempre la de aplanar listas, que los pequeños aprobaron 11 veces de 12.
+- **Mini-benchmark: 7,0 / 11** (8, 6 y 7) con el GGUF anterior y 6,7 (6, 7 y 7) con el actual, el mejor de los tres modelos, aunque solo por 0,4-0,7 tareas. Aprobó la tarea de fechas y la de la caché LRU en las 3 pasadas; los dos modelos pequeños no aprobaron nunca la primera y la segunda solo 3 veces de 12. En cambio, falló siempre la de aplanar listas, que los pequeños aprobaron 11 veces de 12.
 - **Agente: 6 / 9.** Resolvió las 3 tareas de añadir una función y los 3 arreglos. Falló las 3 refactorizaciones de la misma forma: el informe semanal debe ir de lunes a domingo y lo ordenó alfabéticamente. Los tests visibles del proyecto no lo detectaron. Para escribir y arreglar código, fiable; para proteger un comportamiento que ningún test cubre, no.
 - Una pasada varía ±1-2 tareas, así que la diferencia con MiniCPM5-2B (7 / 9) está dentro del ruido.
 
@@ -138,7 +138,7 @@ Las cifras de arriba son de estas dos máquinas. Lo que se puede trasladar:
 Hash completo en [`SHA256SUMS`](SHA256SUMS). QAD significa destilación consciente de la cuantización: Liquid AI entrenó este Q4_0 para recuperar lo que se pierde al cuantizar.
 
 > [!IMPORTANT]
-> **Liquid AI sustituyó este fichero el 2026-10-13** por pesos nuevos (cambian 390 de 428 tensores; mismo tamaño, tipos y metadatos). La mayoría de las mediciones de esta página usaron el fichero anterior (commit `f97fc8a`, SHA-256 `89617cc4…`). Comprobamos el nuevo en el sobremesa: misma velocidad (903 tok/s de lectura del prompt, 33,5 tok/s de generación) y una perplejidad algo menor (16,55 frente a 16,87 en wikitext-2). El mini-benchmark y la prueba de agente aún no se han repetido con él. Datos: [`bench/2.1f-gguf-nuevo/`](bench/2.1f-gguf-nuevo/).
+> **Liquid AI sustituyó este fichero el 2026-10-13** por pesos nuevos (cambian 390 de 428 tensores; mismo tamaño, tipos y metadatos). La mayoría de las mediciones de esta página usaron el fichero anterior (commit `f97fc8a`, SHA-256 `89617cc4…`). Comprobamos el nuevo en el sobremesa: misma velocidad (903 tok/s de lectura del prompt, 33,5 tok/s de generación) y una perplejidad algo menor (16,55 frente a 16,87 en wikitext-2). Con él, el mini-benchmark dio **6,7 / 11** (6, 7 y 7 tareas), frente a 7,0 con el anterior: lo mismo dentro del ruido. La prueba de agente no se ha repetido. Datos: [`bench/2.1f-gguf-nuevo/`](bench/2.1f-gguf-nuevo/).
 
 ## Reproducir las medidas
 

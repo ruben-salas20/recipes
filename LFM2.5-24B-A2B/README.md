@@ -103,7 +103,7 @@ The coding benchmark is 11 Python functions checked by hidden pytest tests, 3 ru
   <img alt="Coding agent with Pi: tasks passed out of 9" src="assets/agent.webp">
 </picture>
 
-- **Coding benchmark: 7.0 / 11** (8, 6 and 7), the best of the three models, though only by 0.7 tasks. It passed the date-parsing and LRU-cache tasks in all 3 runs; the two small models never passed the first and passed the second 3 times in 12 runs. But it failed list flattening every time, which the small models passed 11 times in 12.
+- **Coding benchmark: 7.0 / 11** (8, 6 and 7) with the previous GGUF and 6.7 (6, 7, 7) with the current one, the best of the three models, though only by 0.4–0.7 tasks. It passed the date-parsing and LRU-cache tasks in all 3 runs; the two small models never passed the first and passed the second 3 times in 12 runs. But it failed list flattening every time, which the small models passed 11 times in 12.
 - **Agent: 6 / 9.** It solved all 3 feature tasks and all 3 bug fixes. It failed all 3 refactors in the same way: the weekly report should go from Monday to Sunday, and it sorted it alphabetically. The project's visible tests did not catch it. Writing and fixing code: reliable. Protecting behaviour that no test covers: not.
 - One run varies by ±1–2 tasks, so the difference with MiniCPM5-2B (7 / 9) is within the noise.
 
@@ -138,7 +138,7 @@ The numbers above are for these two machines. What carries over:
 Full hash in [`SHA256SUMS`](SHA256SUMS). QAD means quantization-aware distillation: Liquid AI trained this Q4_0 to recover what quantization loses.
 
 > [!IMPORTANT]
-> **Liquid AI replaced this file on 2026-10-13** with new weights (390 of 428 tensors changed; same size, types and metadata). Most measurements on this page used the previous file (commit `f97fc8a`, SHA-256 `89617cc4…`). We checked the new one on the desktop: same speed (903 tok/s prompt processing, 33.5 tok/s decode) and slightly lower perplexity (16.55 against 16.87 on wikitext-2). The coding benchmark and the agent test have not been repeated with it yet. Data: [`bench/2.1f-gguf-nuevo/`](bench/2.1f-gguf-nuevo/).
+> **Liquid AI replaced this file on 2026-10-13** with new weights (390 of 428 tensors changed; same size, types and metadata). Most measurements on this page used the previous file (commit `f97fc8a`, SHA-256 `89617cc4…`). We checked the new one on the desktop: same speed (903 tok/s prompt processing, 33.5 tok/s decode) and slightly lower perplexity (16.55 against 16.87 on wikitext-2). The coding benchmark gave **6.7 / 11** with it (6, 7 and 7 tasks), against 7.0 with the previous file: the same within the noise. The agent test has not been repeated. Data: [`bench/2.1f-gguf-nuevo/`](bench/2.1f-gguf-nuevo/).
 
 ## Reproduce the measurements
 
