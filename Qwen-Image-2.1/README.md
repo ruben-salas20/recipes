@@ -79,7 +79,10 @@ These results come from the first round, on sd.cpp `c92d73c` (2026-09-22) and `c
 
 Measured with the same ad prompt at 768 × 1344, seed 42, one flag changed at a time:
 
-![The same ad with four configurations and their times](assets/speed.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/speed-dark.webp">
+  <img alt="The same ad with four configurations and their times" src="assets/speed.webp">
+</picture>
 
 | Change | Time | s/step | Result |
 |---|---|---|---|
@@ -118,7 +121,10 @@ Tested prompts: product shots, portraits, ads with Spanish text, concept art, an
 
 **Technical and academic images.** We tested 12 subjects across disciplines, without text in the image, 2 seeds each, at 15 steps (first round). Raw data: [`bench/tecnico/`](bench/tecnico/).
 
-![12 technical subjects with a verdict for each](assets/technical.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/technical-dark.webp">
+  <img alt="12 technical subjects with a verdict for each" src="assets/technical.webp">
+</picture>
 
 - **Usable (7):** heart, cell, flower, suspension bridge, prism, Earth's layers, solar system. Large, well-known structures come out right.
 - **Illustrative (4):** knee (the kneecap sits in the wrong place), engine, dodecahedron, circuit. Recognizable, fine for a general audience; a specialist would spot errors.

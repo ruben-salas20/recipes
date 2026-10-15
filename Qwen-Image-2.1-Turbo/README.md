@@ -129,10 +129,16 @@ The three recipes (regular, Fast, Low RAM), 6 prompts × 3 seeds each: 54 images
 | Time per image | 4 min 33 s | 2 min 25 s | 2 min 33 s |
 | Peak system RAM | 9.4 GB | 9.4 GB | 5.3 GB |
 
-![The three recipes with the same ad and product shot](assets/recipes.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/recipes-dark.webp">
+  <img alt="The three recipes with the same ad and product shot" src="assets/recipes.webp">
+</picture>
 *The same ad and product prompts with the three recipes.*
 
-![Time per image for each recipe](assets/speed.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/speed-dark.webp">
+  <img alt="Time per image for each recipe" src="assets/speed.webp">
+</picture>
 
 How much to trust each result:
 
@@ -152,7 +158,10 @@ Tested prompts: product shots, portraits, ads with Spanish text, concept art, an
 
 **Technical and academic images.** We tested 12 subjects across disciplines, without text in the image, 2 seeds each, with the Fast recipe. Raw data: [`bench/tecnico-turbo/`](bench/tecnico-turbo/).
 
-![12 technical subjects with a verdict for each, Fast recipe](assets/technical.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/technical-dark.webp">
+  <img alt="12 technical subjects with a verdict for each, Fast recipe" src="assets/technical.webp">
+</picture>
 
 - **Usable (8):** heart, cell, flower, engine, suspension bridge, prism, Earth's layers, solar system. The engine now draws a single cylinder, as the prompt asks.
 - **Illustrative (3):** knee (the kneecap is still in the wrong place), dodecahedron (some faces look like hexagons), circuit. Recognizable, fine for a general audience; a specialist would spot errors.

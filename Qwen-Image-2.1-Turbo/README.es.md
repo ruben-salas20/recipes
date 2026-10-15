@@ -129,10 +129,16 @@ Las tres recetas (normal, rápida y poca RAM), 6 prompts × 3 semillas cada una:
 | Tiempo por imagen | 4 min 33 s | 2 min 25 s | 2 min 33 s |
 | RAM máxima del sistema | 9,4 GB | 9,4 GB | 5,3 GB |
 
-![Las tres recetas con el mismo anuncio y producto](assets/recipes.es.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/recipes-dark.es.webp">
+  <img alt="Las tres recetas con el mismo anuncio y producto" src="assets/recipes.es.webp">
+</picture>
 *Los mismos prompts de anuncio y producto con las tres recetas.*
 
-![Tiempo por imagen de cada receta](assets/speed.es.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/speed-dark.es.webp">
+  <img alt="Tiempo por imagen de cada receta" src="assets/speed.es.webp">
+</picture>
 
 Cuánto fiarse de cada resultado:
 
@@ -152,7 +158,10 @@ Prompts probados: fotos de producto, retratos, anuncios con texto en español, c
 
 **Imágenes técnicas y académicas.** Probamos 12 temas de distintas disciplinas, sin texto en la imagen, 2 semillas cada uno, con la receta rápida. Datos en bruto: [`bench/tecnico-turbo/`](bench/tecnico-turbo/).
 
-![12 temas técnicos con su veredicto, receta rápida](assets/technical.es.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/technical-dark.es.webp">
+  <img alt="12 temas técnicos con su veredicto, receta rápida" src="assets/technical.es.webp">
+</picture>
 
 - **Sirven (8):** corazón, célula, flor, motor, puente colgante, prisma, capas de la Tierra y sistema solar. El motor ahora dibuja un solo cilindro, como pide el prompt.
 - **Ilustrativas (3):** rodilla (la rótula sigue mal colocada), dodecaedro (algunas caras parecen hexágonos) y circuito. Se reconocen y valen para público general, pero un especialista vería errores.

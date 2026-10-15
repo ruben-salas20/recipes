@@ -79,7 +79,10 @@ Estos resultados son de la primera ronda, con sd.cpp `c92d73c` (2026-09-22) y `c
 
 Medido con el mismo prompt de anuncio a 768 × 1344, semilla 42, cambiando una sola opción cada vez:
 
-![El mismo anuncio con cuatro configuraciones y sus tiempos](assets/speed.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/speed-dark.es.webp">
+  <img alt="El mismo anuncio con cuatro configuraciones y sus tiempos" src="assets/speed.es.webp">
+</picture>
 
 | Cambio | Tiempo | s/paso | Resultado |
 |---|---|---|---|
@@ -118,7 +121,10 @@ Prompts probados: fotos de producto, retratos, anuncios con texto en español, c
 
 **Imágenes técnicas y académicas.** Probamos 12 temas de distintas disciplinas, sin texto en la imagen, 2 semillas cada uno, con 15 pasos (primera ronda). Datos en bruto: [`bench/tecnico/`](bench/tecnico/).
 
-![12 temas técnicos con su veredicto](assets/technical.es.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/technical-dark.es.webp">
+  <img alt="12 temas técnicos con su veredicto" src="assets/technical.es.webp">
+</picture>
 
 - **Sirven (7):** corazón, célula, flor, puente colgante, prisma, capas de la Tierra y sistema solar. Las estructuras grandes y conocidas salen bien.
 - **Ilustrativas (4):** rodilla (la rótula está mal colocada), motor, dodecaedro y circuito. Se reconocen y valen para público general, pero un especialista vería errores.
