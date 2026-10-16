@@ -1,0 +1,50 @@
+{
+ "producto_s42": {
+  "A": "turbo_1mp",
+  "B": "normal_1mp_easycache"
+ },
+ "retrato_s42": {
+  "A": "normal_1mp_easycache",
+  "B": "turbo_1mp"
+ },
+ "medico_s42": {
+  "A": "normal_1mp_easycache",
+  "B": "turbo_1mp"
+ },
+ "anuncio_s42": {
+  "A": "normal_1mp_easycache",
+  "B": "turbo_1mp"
+ },
+ "ciudad_s42": {
+  "A": "turbo_1mp",
+  "B": "normal_1mp_easycache"
+ },
+ "anime_s42": {
+  "A": "turbo_1mp",
+  "B": "normal_1mp_easycache"
+ },
+ "producto_s7": {
+  "A": "turbo_1mp",
+  "B": "normal_1mp_easycache"
+ },
+ "retrato_s7": {
+  "A": "normal_1mp_easycache",
+  "B": "turbo_1mp"
+ },
+ "medico_s7": {
+  "A": "turbo_1mp",
+  "B": "normal_1mp_easycache"
+ },
+ "anuncio_s7": {
+  "A": "turbo_1mp",
+  "B": "normal_1mp_easycache"
+ },
+ "ciudad_s7": {
+  "A": "turbo_1mp",
+  "B": "normal_1mp_easycache"
+ },
+ "anime_s7": {
+  "A": "turbo_1mp",
+  "B": "normal_1mp_easycache"
+ }
+}

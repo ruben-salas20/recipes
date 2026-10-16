@@ -3,14 +3,14 @@
 A measured recipe for running [Qwen-Image 2.1](https://huggingface.co/Qwen/Qwen-Image-2.1) locally on an **RTX 3050 with 6 GB of VRAM and 16 GB of RAM**, using [stable-diffusion.cpp](https://github.com/leejet/stable-diffusion.cpp). No ComfyUI, no Python stack: one compiled binary and three model files.
 
 > [!TIP]
-> **Need speed?** The [Qwen-Image 2.1 Turbo recipe](../Qwen-Image-2.1-Turbo/README.md) takes about half the time, at the cost of somewhat lower preference in a blind test.
+> **We recommend the [Turbo recipe](../Qwen-Image-2.1-Turbo/README.md) instead of this one.** It takes ~60 s per image against ~148 s, and in a blind test it won 10 of 12 comparisons against this recipe. This page stays for anyone who wants the full 25-step model.
 
 Every number on this page was measured on that machine. The scripts that produced them are in [`scripts/`](scripts/) and the raw results, one CSV per round, are in [`bench/`](bench/).
 
 [Versión en español](README.es.md)
 
 ![Images generated with the recipe](assets/showcase-v2.webp)
-*The recipe, seed 42, no cherry-picking. Top: product shot, portrait, ad with Spanish text. Bottom: concept art, anime illustration.*
+*The previous recipe (1.4 MP, sd.cpp `f89d9b1`), seed 42, no cherry-picking. Top: product shot, portrait, ad with Spanish text. Bottom: concept art, anime illustration.*
 
 > [!IMPORTANT]
 > **The model weights are licensed for non-commercial use only.** The [Qwen Research License](https://huggingface.co/Qwen/Qwen-Image-2.1/blob/main/LICENSE) (section 2) allows research and evaluation. Commercial use, including ads or product photos for a business, needs a separate license from Qwen (`model-business@notice.qwencloud.com`). This guide covers running the model, not what you are allowed to do with its output.
@@ -22,36 +22,47 @@ sd-cli \
   --diffusion-model qwen_image_2.1-Q4_0.gguf \
   --vae qwen_image_2.1_vae_bf16.safetensors \
   --llm Qwen3VL-8B-Instruct-Q4_K_M.gguf \
-  --offload-to-cpu --diffusion-fa \
-  --vae-tiling \
+  --params-backend "te=disk,diffusion=cpu,vae=cpu" \
+  --offload-to-cpu --vae-tiling --vae-tile-size 512 \
   --cfg-scale 1 --sampling-method euler --steps 25 \
-  -W 1184 -H 1184 \
+  -W 1024 -H 1024 \
   -p "your prompt" -o out.png
 ```
 
+- **`--params-backend "te=disk,…"`** streams the text encoder from the file to the GPU without copying it into the program's RAM. It saves ~49 s per image and the image comes out pixel-for-pixel identical.
+- **`--vae-tile-size 512`** decodes in 512 px tiles instead of 256: the VAE goes from ~22 to ~13 s, with no visible seams.
+- **No EasyCache** (`--cache-mode easycache`). It saves ~45 % of the time, but in a blind test the image without it won 10 of 12 comparisons, and it renders the fine text of infographics worse (14 of 21 texts against 16). See [Why these settings](#why-these-settings).
+- **Don't add `--diffusion-fa`**: it is deprecated. Flash attention is on by default (`--flash-attn auto`).
+
 | | |
 |---|---|
-| Use it for | Final images, anything with text |
+| Use it for | Anyone who wants the full 25-step model; for everyday use, the [Turbo recipe](../Qwen-Image-2.1-Turbo/README.md) |
 | Diffusion model | Q4_0 |
-| Text encoder | Q4_K_M |
+| Text encoder | Q4_K_M, read from disk |
 | Steps | 25 |
-| Square | 1184 × 1184 |
-| Portrait 9:16 | 896 × 1568 |
-| Landscape 16:9 | 1568 × 896 |
-| Time per image | **~4 min 33 s** (mean 272.8 s, range 271.9–274.2) |
-| Peak system RAM | 9.4 GB |
+| Square | 1024 × 1024 |
+| Portrait 9:16 | 768 × 1344 |
+| Landscape 16:9 | 1344 × 768 |
+| Time per image | **~148 s** (mean 148.0 s, range 146.2–150.1) |
+| Peak program RAM | 5.2 GB |
 
-It uses flash attention and CFG 1. The time is wall clock for the whole run: loading, text encoding, sampling and VAE decoding. Sizes must be multiples of 32.
+Use CFG 1. The time is wall clock for the whole run: loading, text encoding, sampling and VAE decoding. Means over 6 prompts × 3 seeds. Sizes must be multiples of 32. As with the Turbo recipe, the speed depends on the files fitting in the OS cache (about 10 GB of free RAM); see the [Turbo recipe's warning](../Qwen-Image-2.1-Turbo/README.md#the-recipe).
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/before-after-dark.webp">
+  <img alt="Seconds per image before and now: regular from 273 to 148 s, Turbo from 145 to 60 s" src="assets/before-after.webp">
+</picture>
 
 ## Setup
 
 ### 1. Build stable-diffusion.cpp with CUDA
 
-Use [`0a9340c`](https://github.com/leejet/stable-diffusion.cpp/commit/0a9340c5) (2026-09-25) or later. It fixes the white patches described under [Resolved issues](#resolved-issues). The final round was measured on `f89d9b1` (2026-10-09).
+Use [`8cd731e`](https://github.com/leejet/stable-diffusion.cpp/commit/8cd731e) (2026-10-15). The current recipe was measured on it; later versions have not been tested. You need at least [`0a9340c`](https://github.com/leejet/stable-diffusion.cpp/commit/0a9340c5) (2026-09-25), which fixes the white patches described under [Resolved issues](#resolved-issues).
 
 ```bash
 git clone --recursive https://github.com/leejet/stable-diffusion.cpp
 cd stable-diffusion.cpp
+git checkout 8cd731e && git submodule update --init --recursive
 cmake -B build -G Ninja -DSD_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=86 -DCMAKE_BUILD_TYPE=Release
 cmake --build build -j
 # binaries: build/bin/sd-cli and build/bin/sd-server
@@ -75,6 +86,32 @@ The recipe uses the whole card. Close anything else holding VRAM (an LLM server,
 
 ## Why these settings
 
+### October 2026 round: from 273 to 148 s
+
+On sd.cpp `8cd731e`, changing one flag at a time from the previous recipe (1.4 MP). The previous recipe copied the weights (~9 GB) into the program's RAM; with that, the files no longer fit in the OS cache as well, and every image re-read ~9 GB from the hard disk. Raw data: [`bench/final-1016/`](bench/final-1016/); the blind tests are in the [Turbo folder](../Qwen-Image-2.1-Turbo/bench/cata-1016/).
+
+| Change | Time per image | Image |
+|---|---|---|
+| Previous recipe on sd.cpp `8cd731e`, without `--diffusion-fa` | 271 s | The same scene |
+| **Text encoder from disk** (`te=disk`) | **222 s** | Pixel-for-pixel identical |
+| **512 px VAE tiles** | −9 s (VAE from ~22 to ~13 s) | Almost identical (LPIPS 0.001), no seams |
+| **1 MP instead of 1.4 MP** | **148.0 s** (the current recipe) | 3 of 9 images with perfect text, against 6 of 9 at 1.4 MP. In the blind test, the 1.4 MP version did not win a single comparison against Turbo either |
+
+LPIPS measures how different two images look to a person: 0 is identical, and the higher, the more different.
+
+What we tried and left out of the recipe, all at 1 MP:
+
+| Option | Time per image | Result |
+|---|---|---|
+| EasyCache, default threshold (0.20) | ~80 s | Breaks fine text: 3 of 7 texts in the infographic, with scribbles |
+| EasyCache, threshold 0.15 | ~80 s | 14 of 21 texts against 16; **in the blind test, the recipe without EasyCache won 10 of 12** (2 ties) |
+| EasyCache, threshold 0.05 | ~100 s | Almost identical to the recipe (LPIPS < 0.01), 15 of 21 texts |
+| 20 steps | ~123 s | 16 of 21 texts; the composition changes more (LPIPS up to 0.09) |
+
+EasyCache skips the computation of steps where the image barely changes; the threshold sets how much change is tolerated. An LPIPS of 0.015–0.045 (threshold 0.15) was enough for the difference to show in a blind test.
+
+### First round
+
 These results come from the first round, on sd.cpp `c92d73c` (2026-09-22) and `c678dfe`. Since then sd.cpp corrected Qwen-Image 2.1's noise schedule ([#2048](https://github.com/leejet/stable-diffusion.cpp/pull/2048)), so the same seed gives a slightly different image. Speed and memory did not change in our checks; the quality numbers were re-measured in the final round (next section). Raw data: [`bench/fase1/`](bench/fase1/), [`bench/fase1b/`](bench/fase1b/) and [`bench/fase2/`](bench/fase2/).
 
 Measured with the same ad prompt at 768 × 1344, seed 42, one flag changed at a time:
@@ -96,7 +133,7 @@ Measured with the same ad prompt at 768 × 1344, seed 42, one flag changed at a 
 | 2.4 MP (1152 × 2048) without FA | — | — | **Out of memory** (asked for 11.6 GB of VRAM) |
 | + FA, 2.4 MP | 502 s | 17.1 | Fits, but see below |
 
-- **Flash attention is the single biggest win.** It is not on by default. It also makes 2.4 MP fit in 6 GB.
+- **Flash attention is the single biggest win.** It was not on by default at the time. It also makes 2.4 MP fit in 6 GB.
 - **CFG 1, not 6.** The sd.cpp example uses `--cfg-scale 6.0`; the official ComfyUI template uses 1. With CFG above 1 every step runs twice, so CFG 1 is about twice as fast. In our tests it also followed the prompt's style better (CFG 6 ignored "soft pastel colors").
 - **Resolution matters more than steps.** At 1024 × 576 images came out washed out; at ~1 MP they did not. At ~1 MP, 15, 20 and 25 steps looked nearly the same.
 - **Q4_K and Q5_0 gave no improvement** over Q4_0.
@@ -109,10 +146,11 @@ In that round we compared three candidates (draft at 15 steps and ~1 MP, default
 
 ## Quality results
 
-Measured in the final round, on sd.cpp `f89d9b1`: 6 prompts × 3 seeds, 18 images with this recipe. The run also included the two Turbo variants; their data and the three-way table are in the [Turbo recipe](../Qwen-Image-2.1-Turbo/README.md#comparison-with-the-regular-recipe). Raw data: [`bench/final/`](../Qwen-Image-2.1-Turbo/bench/final/); votes and answer key: [`bench/final/ciego/`](../Qwen-Image-2.1-Turbo/bench/final/ciego/).
+Measured with the current recipe: 6 prompts × 3 seeds, 18 images, compared with the Turbo recipe. The full table and the blind tests are in the [Turbo recipe](../Qwen-Image-2.1-Turbo/README.md#comparison-with-the-regular-recipe).
 
-- **Blind preference: 9 of 18 comparisons** against the two Turbo variants (Fast and Low RAM). Images were shown at the same size in random order, and one person voted. This recipe won all 3 product comparisons and all 3 city comparisons. By chance it would get about 5 of 18. The lead is a clear signal but not proof, because there was a single voter.
-- **Text: 6 of 9 images perfect.** The 9 text images are the ad, the product shot and the medical illustration (3 seeds each). Failures: one ad ("Envio" without the accent) and two medical images (a repeated "Tibia" label, and "Tibla"). Text was checked letter by letter, by eye, not with OCR. The medical illustration, with many small labels, is the hardest case for every recipe.
+- **Blind preference: 1 of 12 comparisons** against the Turbo recipe (10 for Turbo and 1 tie). 12 pairs in random order, one voter. In the previous round, at 1.4 MP, this recipe won 9 of 18 against the two Turbo variants of the time; with the same images of this recipe, it now loses. The explanation is in the Turbo recipe: the voter's judgement changed, not the images.
+- **Text: 3 of 9 images perfect.** The 9 text images are the ad, the product shot and the medical illustration (3 seeds each). Failures: two ads ("Envio" without the accent) and two medical illustrations (a repeated "Tibia" in one; a repeated "Menisco", "Cartíllago" and an illegible label in another). Turbo got 6 of 9 on the same test images. Text was checked letter by letter, at full size, not with OCR.
+- **Infographics: we don't recommend them.** In an infographic with 7 texts, 16 of 21 right in Spanish and 21 of 21 in English, the same as Turbo, but the figures are unrelated to the text or explain nothing. See the [Turbo recipe](../Qwen-Image-2.1-Turbo/README.md#what-it-is-good-for).
 - **White patches: 0 of 18 images.**
 
 ## What it is good for
@@ -132,7 +170,7 @@ Tested prompts: product shots, portraits, ads with Spanish text, concept art, an
 
 The Turbo model did better on the same test (8 / 3 / 1); see the [Turbo recipe](../Qwen-Image-2.1-Turbo/README.md#what-it-is-good-for).
 
-In short: good for textbook-style figures of big, familiar structures. Not reliable where details must be exact (specific molecules, precise mechanical parts, spatial relations between parts). **Generate without labels and add them yourself:** when asked for labels, the model spells them well but points them at the wrong part.
+In short: good for textbook-style figures of big, familiar structures. Not reliable where details must be exact: specific molecules, precise mechanical parts or the spatial relation between parts. **Generate without labels and add them yourself:** when asked for labels, the model spells them well but points them at the wrong part.
 
 ## Resolved issues
 
@@ -149,15 +187,16 @@ Thanks to leejet for the fix and for answering our report on Hugging Face.
 
 ## Other things to know
 
-- **Keep `--vae-tiling`.** Decoding a 1 MP image in one piece needs more than 6 GB and sd.cpp falls back to tiling anyway. The default 256 px tiles are fine. Since [`19bbbca`](https://github.com/leejet/stable-diffusion.cpp/commit/19bbbca1), `--vae-tile-size` is measured in image pixels, not latent cells: if you copied `--vae-tile-size 24x24` from an older version of this page, remove it. **Never decode on the CPU without tiling:** at 1024² it used all 16 GB of RAM and the kernel killed the process.
-- **The first image after a reboot is ~1 minute slower** if the weights live on a hard disk: ~10 GB have to be read. After that they stay in the OS page cache and load in ~3 s.
-- **Don't benchmark while downloading.** Downloads to the same disk evict the cached weights; load time went from 3 s to 36 s in our tests.
+- **Keep `--vae-tiling`.** Decoding a 1 MP image in one piece needs more than 6 GB and sd.cpp falls back to tiling anyway. Since [`19bbbca`](https://github.com/leejet/stable-diffusion.cpp/commit/19bbbca1), `--vae-tile-size` is measured in image pixels, not latent cells: if you copied `--vae-tile-size 24x24` from an older version of this page, remove it. **Never decode on the CPU without tiling:** at 1024² it used all 16 GB of RAM and the kernel killed the process.
+- **The first images after a reboot or a model switch are slower** if the weights live on a hard disk: ~10 GB have to be read to fill the OS cache. In our tests the first one took about 20 s longer.
+- **Don't benchmark while downloading.** Downloads to the same disk evict the weights from the cache, and the recipe reads them from disk again.
 - **The VRAM column always shows ~5.1–5.2 GB.** sd.cpp fills whatever is free and streams the rest from RAM. It is what it uses, not what it needs; the minimum VRAM has not been measured.
 - **Output PNGs are RGBA** even for opaque images, because Qwen-Image 2.1 supports transparency.
 
 ## Reproduce the measurements
 
 ```bash
+../Qwen-Image-2.1-Turbo/scripts/final-1016.sh normal   # the current recipe: 6 prompts × 3 seeds (resumable)
 scripts/bench.sh <round> <name> <model> <steps> <prompt_id> [W H] [-- extra sd-cli args]
 scripts/fase1.sh      # speed and memory, one variable at a time (first round)
 scripts/fase1b.sh     # flash-attention combinations (first round)
@@ -165,9 +204,9 @@ scripts/fase2.sh      # 3 early recipes × 6 prompts × 3 seeds (first round, ~5
 scripts/tecnico.sh    # 12 technical subjects × 2 seeds (first round)
 ```
 
-`bench.sh` takes either the suffix of a model file or the full path to a `.gguf`. The `LLM` environment variable selects the text encoder; by default it is the Q4_K_M. The final round's script (`final.sh`) is in the [Turbo folder](../Qwen-Image-2.1-Turbo/scripts/).
+`bench.sh` takes either the suffix of a model file or the full path to a `.gguf`. The `LLM` environment variable selects the text encoder; by default it is the Q4_K_M. The scripts of the current round (`final-1016.sh`) and of the previous one (`final.sh`) are in the [Turbo folder](../Qwen-Image-2.1-Turbo/scripts/).
 
-Prompts are in [`prompts/`](prompts/). Every run appends one row to a `resultados.csv` with the time, the peak RAM and VRAM and the exact flags; the images and logs are written next to it but are not included in this repo. Data by round: [`bench/fase1/`](bench/fase1/), [`bench/fase1b/`](bench/fase1b/), [`bench/fase2/`](bench/fase2/) (with the first blind test in [`bench/fase2/ciego/`](bench/fase2/ciego/)) and [`bench/tecnico/`](bench/tecnico/). The scripts assume the model paths of the test machine; edit `D` and `SD` at the top of `bench.sh`.
+Prompts are in [`prompts/`](prompts/). Every run appends one row to a `resultados.csv` with the time, the peak RAM and VRAM and the exact flags; the images and logs are written next to it but are not included in this repo. Data by round: [`bench/final-1016/`](bench/final-1016/) (the current recipe), [`bench/fase1/`](bench/fase1/), [`bench/fase1b/`](bench/fase1b/), [`bench/fase2/`](bench/fase2/) (with the first blind test in [`bench/fase2/ciego/`](bench/fase2/ciego/)) and [`bench/tecnico/`](bench/tecnico/). The scripts assume the model paths of the test machine; edit `D` and `SD` at the top of `bench.sh`.
 
 ## Test machine
 
@@ -177,7 +216,7 @@ Prompts are in [`prompts/`](prompts/). Every run appends one row to a `resultado
 | CPU / RAM | 6 cores, 16 GB |
 | Storage | Weights on a 7200 rpm hard disk |
 | OS | Ubuntu 24.04 |
-| sd.cpp | Final round: `f89d9b1` (2026-10-09). First round: `c92d73c` (phase 2) and `c678dfe` (phase 1 and the technical test; one image compared across both was bit-identical). White-patch fix verified on `3f8527a` |
+| sd.cpp | Current recipe: `8cd731e` (2026-10-15). Previous round: `f89d9b1` (2026-10-09). First round: `c92d73c` (phase 2) and `c678dfe` (phase 1 and the technical test; one image compared across both was bit-identical). White-patch fix verified on `3f8527a` |
 
 ## License
 
