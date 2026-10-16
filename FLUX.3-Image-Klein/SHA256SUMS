@@ -1,0 +1,5 @@
+c3e9813cdd049c831c836b2e9db61150e49a93fc1a4c63b256494642fee0bd7c  model.safetensors
+868fe7b343cc8f3a19dbcfcafbc3d5f888802be3f89bd81b65b3621a066ce8f3  ae.safetensors
+054721f478bc5fa6beffb7f38eae575d45298f88cbb8d2f83ef675a727863eb1  Qwen3VL-4B-Instruct-Q8_0.gguf
+cae4ed97bc1d7021a6d8113aceba3a53aeb30e5fd67fc45819f164e4af3d444d  flux-3-image-klein-q6_K.gguf
+c3f1cb079e58fc0dab83d449376b90415f14696d6286c4f46202d6c36d58b4d6  flux-3-image-klein-q5_K.gguf

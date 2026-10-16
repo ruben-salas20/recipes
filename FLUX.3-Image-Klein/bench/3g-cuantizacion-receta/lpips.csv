@@ -1,0 +1,13 @@
+imagen,referencia,lpips
+3g/anuncio_q5_K_receta_s42.png,3e/anuncio_q6_K_easycache_s42.png,0.0810
+3g/anuncio_q4_K_receta_s42.png,3e/anuncio_q6_K_easycache_s42.png,0.0918
+3g/anuncio_q5_K_receta_s7.png,3e/anuncio_q6_K_easycache_s7.png,0.0259
+3g/anuncio_q4_K_receta_s7.png,3e/anuncio_q6_K_easycache_s7.png,0.0625
+3g/producto_q5_K_receta_s42.png,3e/producto_q6_K_easycache_s42.png,0.0244
+3g/producto_q4_K_receta_s42.png,3e/producto_q6_K_easycache_s42.png,0.0344
+3g/producto_q5_K_receta_s7.png,3e/producto_q6_K_easycache_s7.png,0.0224
+3g/producto_q4_K_receta_s7.png,3e/producto_q6_K_easycache_s7.png,0.1080
+3g/retrato_q5_K_receta_s42.png,3e/retrato_q6_K_easycache_s42.png,0.0424
+3g/retrato_q4_K_receta_s42.png,3e/retrato_q6_K_easycache_s42.png,0.1797
+3g/retrato_q5_K_receta_s7.png,3e/retrato_q6_K_easycache_s7.png,0.0420
+3g/retrato_q4_K_receta_s7.png,3e/retrato_q6_K_easycache_s7.png,0.0728

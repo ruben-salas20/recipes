@@ -1,0 +1,4 @@
+id,tipo,semilla,ancho,alto,exit,total_s,codificador_s,muestreo_s,vae_s,vram_pico_mib,ram_pico_kb
+infografia,q6_K_receta,42,768,1344,0,46.1,4.35,33.63,6.22,4903,4929612
+infografia,q6_K_receta,7,768,1344,0,40.0,6.55,24.45,7.04,4903,4929984
+infografia,q6_K_receta,123,768,1344,0,35.8,3.14,24.45,6.27,4903,4944396

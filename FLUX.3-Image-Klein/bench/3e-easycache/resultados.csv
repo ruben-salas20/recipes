@@ -1,0 +1,7 @@
+id,tipo,semilla,ancho,alto,exit,total_s,codificador_s,muestreo_s,vae_s,vram_pico_mib,ram_pico_kb
+producto,q6_K_easycache,42,1024,1024,0,50.0,1.14,40.17,6.78,4917,4934024
+retrato,q6_K_easycache,42,768,1344,0,48.6,1.14,39.29,6.28,4903,4933208
+anuncio,q6_K_easycache,42,768,1344,0,48.7,1.14,39.38,6.28,4903,4933136
+producto,q6_K_easycache,7,1024,1024,0,50.3,1.14,40.45,6.81,4917,4937840
+retrato,q6_K_easycache,7,768,1344,0,48.8,1.14,39.48,6.29,4903,4933168
+anuncio,q6_K_easycache,7,768,1344,0,48.8,1.14,39.49,6.28,4903,4933188

@@ -1,0 +1,7 @@
+imagen,referencia,lpips
+3a/anuncio_q6_K_s42.png,3b/anuncio_q6_K_te8_s42.png,0.0431
+3a/anuncio_q6_K_s7.png,3b/anuncio_q6_K_te8_s7.png,0.0296
+3a/producto_q6_K_s42.png,3b/producto_q6_K_te8_s42.png,0.0587
+3a/producto_q6_K_s7.png,3b/producto_q6_K_te8_s7.png,0.0083
+3a/retrato_q6_K_s42.png,3b/retrato_q6_K_te8_s42.png,0.0215
+3a/retrato_q6_K_s7.png,3b/retrato_q6_K_te8_s7.png,0.0424

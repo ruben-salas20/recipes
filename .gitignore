@@ -38,6 +38,19 @@
 !Qwen-Image-2.1-Turbo/bench/final/ciego/votos.json
 !Qwen-Image-2.1-Turbo/bench/final/ciego/clave.json
 
+!FLUX.3-Image-Klein/README.md
+!FLUX.3-Image-Klein/README.es.md
+!FLUX.3-Image-Klein/SHA256SUMS
+!FLUX.3-Image-Klein/assets/*.webp
+!FLUX.3-Image-Klein/prompts/*.tsv
+!FLUX.3-Image-Klein/scripts/*.sh
+!FLUX.3-Image-Klein/scripts/*.py
+!FLUX.3-Image-Klein/bench/**/resultados.csv
+!FLUX.3-Image-Klein/bench/**/lpips.csv
+!FLUX.3-Image-Klein/bench/1-humo/conversion/convertir.csv
+!FLUX.3-Image-Klein/bench/4-cata/ciego/votos.json
+!FLUX.3-Image-Klein/bench/4-cata/ciego/clave.json
+
 !LFM2.5-24B-A2B/README.md
 !LFM2.5-24B-A2B/README.es.md
 !LFM2.5-24B-A2B/SHA256SUMS

@@ -1,0 +1,13 @@
+imagen,referencia,lpips
+3c/anuncio_q6_K_p12_s42.png,3b/anuncio_q6_K_te8disco_s42.png,0.1449
+3c/anuncio_q6_K_p8_s42.png,3b/anuncio_q6_K_te8disco_s42.png,0.3346
+3c/anuncio_q6_K_p12_s7.png,3b/anuncio_q6_K_te8disco_s7.png,0.0439
+3c/anuncio_q6_K_p8_s7.png,3b/anuncio_q6_K_te8disco_s7.png,0.0806
+3c/producto_q6_K_p12_s42.png,3b/producto_q6_K_te8disco_s42.png,0.0325
+3c/producto_q6_K_p8_s42.png,3b/producto_q6_K_te8disco_s42.png,0.0780
+3c/producto_q6_K_p12_s7.png,3b/producto_q6_K_te8disco_s7.png,0.0160
+3c/producto_q6_K_p8_s7.png,3b/producto_q6_K_te8disco_s7.png,0.0519
+3c/retrato_q6_K_p12_s42.png,3b/retrato_q6_K_te8disco_s42.png,0.0340
+3c/retrato_q6_K_p8_s42.png,3b/retrato_q6_K_te8disco_s42.png,0.1626
+3c/retrato_q6_K_p12_s7.png,3b/retrato_q6_K_te8disco_s7.png,0.0468
+3c/retrato_q6_K_p8_s7.png,3b/retrato_q6_K_te8disco_s7.png,0.0921

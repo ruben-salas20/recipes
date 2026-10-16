@@ -1,0 +1,92 @@
+{
+ "producto_s42": {
+  "A": "q5_K_receta",
+  "B": "q6_K_receta_p8",
+  "C": "q6_K_receta"
+ },
+ "producto_s7": {
+  "A": "q6_K_receta",
+  "B": "q6_K_receta_p8",
+  "C": "q5_K_receta"
+ },
+ "producto_s123": {
+  "A": "q5_K_receta",
+  "B": "q6_K_receta_p8",
+  "C": "q6_K_receta"
+ },
+ "retrato_s42": {
+  "A": "q5_K_receta",
+  "B": "q6_K_receta_p8",
+  "C": "q6_K_receta"
+ },
+ "retrato_s7": {
+  "A": "q6_K_receta",
+  "B": "q5_K_receta",
+  "C": "q6_K_receta_p8"
+ },
+ "retrato_s123": {
+  "A": "q6_K_receta",
+  "B": "q6_K_receta_p8",
+  "C": "q5_K_receta"
+ },
+ "medico_s42": {
+  "A": "q6_K_receta_p8",
+  "B": "q5_K_receta",
+  "C": "q6_K_receta"
+ },
+ "medico_s7": {
+  "A": "q5_K_receta",
+  "B": "q6_K_receta",
+  "C": "q6_K_receta_p8"
+ },
+ "medico_s123": {
+  "A": "q5_K_receta",
+  "B": "q6_K_receta_p8",
+  "C": "q6_K_receta"
+ },
+ "anuncio_s42": {
+  "A": "q6_K_receta_p8",
+  "B": "q5_K_receta",
+  "C": "q6_K_receta"
+ },
+ "anuncio_s7": {
+  "A": "q6_K_receta_p8",
+  "B": "q5_K_receta",
+  "C": "q6_K_receta"
+ },
+ "anuncio_s123": {
+  "A": "q5_K_receta",
+  "B": "q6_K_receta",
+  "C": "q6_K_receta_p8"
+ },
+ "ciudad_s42": {
+  "A": "q6_K_receta",
+  "B": "q6_K_receta_p8",
+  "C": "q5_K_receta"
+ },
+ "ciudad_s7": {
+  "A": "q5_K_receta",
+  "B": "q6_K_receta_p8",
+  "C": "q6_K_receta"
+ },
+ "ciudad_s123": {
+  "A": "q5_K_receta",
+  "B": "q6_K_receta_p8",
+  "C": "q6_K_receta"
+ },
+ "anime_s42": {
+  "A": "q6_K_receta",
+  "B": "q5_K_receta",
+  "C": "q6_K_receta_p8"
+ },
+ "anime_s7": {
+  "A": "q6_K_receta_p8",
+  "B": "q6_K_receta",
+  "C": "q5_K_receta"
+ },
+ "anime_s123": {
+  "A": "q6_K_receta_p8",
+  "B": "q5_K_receta",
+  "C": "q6_K_receta"
+ }
+}

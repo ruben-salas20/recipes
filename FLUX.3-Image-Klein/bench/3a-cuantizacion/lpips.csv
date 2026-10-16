@@ -1,0 +1,13 @@
+imagen,referencia,lpips
+anuncio_q5_K_s42.png,anuncio_q6_K_s42.png,0.0510
+anuncio_q4_K_s42.png,anuncio_q6_K_s42.png,0.0900
+anuncio_q5_K_s7.png,anuncio_q6_K_s7.png,0.0322
+anuncio_q4_K_s7.png,anuncio_q6_K_s7.png,0.0640
+producto_q5_K_s42.png,producto_q6_K_s42.png,0.0358
+producto_q4_K_s42.png,producto_q6_K_s42.png,0.0554
+producto_q5_K_s7.png,producto_q6_K_s7.png,0.0242
+producto_q4_K_s7.png,producto_q6_K_s7.png,0.1231
+retrato_q5_K_s42.png,retrato_q6_K_s42.png,0.0337
+retrato_q4_K_s42.png,retrato_q6_K_s42.png,0.1688
+retrato_q5_K_s7.png,retrato_q6_K_s7.png,0.0550
+retrato_q4_K_s7.png,retrato_q6_K_s7.png,0.0811

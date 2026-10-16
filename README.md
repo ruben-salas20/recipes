@@ -10,6 +10,7 @@ Measured recipes for running open models on modest local hardware. Each folder i
 |---|---|---|
 | Qwen-Image 2.1 (text-to-image) | RTX 3050 6 GB · 16 GB RAM | [English](Qwen-Image-2.1/README.md) · [Español](Qwen-Image-2.1/README.es.md) |
 | Qwen-Image 2.1 Turbo (text-to-image, 8 steps) | RTX 3050 6 GB · 16 GB RAM | [English](Qwen-Image-2.1-Turbo/README.md) · [Español](Qwen-Image-2.1-Turbo/README.es.md) |
+| FLUX.3 Image Klein (text-to-image, 8 steps) | RTX 3050 6 GB · 16 GB RAM | [English](FLUX.3-Image-Klein/README.md) · [Español](FLUX.3-Image-Klein/README.es.md) |
 
 ## Text models · *Modelos de texto*
 
