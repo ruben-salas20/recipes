@@ -18,6 +18,7 @@ body:
         - LFM2.5-24B-A2B
         - MiniCPM5-2B
         - LFM2.5-2.6B
+        - LFM3-1.7B
         - Qwen-Image 2.1
         - Qwen-Image 2.1 Turbo
     validations:

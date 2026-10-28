@@ -1,0 +1,1999 @@
+{
+  "modelo": "lfm3-q4km",
+  "base_url": "http://127.0.0.1:8090/v1",
+  "fecha": "2026-10-28T01:04:28",
+  "parametros": {
+    "temperature": 0.1,
+    "max_tokens": 8192,
+    "top_k": 50,
+    "repeat_penalty": 1.1
+  },
+  "prompt_sistema": {
+    "es": "Eres un asistente que resume textos con fidelidad. Usa solo la información del texto: no añadas datos, nombres ni cifras que no aparezcan en él. Responde solo con el resumen, sin título, introducción ni comentarios.",
+    "en": "You summarize texts faithfully. Use only information from the text: do not add facts, names or figures that do not appear in it. Reply with the summary only, without a title, introduction or comments."
+  },
+  "resumen": {
+    "items": 18,
+    "aprobados": 10,
+    "longitud_ok": 16,
+    "formato_ok": 18,
+    "idioma_ok": 18,
+    "sin_sospechosos": 12,
+    "sospechosos_total": 15,
+    "principales_ok": 17,
+    "hechos_presentes": 106,
+    "hechos_total": 126,
+    "cobertura_media": 0.845,
+    "errores": 0,
+    "tiempo_total_s": 598.5,
+    "tokens_s_medio": 100.86
+  },
+  "items": [
+    {
+      "id": "01_es_noticia_planta",
+      "titulo": "Recorte de empleo en una planta de baterías",
+      "tipo": "noticia",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume la siguiente noticia en exactamente 3 frases.",
+      "limites": {
+        "frases": [
+          3,
+          3
+        ]
+      },
+      "resumen": "La empresa Electrocel Ibérica anunció el 14 de mayo que recortará 340 empleos de su planta de baterías en Valdecierzo después de que el fabricante alemán Kressler Motoren cancelara el contrato que representaba casi el 60 % de la producción, de los mil ciento cincuenta puestos disponibles. Los despidos se distribuirán en dos fases—190 antes de septiembre y 150 durante el primer trimestre de 2027—y la planta seguirá produciendo módulos para almacenamiento estacionario, línea que creció un 22 % el año pasado, mientras intenta encontrar clientes alternativos durante cuatro meses; según su directora general Marta Oliván, solo se han cerrado acuerdos con dos fabricantes de autobuses cuya demanda no compensa ni la mitad del volumen perdido. El comité de empresa convocó una asamblea para el jueves y no descarta una huelga indefinida a partir del 2 de junio, mientras el Gobierno autonómico pide un plan detallado antes de 30 días y cuestiona si la ayuda pública de 48 millones de euros concedida en 2023 para mantener los empleos durante cinco años se respeta; el alcalde señala que cada puesto directo depende de otros dos en talleres, transporte y comercios.",
+      "contenido": "La empresa Electrocel Ibérica anunció el 14 de mayo que recortará 340 empleos de su planta de baterías en Valdecierzo después de que el fabricante alemán Kressler Motoren cancelara el contrato que representaba casi el 60 % de la producción, de los mil ciento cincuenta puestos disponibles. Los despidos se distribuirán en dos fases—190 antes de septiembre y 150 durante el primer trimestre de 2027—y la planta seguirá produciendo módulos para almacenamiento estacionario, línea que creció un 22 % el año pasado, mientras intenta encontrar clientes alternativos durante cuatro meses; según su directora general Marta Oliván, solo se han cerrado acuerdos con dos fabricantes de autobuses cuya demanda no compensa ni la mitad del volumen perdido. El comité de empresa convocó una asamblea para el jueves y no descarta una huelga indefinida a partir del 2 de junio, mientras el Gobierno autonómico pide un plan detallado antes de 30 días y cuestiona si la ayuda pública de 48 millones de euros concedida en 2023 para mantener los empleos durante cinco años se respeta; el alcalde señala que cada puesto directo depende de otros dos en talleres, transporte y comercios.",
+      "finish_reason": "stop",
+      "tokens_prompt": 711,
+      "tokens_total": 4025,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 16399,
+      "segundos_generacion": 40.29,
+      "tokens_s": 100.47,
+      "usage": {
+        "completion_tokens": 4025,
+        "prompt_tokens": 711,
+        "total_tokens": 4736,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 711,
+        "prompt_ms": 180.657,
+        "prompt_per_token_ms": 0.25408860759493673,
+        "prompt_per_second": 3935.634932496388,
+        "predicted_n": 4025,
+        "predicted_ms": 40050.439,
+        "predicted_per_token_ms": 9.952892395626241,
+        "predicted_per_second": 100.47330567337852
+      },
+      "comprobaciones": {
+        "palabras": 187,
+        "frases": 3,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 78,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 8,
+            "principal": false,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 8,
+        "cobertura": 0.875,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null
+    },
+    {
+      "id": "02_es_acta_vecinos",
+      "titulo": "Junta de una comunidad de vecinos",
+      "tipo": "acta",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume el acta en una lista de entre 4 y 6 viñetas, de una línea cada una y con 120 palabras como máximo en total. Usa un guion al principio de cada viñeta.",
+      "limites": {
+        "vinetas": [
+          4,
+          6
+        ],
+        "max_palabras": 120
+      },
+      "resumen": "- Se aprobaron las cuentas de 2025‑2026 con gasto 38.400 euros vs 35.000; la diferencia por reparación del bajante (2.900 €) se aceptó.  \n- Se eligió el ascensor de Ascensores Turia con 54.500 euros, 14 votos a favor, 2 en contra; pago por 18 meses desde enero.  \n- Se acuerda encargar medición de ruido para el bar del bajo después de las 23:00, presupuesto 600 euros y denunciar si supera límites.  \n- La propietaria del 5.º A propone placas solares; no hay acuerdo, se pedirán dos estudios técnicos sin costo y se elige Javier Soler del 2.º C como nuevo presidente.  \n- Se pide revisar iluminación del garaje que falla desde agosto; el administrador avisará al electricista esta semana.",
+      "contenido": "- Se aprobaron las cuentas de 2025‑2026 con gasto 38.400 euros vs 35.000; la diferencia por reparación del bajante (2.900 €) se aceptó.  \n- Se eligió el ascensor de Ascensores Turia con 54.500 euros, 14 votos a favor, 2 en contra; pago por 18 meses desde enero.  \n- Se acuerda encargar medición de ruido para el bar del bajo después de las 23:00, presupuesto 600 euros y denunciar si supera límites.  \n- La propietaria del 5.º A propone placas solares; no hay acuerdo, se pedirán dos estudios técnicos sin costo y se elige Javier Soler del 2.º C como nuevo presidente.  \n- Se pide revisar iluminación del garaje que falla desde agosto; el administrador avisará al electricista esta semana.",
+      "finish_reason": "stop",
+      "tokens_prompt": 734,
+      "tokens_total": 6745,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 21610,
+      "segundos_generacion": 67.9,
+      "tokens_s": 99.66,
+      "usage": {
+        "completion_tokens": 6745,
+        "prompt_tokens": 734,
+        "total_tokens": 7479,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 734,
+        "prompt_ms": 182.895,
+        "prompt_per_token_ms": 0.2491757493188011,
+        "prompt_per_second": 4013.2316356379342,
+        "predicted_n": 6745,
+        "predicted_ms": 67667.364,
+        "predicted_per_token_ms": 10.033713523131674,
+        "predicted_per_second": 99.66399755131587
+      },
+      "comprobaciones": {
+        "palabras": 113,
+        "frases": 5,
+        "vinetas": 5,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 43,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 7,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null
+    },
+    {
+      "id": "03_es_informe_incidente",
+      "titulo": "Informe de una caída del servicio de pagos",
+      "tipo": "informe técnico",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume el siguiente informe en menos de 100 palabras.",
+      "limites": {
+        "max_palabras": 99
+      },
+      "resumen": "Pagalia perdió el 38% de pagos con tarjeta (10:42‑12:19) por error de tiempo agotado; caída de 97 min afectó a 2.300 comercios. La causa fue una actualización de dbpool que redujo el grupo de conexiones de 200 a 20 sin avisar. Se revertió a v4.17.2 y la tasa de errores volvió a normal. El fallo provino del valor por defecto sin configurar. Acciones: fijar tamaño explícito (Arenal), añadir alerta de uso del grupo (Valcárcel), exigir resumen en actualizaciones (Ledesma), despliegues graduales y pruebas ≥300 peticiones (Plataforma/Calidad). El incidente no fue código propio.",
+      "contenido": "Pagalia perdió el 38% de pagos con tarjeta (10:42‑12:19) por error de tiempo agotado; caída de 97 min afectó a 2.300 comercios. La causa fue una actualización de dbpool que redujo el grupo de conexiones de 200 a 20 sin avisar. Se revertió a v4.17.2 y la tasa de errores volvió a normal. El fallo provino del valor por defecto sin configurar. Acciones: fijar tamaño explícito (Arenal), añadir alerta de uso del grupo (Valcárcel), exigir resumen en actualizaciones (Ledesma), despliegues graduales y pruebas ≥300 peticiones (Plataforma/Calidad). El incidente no fue código propio.",
+      "finish_reason": "stop",
+      "tokens_prompt": 1416,
+      "tokens_total": 7316,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 23195,
+      "segundos_generacion": 74.47,
+      "tokens_s": 98.76,
+      "usage": {
+        "completion_tokens": 7316,
+        "prompt_tokens": 1416,
+        "total_tokens": 8732,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 1416,
+        "prompt_ms": 332.4,
+        "prompt_per_token_ms": 0.2347457627118644,
+        "prompt_per_second": 4259.927797833936,
+        "predicted_n": 7316,
+        "predicted_ms": 74071.35,
+        "predicted_per_token_ms": 10.125953520164048,
+        "predicted_per_second": 98.75613175674535
+      },
+      "comprobaciones": {
+        "palabras": 92,
+        "frases": 6,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 30,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 8,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 5,
+        "hechos_total": 8,
+        "cobertura": 0.625,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null
+    },
+    {
+      "id": "04_es_correos_congreso",
+      "titulo": "Cambio de fechas de unas jornadas científicas",
+      "tipo": "hilo de correos",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume este hilo de correos en exactamente 3 frases.",
+      "limites": {
+        "frases": [
+          3,
+          3
+        ]
+      },
+      "resumen": "La Facultad de Ciencias de Granada indica que el auditorio no estará disponible del 19 al 23 de octubre, coincidiendo con las Jornadas del 21 y 22, ofreciendo dos opciones: trasladarse al salón de actos del edificio Mecenas (180 plazas) o mantener el auditorio y posponer las Jornadas al 11 y 12 de noviembre. Carmen Villalba confirma que el hotel Alhambra Centro mantiene la tarifa grupal de 89 euros por noche para el 11, 12 y 13 de noviembre si se confirma el cambio antes del 20 de septiembre, aunque ya hay aproximadamente 60 personas con entradas. Nuria propone cambiar a las fechas del 12 y 13 de noviembre para evitar el congreso de Lisboa (9 al 11) y asegurar que el auditorio esté libre el día 13, pidiendo confirmación de Carmen sobre las nuevas noches en el hotel y de Raúl sobre avisar los 12 ponentes antes del jueves.",
+      "contenido": "La Facultad de Ciencias de Granada indica que el auditorio no estará disponible del 19 al 23 de octubre, coincidiendo con las Jornadas del 21 y 22, ofreciendo dos opciones: trasladarse al salón de actos del edificio Mecenas (180 plazas) o mantener el auditorio y posponer las Jornadas al 11 y 12 de noviembre. Carmen Villalba confirma que el hotel Alhambra Centro mantiene la tarifa grupal de 89 euros por noche para el 11, 12 y 13 de noviembre si se confirma el cambio antes del 20 de septiembre, aunque ya hay aproximadamente 60 personas con entradas. Nuria propone cambiar a las fechas del 12 y 13 de noviembre para evitar el congreso de Lisboa (9 al 11) y asegurar que el auditorio esté libre el día 13, pidiendo confirmación de Carmen sobre las nuevas noches en el hotel y de Raúl sobre avisar los 12 ponentes antes del jueves.",
+      "finish_reason": "stop",
+      "tokens_prompt": 819,
+      "tokens_total": 2151,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 7709,
+      "segundos_generacion": 21.49,
+      "tokens_s": 101.37,
+      "usage": {
+        "completion_tokens": 2151,
+        "prompt_tokens": 819,
+        "total_tokens": 2970,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 819,
+        "prompt_ms": 202.336,
+        "prompt_per_token_ms": 0.24705250305250306,
+        "prompt_per_second": 4047.7226000316305,
+        "predicted_n": 2151,
+        "predicted_ms": 21210.068,
+        "predicted_per_token_ms": 9.865147906976745,
+        "predicted_per_second": 101.36695459910831
+      },
+      "comprobaciones": {
+        "palabras": 150,
+        "frases": 3,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 63,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 6,
+        "hechos_total": 7,
+        "cobertura": 0.857,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null
+    },
+    {
+      "id": "05_es_divulgacion_pan",
+      "titulo": "Por qué el pan se pone duro",
+      "tipo": "artículo divulgativo",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume el siguiente artículo en menos de 80 palabras.",
+      "limites": {
+        "max_palabras": 79
+      },
+      "resumen": "El pan duro se debe a la retrogradación del almidón: al enfriarse, las cadenas de almidón se reorganizan y atrapan agua, volviéndose rígida aunque siga humedad. El frigorífico acelera; el congelador lo frena. Se puede ablandar recalentando a más de 60 grados. Panaderos usan más agua, fermentación larga, grasa o enzimas para retrasarla.",
+      "contenido": "El pan duro se debe a la retrogradación del almidón: al enfriarse, las cadenas de almidón se reorganizan y atrapan agua, volviéndose rígida aunque siga humedad. El frigorífico acelera; el congelador lo frena. Se puede ablandar recalentando a más de 60 grados. Panaderos usan más agua, fermentación larga, grasa o enzimas para retrasarla.",
+      "finish_reason": "stop",
+      "tokens_prompt": 722,
+      "tokens_total": 1647,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 5018,
+      "segundos_generacion": 16.41,
+      "tokens_s": 101.34,
+      "usage": {
+        "completion_tokens": 1647,
+        "prompt_tokens": 722,
+        "total_tokens": 2369,
+        "prompt_tokens_details": {
+          "cached_tokens": 206
+        }
+      },
+      "timings": {
+        "cache_n": 206,
+        "prompt_n": 516,
+        "prompt_ms": 127.265,
+        "prompt_per_token_ms": 0.24663759689922482,
+        "prompt_per_second": 4054.5318822928534,
+        "predicted_n": 1647,
+        "predicted_ms": 16242.173,
+        "predicted_per_token_ms": 9.867662818955043,
+        "predicted_per_second": 101.34111981198575
+      },
+      "comprobaciones": {
+        "palabras": 53,
+        "frases": 4,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 19,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 4,
+        "hechos_total": 6,
+        "cobertura": 0.667,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null
+    },
+    {
+      "id": "06_es_noticia_festival",
+      "titulo": "Palmarés de un festival de cine",
+      "tipo": "noticia",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume la siguiente noticia en exactamente 2 frases.",
+      "limites": {
+        "frases": [
+          2,
+          2
+        ]
+      },
+      "resumen": "La película 'Las horas del faro' de la directora gallega Iria Castiñeira ganó la Gaviota de Oro en el Festival de Cine de Montesur, cerrando con 64.000 espectadores y premia a su debutante, destacando la madurez de una mirada que parece tener diez películas detrás. El director Bernardo Lozano atribuyó el aumento de público a la nueva sección al aire libre en la playa de Levante, con proyecciones gratuitas que reunieron a unas 15.000 personas en nueve noches y a la participación femenina en ocho de las dieciséis películas, aunque tuvo que suspender dos proyecciones por viento y promete accesibilidad total para la próxima edición.",
+      "contenido": "La película 'Las horas del faro' de la directora gallega Iria Castiñeira ganó la Gaviota de Oro en el Festival de Cine de Montesur, cerrando con 64.000 espectadores y premia a su debutante, destacando la madurez de una mirada que parece tener diez películas detrás. El director Bernardo Lozano atribuyó el aumento de público a la nueva sección al aire libre en la playa de Levante, con proyecciones gratuitas que reunieron a unas 15.000 personas en nueve noches y a la participación femenina en ocho de las dieciséis películas, aunque tuvo que suspender dos proyecciones por viento y promete accesibilidad total para la próxima edición.",
+      "finish_reason": "stop",
+      "tokens_prompt": 566,
+      "tokens_total": 3443,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 13213,
+      "segundos_generacion": 34.29,
+      "tokens_s": 100.91,
+      "usage": {
+        "completion_tokens": 3443,
+        "prompt_tokens": 566,
+        "total_tokens": 4009,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 566,
+        "prompt_ms": 154.203,
+        "prompt_per_token_ms": 0.2724434628975265,
+        "prompt_per_second": 3670.486307010888,
+        "predicted_n": 3443,
+        "predicted_ms": 34108.095,
+        "predicted_per_token_ms": 9.909382626380012,
+        "predicted_per_second": 100.91446033558896
+      },
+      "comprobaciones": {
+        "palabras": 105,
+        "frases": 2,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 42,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 4,
+        "hechos_total": 7,
+        "cobertura": 0.571,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null
+    },
+    {
+      "id": "07_es_informe_cooperativa",
+      "titulo": "Informe trimestral de una cooperativa de aceite",
+      "tipo": "informe",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume el siguiente informe en 5 viñetas como máximo. Usa un guion al principio de cada viñeta y no escribas nada más.",
+      "limites": {
+        "vinetas": [
+          3,
+          5
+        ]
+      },
+      "resumen": "- La cosecha 2025-2026 entregó 18,4 millones de kg a 1,320 socios; rendimiento graso 21,8% y 4,01 millones de litros de aceite (62% virgen extra).  \n- Ventas de 1,3 millones de litros vendieron virgen extra a 5,40 €/litro (bajado de 6,90) y la embotellada \"Almedina Oro\" creció 31%, representando 14% de facturación.  \n- Facturación del trimestre fue 8,2 millones € (18% menos que el año anterior), resultado neto 410.000 €; liquidación 0,92 €/kg en dos plazos: diciembre y marzo.  \n- Inversión de 1,1 millones € para nueva línea de empaque instalada en noviembre, triplica capacidad de embotellado, financiada 40% con ayuda europea.  \n- Riesgos: lluvias de septiembre 30% inferiores a la media; dos compradores retrasaron pagos >60 días (deuda pendiente 640.000 €); contrato Grupo Merca vence en enero sin renovar; propuestas: campaña alemana 150.000 €, pago anticipado y tienda online antes de Navidad.",
+      "contenido": "- La cosecha 2025-2026 entregó 18,4 millones de kg a 1,320 socios; rendimiento graso 21,8% y 4,01 millones de litros de aceite (62% virgen extra).  \n- Ventas de 1,3 millones de litros vendieron virgen extra a 5,40 €/litro (bajado de 6,90) y la embotellada \"Almedina Oro\" creció 31%, representando 14% de facturación.  \n- Facturación del trimestre fue 8,2 millones € (18% menos que el año anterior), resultado neto 410.000 €; liquidación 0,92 €/kg en dos plazos: diciembre y marzo.  \n- Inversión de 1,1 millones € para nueva línea de empaque instalada en noviembre, triplica capacidad de embotellado, financiada 40% con ayuda europea.  \n- Riesgos: lluvias de septiembre 30% inferiores a la media; dos compradores retrasaron pagos >60 días (deuda pendiente 640.000 €); contrato Grupo Merca vence en enero sin renovar; propuestas: campaña alemana 150.000 €, pago anticipado y tienda online antes de Navidad.",
+      "finish_reason": "stop",
+      "tokens_prompt": 721,
+      "tokens_total": 2825,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 8915,
+      "segundos_generacion": 28.13,
+      "tokens_s": 101.21,
+      "usage": {
+        "completion_tokens": 2825,
+        "prompt_tokens": 721,
+        "total_tokens": 3546,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 721,
+        "prompt_ms": 182.569,
+        "prompt_per_token_ms": 0.2532163661581137,
+        "prompt_per_second": 3949.1918124106505,
+        "predicted_n": 2825,
+        "predicted_ms": 27901.743,
+        "predicted_per_token_ms": 9.880220609065155,
+        "predicted_per_second": 101.21231494390872
+      },
+      "comprobaciones": {
+        "palabras": 133,
+        "frases": 5,
+        "vinetas": 5,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 32,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 7,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null
+    },
+    {
+      "id": "08_es_acta_consejo_escolar",
+      "titulo": "Consejo escolar de un colegio",
+      "tipo": "acta",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume el acta en menos de 120 palabras.",
+      "limites": {
+        "max_palabras": 119
+      },
+      "resumen": "En la sesión del 10/02/2026: el comedor del CEIP aumentará su menú de 4,60 a 5,10 € en marzo; se acuerda pedir escrito al proveedor para respetar contrato hasta septiembre. El Ayuntamiento aprueba reforma del patio infantil (85.000 €, julio-sep) con suelo de caucho y sombra; se mantendrá zona de tierra para huerto según arquitecto. La jornada continua (9:00-14:00) no pasa porque solo 58% de las 298 familias votaron a favor (212), menos que el 55% requerido del censo (123 votos = 41%). El absentismo bajó al 3,5%. Se pide mayor vigilancia a la salida de 14:00 y presencia policial en marzo.",
+      "contenido": "En la sesión del 10/02/2026: el comedor del CEIP aumentará su menú de 4,60 a 5,10 € en marzo; se acuerda pedir escrito al proveedor para respetar contrato hasta septiembre. El Ayuntamiento aprueba reforma del patio infantil (85.000 €, julio-sep) con suelo de caucho y sombra; se mantendrá zona de tierra para huerto según arquitecto. La jornada continua (9:00-14:00) no pasa porque solo 58% de las 298 familias votaron a favor (212), menos que el 55% requerido del censo (123 votos = 41%). El absentismo bajó al 3,5%. Se pide mayor vigilancia a la salida de 14:00 y presencia policial en marzo.",
+      "finish_reason": "stop",
+      "tokens_prompt": 696,
+      "tokens_total": 1684,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 5225,
+      "segundos_generacion": 16.83,
+      "tokens_s": 101.27,
+      "usage": {
+        "completion_tokens": 1684,
+        "prompt_tokens": 696,
+        "total_tokens": 2380,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 696,
+        "prompt_ms": 174.329,
+        "prompt_per_token_ms": 0.2504727011494253,
+        "prompt_per_second": 3992.451055188752,
+        "predicted_n": 1684,
+        "predicted_ms": 16619.5,
+        "predicted_per_token_ms": 9.874925727866904,
+        "predicted_per_second": 101.26658443394807
+      },
+      "comprobaciones": {
+        "palabras": 99,
+        "frases": 5,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 36,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [
+            "02"
+          ],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 1,
+        "fiel_ok": false,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 6,
+        "hechos_total": 6,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": null
+    },
+    {
+      "id": "09_es_noticia_salud_a_en",
+      "titulo": "Apertura de un centro de salud con retraso (resumen en inglés)",
+      "tipo": "noticia",
+      "idioma_texto": "es",
+      "idioma_resumen": "en",
+      "instruccion": "Summarize the following Spanish news article in English, in fewer than 80 words.",
+      "limites": {
+        "max_palabras": 79
+      },
+      "resumen": "Arroyo Blanco health center opens Jan 12 2027, two years late after the first builder collapsed; cost €7.8 million versus €5.9 million budget, serving about 22,000 in a 2,400 m² building with family medicine, pediatrics, physiotherapy and extraction room. It will have forty‑six staff (31 already hired). Neighbors demand full staff and evening/24‑hour emergency care; El Carmen center will extend hours from March.",
+      "contenido": "Arroyo Blanco health center opens Jan 12 2027, two years late after the first builder collapsed; cost €7.8 million versus €5.9 million budget, serving about 22,000 in a 2,400 m² building with family medicine, pediatrics, physiotherapy and extraction room. It will have forty‑six staff (31 already hired). Neighbors demand full staff and evening/24‑hour emergency care; El Carmen center will extend hours from March.",
+      "finish_reason": "stop",
+      "tokens_prompt": 617,
+      "tokens_total": 1969,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 6419,
+      "segundos_generacion": 19.55,
+      "tokens_s": 101.69,
+      "usage": {
+        "completion_tokens": 1969,
+        "prompt_tokens": 617,
+        "total_tokens": 2586,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 617,
+        "prompt_ms": 161.645,
+        "prompt_per_token_ms": 0.2619854132901135,
+        "prompt_per_second": 3817.0064029199784,
+        "predicted_n": 1969,
+        "predicted_ms": 19353.348,
+        "predicted_per_token_ms": 9.834018292682927,
+        "predicted_per_second": 101.68783199682038
+      },
+      "comprobaciones": {
+        "palabras": 63,
+        "frases": 3,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "en",
+        "idioma_marcas": {
+          "marcas_es": 1,
+          "marcas_en": 13
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": [
+            "Jan"
+          ]
+        },
+        "n_sospechosos": 1,
+        "fiel_ok": false,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 7,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": null
+    },
+    {
+      "id": "10_en_noticia_carril_bici",
+      "titulo": "A city approves protected bike lanes",
+      "tipo": "noticia",
+      "idioma_texto": "en",
+      "idioma_resumen": "en",
+      "instruccion": "Summarize the following news article in exactly 3 sentences.",
+      "limites": {
+        "frases": [
+          3,
+          3
+        ]
+      },
+      "resumen": "The Harborview city council voted 7–4 to approve building 28 km of protected bike lanes over the next three years at an estimated cost of $46 million, linking the waterfront, university district, and suburbs Eastgate and Millbrook. The plan removes about 1,150 on‑street parking spaces along Commerce Avenue—a move supported by five cyclists who have died since 2022 but opposed by merchants who warned of up to a 20% loss in walk‑in customers and asked for a delay. To address concerns the final proposal adds a new 400‑space garage before the Commerce Avenue lanes, a $2 million compensation fund for businesses, and allows construction to pause if affected street revenue falls more than 15%, with work beginning in September on the waterfront section.",
+      "contenido": "The Harborview city council voted 7–4 to approve building 28 km of protected bike lanes over the next three years at an estimated cost of $46 million, linking the waterfront, university district, and suburbs Eastgate and Millbrook. The plan removes about 1,150 on‑street parking spaces along Commerce Avenue—a move supported by five cyclists who have died since 2022 but opposed by merchants who warned of up to a 20% loss in walk‑in customers and asked for a delay. To address concerns the final proposal adds a new 400‑space garage before the Commerce Avenue lanes, a $2 million compensation fund for businesses, and allows construction to pause if affected street revenue falls more than 15%, with work beginning in September on the waterfront section.",
+      "finish_reason": "stop",
+      "tokens_prompt": 520,
+      "tokens_total": 1759,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 7105,
+      "segundos_generacion": 17.44,
+      "tokens_s": 101.7,
+      "usage": {
+        "completion_tokens": 1759,
+        "prompt_tokens": 520,
+        "total_tokens": 2279,
+        "prompt_tokens_details": {
+          "cached_tokens": 49
+        }
+      },
+      "timings": {
+        "cache_n": 49,
+        "prompt_n": 471,
+        "prompt_ms": 123.991,
+        "prompt_per_token_ms": 0.26325053078556265,
+        "prompt_per_second": 3798.6628061714155,
+        "predicted_n": 1759,
+        "predicted_ms": 17285.603,
+        "predicted_per_token_ms": 9.832538680318544,
+        "predicted_per_second": 101.7031341053014
+      },
+      "comprobaciones": {
+        "palabras": 123,
+        "frases": 3,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "en",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 41
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 7,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null
+    },
+    {
+      "id": "11_en_acta_retro",
+      "titulo": "Sprint retrospective of a mobile team",
+      "tipo": "acta",
+      "idioma_texto": "en",
+      "idioma_resumen": "en",
+      "instruccion": "Summarize these meeting notes as a list of 4 to 6 bullet points, one line each, with at most 120 words in total. Start each bullet with a hyphen.",
+      "limites": {
+        "vinetas": [
+          4,
+          6
+        ],
+        "max_palabras": 120
+      },
+      "resumen": "- Sprint 42 missed the offline mode goal for delivery app; only 21 of 34 points done and two stories blocked waiting on a late payments API.  \n- Big wins: crash rate fell from 1.8% to 0.6% after fixing an image cache leak; pairing sessions between Hannah and Kofi worked well; Laura’s new story format reduced questions.  \n- Issues: no owner for payments API follow-up, E2E suite now 47 min (skipped before merge), and 11 hrs meetings per person.  \n- Actions: give each cross‑team dependency a named owner, split E2E tests (critical 20% on every merge, nightly), cancel Wednesday sync for two sprints and replace with written update; focus first week of sprint 43 on offline mode.  \n- Mood: average 3.1/5, down from 3.8 last sprint.",
+      "contenido": "- Sprint 42 missed the offline mode goal for delivery app; only 21 of 34 points done and two stories blocked waiting on a late payments API.  \n- Big wins: crash rate fell from 1.8% to 0.6% after fixing an image cache leak; pairing sessions between Hannah and Kofi worked well; Laura’s new story format reduced questions.  \n- Issues: no owner for payments API follow-up, E2E suite now 47 min (skipped before merge), and 11 hrs meetings per person.  \n- Actions: give each cross‑team dependency a named owner, split E2E tests (critical 20% on every merge, nightly), cancel Wednesday sync for two sprints and replace with written update; focus first week of sprint 43 on offline mode.  \n- Mood: average 3.1/5, down from 3.8 last sprint.",
+      "finish_reason": "stop",
+      "tokens_prompt": 584,
+      "tokens_total": 7299,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 22808,
+      "segundos_generacion": 73.31,
+      "tokens_s": 99.8,
+      "usage": {
+        "completion_tokens": 7299,
+        "prompt_tokens": 584,
+        "total_tokens": 7883,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 584,
+        "prompt_ms": 154.878,
+        "prompt_per_token_ms": 0.2652020547945205,
+        "prompt_per_second": 3770.709849042473,
+        "predicted_n": 7299,
+        "predicted_ms": 73126.488,
+        "predicted_per_token_ms": 10.020072348588654,
+        "predicted_per_second": 99.79967860619807
+      },
+      "comprobaciones": {
+        "palabras": 121,
+        "frases": 5,
+        "vinetas": 5,
+        "longitud_ok": false,
+        "formato_ok": true,
+        "motivos_forma": [
+          "121 palabras > 120"
+        ],
+        "idioma_detectado": "en",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 25
+        },
+        "idioma_ok": true,
+        "forma_ok": false,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 7,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": null
+    },
+    {
+      "id": "12_en_informe_dron",
+      "titulo": "Cold-weather endurance test of an inspection drone",
+      "tipo": "informe técnico",
+      "idioma_texto": "en",
+      "idioma_resumen": "en",
+      "instruccion": "Summarize the following report in fewer than 100 words.",
+      "limites": {
+        "max_palabras": 99
+      },
+      "resumen": "Kestrel-4 drone endurance tested at -14 to -22 °C (Lake Tarvik). No pre‑heat: ~21 min; with batteries pre‑heated to 25 °C: ~32 min (+48%); firmware 3.3‑beta added another 10% but made it sluggish in gusts. Pre‑heating alone most effective, raising endurance by ~48%; cold caused BMS underestimation leading to early return at ~30%. Recommend heated battery case (~180€/unit), keep drones warm for temps below -10 °C (to avoid lens fogging), and set a separate cold figure of about 30 min. Limitations: single batch, few cycles, no sub‑-22 °C or firmware‑only tests.",
+      "contenido": "Kestrel-4 drone endurance tested at -14 to -22 °C (Lake Tarvik). No pre‑heat: ~21 min; with batteries pre‑heated to 25 °C: ~32 min (+48%); firmware 3.3‑beta added another 10% but made it sluggish in gusts. Pre‑heating alone most effective, raising endurance by ~48%; cold caused BMS underestimation leading to early return at ~30%. Recommend heated battery case (~180€/unit), keep drones warm for temps below -10 °C (to avoid lens fogging), and set a separate cold figure of about 30 min. Limitations: single batch, few cycles, no sub‑-22 °C or firmware‑only tests.",
+      "finish_reason": "stop",
+      "tokens_prompt": 1402,
+      "tokens_total": 2049,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 5934,
+      "segundos_generacion": 20.71,
+      "tokens_s": 100.87,
+      "usage": {
+        "completion_tokens": 2049,
+        "prompt_tokens": 1402,
+        "total_tokens": 3451,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 1402,
+        "prompt_ms": 332.129,
+        "prompt_per_token_ms": 0.23689657631954353,
+        "prompt_per_second": 4221.251381240421,
+        "predicted_n": 2049,
+        "predicted_ms": 20302.892,
+        "predicted_per_token_ms": 9.913521484375,
+        "predicted_per_second": 100.8723289273272
+      },
+      "comprobaciones": {
+        "palabras": 91,
+        "frases": 5,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "en",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 17
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [
+            "21",
+            "32"
+          ],
+          "meses": [],
+          "nombres": [
+            "BMS"
+          ]
+        },
+        "n_sospechosos": 3,
+        "fiel_ok": false,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": false
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 8,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 6,
+        "hechos_total": 8,
+        "cobertura": 0.75,
+        "principales_ok": false,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": null
+    },
+    {
+      "id": "13_en_correos_proveedor",
+      "titulo": "Delayed delivery of laboratory freezers",
+      "tipo": "hilo de correos",
+      "idioma_texto": "en",
+      "idioma_resumen": "en",
+      "instruccion": "Summarize this email thread in fewer than 80 words.",
+      "limites": {
+        "max_palabras": 79
+      },
+      "resumen": "Order PS-77812 of UF-700 freezers missed its 28 Oct delivery due to customs; Tom estimates arrival 17 Nov plus install next day, or offers a UF-500 in stock. Greta accepts the loan and seeks penalty credit: contract gives 1% of order value per week delay (≈38,600 € → ~1,158 €). Tom confirms UF-500 delivery Thu 5 Nov 9‑12, to be collected at his cost when UF-700 installed; finance issued the credit and will update weekly.",
+      "contenido": "Order PS-77812 of UF-700 freezers missed its 28 Oct delivery due to customs; Tom estimates arrival 17 Nov plus install next day, or offers a UF-500 in stock. Greta accepts the loan and seeks penalty credit: contract gives 1% of order value per week delay (≈38,600 € → ~1,158 €). Tom confirms UF-500 delivery Thu 5 Nov 9‑12, to be collected at his cost when UF-700 installed; finance issued the credit and will update weekly.",
+      "finish_reason": "stop",
+      "tokens_prompt": 618,
+      "tokens_total": 4122,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 12793,
+      "segundos_generacion": 40.99,
+      "tokens_s": 101.0,
+      "usage": {
+        "completion_tokens": 4122,
+        "prompt_tokens": 618,
+        "total_tokens": 4740,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 618,
+        "prompt_ms": 160.212,
+        "prompt_per_token_ms": 0.2592427184466019,
+        "prompt_per_second": 3857.3889596284926,
+        "predicted_n": 4122,
+        "predicted_ms": 40800.431,
+        "predicted_per_token_ms": 9.90061417131764,
+        "predicted_per_second": 101.0038349839981
+      },
+      "comprobaciones": {
+        "palabras": 72,
+        "frases": 3,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "en",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 16
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": [
+            "Oct",
+            "Thu"
+          ]
+        },
+        "n_sospechosos": 2,
+        "fiel_ok": false,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 6,
+        "hechos_total": 6,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": null
+    },
+    {
+      "id": "14_en_divulgacion_pulpo",
+      "titulo": "How octopuses change colour",
+      "tipo": "artículo divulgativo",
+      "idioma_texto": "en",
+      "idioma_resumen": "en",
+      "instruccion": "Summarize the following article in exactly 3 sentences.",
+      "limites": {
+        "frases": [
+          3,
+          3
+        ]
+      },
+      "resumen": "An octopus can alter the color and pattern of its skin in under a second by using up to 230 chromatophores—elastic pigment sacs surrounded by muscles—that open or close within about 200 milliseconds, while underlying iridophores reflect and scatter light to create additional hues. Although most experiments show they cannot see color, the skin contains opsins and their U-shaped pupils may detect wavelengths without eyes, enabling them to match backgrounds precisely despite being color-blind. This rapid camouflage also functions for communication and warning such as flashing rings or bands but costs significant energy at rest, prompting engineers to develop artificial materials that mimic the system’s speed and resolution.",
+      "contenido": "An octopus can alter the color and pattern of its skin in under a second by using up to 230 chromatophores—elastic pigment sacs surrounded by muscles—that open or close within about 200 milliseconds, while underlying iridophores reflect and scatter light to create additional hues. Although most experiments show they cannot see color, the skin contains opsins and their U-shaped pupils may detect wavelengths without eyes, enabling them to match backgrounds precisely despite being color-blind. This rapid camouflage also functions for communication and warning such as flashing rings or bands but costs significant energy at rest, prompting engineers to develop artificial materials that mimic the system’s speed and resolution.",
+      "finish_reason": "stop",
+      "tokens_prompt": 659,
+      "tokens_total": 855,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 3506,
+      "segundos_generacion": 8.63,
+      "tokens_s": 101.15,
+      "usage": {
+        "completion_tokens": 855,
+        "prompt_tokens": 659,
+        "total_tokens": 1514,
+        "prompt_tokens_details": {
+          "cached_tokens": 143
+        }
+      },
+      "timings": {
+        "cache_n": 143,
+        "prompt_n": 516,
+        "prompt_ms": 126.685,
+        "prompt_per_token_ms": 0.24551356589147288,
+        "prompt_per_second": 4073.094683664206,
+        "predicted_n": 855,
+        "predicted_ms": 8443.043,
+        "predicted_per_token_ms": 9.886467213114754,
+        "predicted_per_second": 101.14836558335662
+      },
+      "comprobaciones": {
+        "palabras": 108,
+        "frases": 3,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "en",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 35
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 7,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null
+    },
+    {
+      "id": "15_en_noticia_biblioteca_a_es",
+      "titulo": "Reapertura de una biblioteca tras una inundación (texto en inglés, resumen en español)",
+      "tipo": "noticia",
+      "idioma_texto": "en",
+      "idioma_resumen": "es",
+      "instruccion": "Resume en español la siguiente noticia, escrita en inglés, en menos de 80 palabras.",
+      "limites": {
+        "max_palabras": 79
+      },
+      "resumen": "La biblioteca de Bramley reabrió tras un desbordamiento que inundó sótano y primer piso, perdiendo ~31 000 libros. El ayuntamiento rediseñó: sótano alberga calderas; archivo en segundo piso. Primer piso será para adolescentes (13‑18) con salones de estudio, grabación y juegos, abierto hasta las 9 p.m. Se reemplazaron ~22 000 libros. Los mayores critican la reducción de asientos del salón de periódicos (de 60 a 25). La biblioteca será una de tres 'espacios cálidos' este invierno, gratuita.",
+      "contenido": "La biblioteca de Bramley reabrió tras un desbordamiento que inundó sótano y primer piso, perdiendo ~31 000 libros. El ayuntamiento rediseñó: sótano alberga calderas; archivo en segundo piso. Primer piso será para adolescentes (13‑18) con salones de estudio, grabación y juegos, abierto hasta las 9 p.m. Se reemplazaron ~22 000 libros. Los mayores critican la reducción de asientos del salón de periódicos (de 60 a 25). La biblioteca será una de tres 'espacios cálidos' este invierno, gratuita.",
+      "finish_reason": "stop",
+      "tokens_prompt": 508,
+      "tokens_total": 3832,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 13050,
+      "segundos_generacion": 38.26,
+      "tokens_s": 100.5,
+      "usage": {
+        "completion_tokens": 3832,
+        "prompt_tokens": 508,
+        "total_tokens": 4340,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 508,
+        "prompt_ms": 130.715,
+        "prompt_per_token_ms": 0.25731299212598424,
+        "prompt_per_second": 3886.3175611062234,
+        "predicted_n": 3832,
+        "predicted_ms": 38119.443,
+        "predicted_per_token_ms": 9.950259201252937,
+        "predicted_per_second": 100.49989450265576
+      },
+      "comprobaciones": {
+        "palabras": 77,
+        "frases": 6,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 28,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [
+            "31",
+            "000",
+            "22"
+          ],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 3,
+        "fiel_ok": false,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 3,
+        "hechos_total": 7,
+        "cobertura": 0.429,
+        "principales_ok": true,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": null
+    },
+    {
+      "id": "16_en_correos_microscopio_a_es",
+      "titulo": "Nuevas normas de reserva de un microscopio (texto en inglés, resumen en español)",
+      "tipo": "hilo de correos",
+      "idioma_texto": "en",
+      "idioma_resumen": "es",
+      "instruccion": "Resume en español este hilo de correos, escrito en inglés, en una lista de 3 a 5 viñetas. Usa un guion al principio de cada viñeta y no escribas nada más.",
+      "limites": {
+        "vinetas": [
+          3,
+          5
+        ]
+      },
+      "resumen": "- A partir del 1 de mayo, el microscopio confocal Zeiss (sala B214) tiene un máximo de 4 horas por sesión y 12 horas semanales por grupo; las sesiones nocturnas (8 p.m. a 8 a.m.) solo pueden reservarse si el usuario completó capacitación avanzada.  \n- Se permite una excepción para experimentos de time-lapse continuo (6–8 h) si se solicita por correo al menos 48 horas antes; la sesión cuenta hacia el límite semanal y cada grupo puede pedir una excepción mensual.  \n- La capacitación avanzada incluye una sesión extra el 12 y 13 de mayo con 6 plazas, priorizando a estudiantes que dependen de imagen nocturna; se pregunta si sigue ofreciéndose dos veces al año.  \n- La tarifa horaria para usuarios internos es £28; la multa por no asistencia (no-show) será de £40 si el grupo no entra dentro de los 30 minutos del inicio, y comenzará el 1 de junio en lugar del 1 de mayo.",
+      "contenido": "- A partir del 1 de mayo, el microscopio confocal Zeiss (sala B214) tiene un máximo de 4 horas por sesión y 12 horas semanales por grupo; las sesiones nocturnas (8 p.m. a 8 a.m.) solo pueden reservarse si el usuario completó capacitación avanzada.  \n- Se permite una excepción para experimentos de time-lapse continuo (6–8 h) si se solicita por correo al menos 48 horas antes; la sesión cuenta hacia el límite semanal y cada grupo puede pedir una excepción mensual.  \n- La capacitación avanzada incluye una sesión extra el 12 y 13 de mayo con 6 plazas, priorizando a estudiantes que dependen de imagen nocturna; se pregunta si sigue ofreciéndose dos veces al año.  \n- La tarifa horaria para usuarios internos es £28; la multa por no asistencia (no-show) será de £40 si el grupo no entra dentro de los 30 minutos del inicio, y comenzará el 1 de junio en lugar del 1 de mayo.",
+      "finish_reason": "stop",
+      "tokens_prompt": 606,
+      "tokens_total": 2160,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 7704,
+      "segundos_generacion": 21.48,
+      "tokens_s": 101.46,
+      "usage": {
+        "completion_tokens": 2160,
+        "prompt_tokens": 606,
+        "total_tokens": 2766,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 606,
+        "prompt_ms": 157.074,
+        "prompt_per_token_ms": 0.2591980198019802,
+        "prompt_per_second": 3858.0541655525417,
+        "predicted_n": 2160,
+        "predicted_ms": 21279.657,
+        "predicted_per_token_ms": 9.856256137100509,
+        "predicted_per_second": 101.4584022665403
+      },
+      "comprobaciones": {
+        "palabras": 153,
+        "frases": 4,
+        "vinetas": 4,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 57,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 4,
+        "hechos_total": 7,
+        "cobertura": 0.571,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null
+    },
+    {
+      "id": "17_en_informe_agua_a_es",
+      "titulo": "Informe anual de calidad del agua (texto en inglés, resumen en español)",
+      "tipo": "informe técnico",
+      "idioma_texto": "en",
+      "idioma_resumen": "es",
+      "instruccion": "Resume en español el siguiente informe, escrito en inglés, en exactamente 3 frases.",
+      "limites": {
+        "frases": [
+          3,
+          3
+        ]
+      },
+      "resumen": "En 2025 la Glenmoor Water Authority suministró un promedio de 41 millones de litros de agua potable al día a aproximadamente 186 000 residentes, realizó 9 412 análisis en sus plantas Ashford y Kilnbrook para 64 sustancias y microorganismos y el 99.94 % cumplió los estándares legales. Se detectaron cuatro muestras de Dunlow con manganeso superior al límite legal y dos muestras de viviendas del pueblo antiguo de Glenmoor con plomo, lo que obligó a ajustar el tratamiento en cinco días y a informar a los propietarios sobre tuberías internas, además de reemplazar 1 240 conexiones de plomo en 2025 con el objetivo de eliminar todas las tuberías de plomo para 2030. Por primera vez se probó PFAS en 48 muestras, todas por debajo del valor de referencia (la más alta fue 18 nanogramos por litro en Kilnbrook); el agua de Ashford es suave y la de Kilnbrook moderadamente dura, las quejas sobre sabor y olor disminuyeron de 412 en 2024 a 287 en 2025 gracias a mejoras en la limpieza de tanques, e se destinará £27 millones en 2025 y £31 millones en 2026 para instalar un nuevo filtro en Kilnbrook.",
+      "contenido": "En 2025 la Glenmoor Water Authority suministró un promedio de 41 millones de litros de agua potable al día a aproximadamente 186 000 residentes, realizó 9 412 análisis en sus plantas Ashford y Kilnbrook para 64 sustancias y microorganismos y el 99.94 % cumplió los estándares legales. Se detectaron cuatro muestras de Dunlow con manganeso superior al límite legal y dos muestras de viviendas del pueblo antiguo de Glenmoor con plomo, lo que obligó a ajustar el tratamiento en cinco días y a informar a los propietarios sobre tuberías internas, además de reemplazar 1 240 conexiones de plomo en 2025 con el objetivo de eliminar todas las tuberías de plomo para 2030. Por primera vez se probó PFAS en 48 muestras, todas por debajo del valor de referencia (la más alta fue 18 nanogramos por litro en Kilnbrook); el agua de Ashford es suave y la de Kilnbrook moderadamente dura, las quejas sobre sabor y olor disminuyeron de 412 en 2024 a 287 en 2025 gracias a mejoras en la limpieza de tanques, e se destinará £27 millones en 2025 y £31 millones en 2026 para instalar un nuevo filtro en Kilnbrook.",
+      "finish_reason": "stop",
+      "tokens_prompt": 686,
+      "tokens_total": 3899,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 14414,
+      "segundos_generacion": 38.99,
+      "tokens_s": 100.51,
+      "usage": {
+        "completion_tokens": 3899,
+        "prompt_tokens": 686,
+        "total_tokens": 4585,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 686,
+        "prompt_ms": 171.382,
+        "prompt_per_token_ms": 0.24982798833819242,
+        "prompt_per_second": 4002.754081525481,
+        "predicted_n": 3899,
+        "predicted_ms": 38781.458,
+        "predicted_per_token_ms": 9.949065674704977,
+        "predicted_per_second": 100.51195084001226
+      },
+      "comprobaciones": {
+        "palabras": 191,
+        "frases": 3,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 76,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [
+            "186",
+            "000",
+            "9",
+            "1",
+            "240"
+          ],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 5,
+        "fiel_ok": false,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 7,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": null
+    },
+    {
+      "id": "18_en_noticia_compra",
+      "titulo": "A meal-kit company buys a rival",
+      "tipo": "noticia",
+      "idioma_texto": "en",
+      "idioma_resumen": "en",
+      "instruccion": "Summarize the following news article in fewer than 60 words.",
+      "limites": {
+        "max_palabras": 59
+      },
+      "resumen": "Tidewell Foods bought FreshCrate for $410 million cash, forming North America’s second-largest meal‑kit firm with ~2.1 M subscribers. Tidewell pays $14.50/share (37% premium). The deal closes Q4 pending regulators; it will keep the FreshCrate brand for two years, moving Ohio distribution to Indiana and saving $45 million annually. Analysts are divided; consumer groups warn of possible price hikes in rural states.",
+      "contenido": "Tidewell Foods bought FreshCrate for $410 million cash, forming North America’s second-largest meal‑kit firm with ~2.1 M subscribers. Tidewell pays $14.50/share (37% premium). The deal closes Q4 pending regulators; it will keep the FreshCrate brand for two years, moving Ohio distribution to Indiana and saving $45 million annually. Analysts are divided; consumer groups warn of possible price hikes in rural states.",
+      "finish_reason": "stop",
+      "tokens_prompt": 529,
+      "tokens_total": 1951,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 6500,
+      "segundos_generacion": 19.36,
+      "tokens_s": 101.72,
+      "usage": {
+        "completion_tokens": 1951,
+        "prompt_tokens": 529,
+        "total_tokens": 2480,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 529,
+        "prompt_ms": 148.383,
+        "prompt_per_token_ms": 0.28049716446124767,
+        "prompt_per_second": 3565.0984277174607,
+        "predicted_n": 1951,
+        "predicted_ms": 19169.683,
+        "predicted_per_token_ms": 9.830606666666666,
+        "predicted_per_second": 101.72312186904708
+      },
+      "comprobaciones": {
+        "palabras": 61,
+        "frases": 4,
+        "vinetas": 0,
+        "longitud_ok": false,
+        "formato_ok": true,
+        "motivos_forma": [
+          "61 palabras > 59"
+        ],
+        "idioma_detectado": "en",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 13
+        },
+        "idioma_ok": true,
+        "forma_ok": false,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 6,
+        "hechos_total": 7,
+        "cobertura": 0.857,
+        "principales_ok": true,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": null
+    }
+  ]
+}

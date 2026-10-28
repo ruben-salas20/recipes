@@ -1,0 +1,3714 @@
+{
+  "modelo": "lfm3-q4km",
+  "base_url": "http://127.0.0.1:8090/v1",
+  "fecha": "2026-10-27T23:59:13",
+  "parametros": {
+    "temperature": 0.1,
+    "max_tokens": 8192,
+    "top_k": 50,
+    "repeat_penalty": 1.1
+  },
+  "prompt_sistema": {
+    "es": "Eres un asistente que resume textos con fidelidad. Usa solo la información del texto: no añadas datos, nombres ni cifras que no aparezcan en él. Responde solo con el resumen, sin título, introducción ni comentarios.",
+    "en": "You summarize texts faithfully. Use only information from the text: do not add facts, names or figures that do not appear in it. Reply with the summary only, without a title, introduction or comments."
+  },
+  "resumen": {
+    "items": 18,
+    "aprobados": 11,
+    "longitud_ok": 15,
+    "formato_ok": 18,
+    "idioma_ok": 13,
+    "sin_sospechosos": 15,
+    "sospechosos_total": 6,
+    "principales_ok": 13,
+    "hechos_presentes": 84,
+    "hechos_total": 126,
+    "cobertura_media": 0.67,
+    "errores": 3,
+    "tiempo_total_s": 716.1,
+    "tokens_s_medio": 100.7
+  },
+  "items": [
+    {
+      "id": "01_es_noticia_planta",
+      "titulo": "Recorte de empleo en una planta de baterías",
+      "tipo": "noticia",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume la siguiente noticia en exactamente 3 frases.",
+      "limites": {
+        "frases": [
+          3,
+          3
+        ]
+      },
+      "resumen": "Electrocel Ibérica, the battery plant in Valdecierzo, announced it will cut 340 jobs out of its 1,150 at its Valdecierzo facility after Kressler Motoren canceled the contract that covered almost 60% of production. The cuts are planned in two phases—190 before September and 150 in the first quarter of 2027—and the plant will continue producing stationary storage modules, a line that grew 22% last year. The company faces a potential strike from its union, has been asked for a detailed plan by the autonomous government, and claims the contract commitment covered at least 800 workers while receiving public aid of 48 million euros in 2023 to keep employment for five years.",
+      "contenido": "Electrocel Ibérica, the battery plant in Valdecierzo, announced it will cut 340 jobs out of its 1,150 at its Valdecierzo facility after Kressler Motoren canceled the contract that covered almost 60% of production. The cuts are planned in two phases—190 before September and 150 in the first quarter of 2027—and the plant will continue producing stationary storage modules, a line that grew 22% last year. The company faces a potential strike from its union, has been asked for a detailed plan by the autonomous government, and claims the contract commitment covered at least 800 workers while receiving public aid of 48 million euros in 2023 to keep employment for five years.",
+      "finish_reason": "stop",
+      "tokens_prompt": 711,
+      "tokens_total": 2174,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 8748,
+      "segundos_generacion": 21.7,
+      "tokens_s": 101.31,
+      "usage": {
+        "completion_tokens": 2174,
+        "prompt_tokens": 711,
+        "total_tokens": 2885,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 711,
+        "prompt_ms": 180.601,
+        "prompt_per_token_ms": 0.2540098452883263,
+        "prompt_per_second": 3936.85527765627,
+        "predicted_n": 2174,
+        "predicted_ms": 21450.02,
+        "predicted_per_token_ms": 9.871155085135758,
+        "predicted_per_second": 101.30526684823604
+      },
+      "comprobaciones": {
+        "palabras": 111,
+        "frases": 3,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "en",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 41
+        },
+        "idioma_ok": false,
+        "forma_ok": false,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": false
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 8,
+            "principal": false,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 4,
+        "hechos_total": 8,
+        "cobertura": 0.5,
+        "principales_ok": false,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "it will cut 340 jobs out of its 1,150 at its Valdecierzo facility",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "after Kressler Motoren canceled the contract that covered almost 60% of production",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "The cuts are planned in two phases—190 before September and 150 in the first quarter of 2027",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "receiving public aid of 48 million euros in 2023 to keep employment for five years",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 8,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 4,
+        "hechos_total": 8,
+        "cobertura": 0.5,
+        "principales_ok": true,
+        "citas_no_verificadas": 0,
+        "invenciones": [
+          {
+            "cita": "claims the contract commitment covered at least 800 workers",
+            "motivo": "El texto dice que el compromiso de la ayuda se refería a un mínimo de 800 trabajadores, no que fuera un compromiso de contrato.",
+            "cita_verificada": true
+          }
+        ],
+        "n_invenciones": 1,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"it will cut 340 jobs out of its 1,150 at its Valdecierzo facility\"}, {\"id\": 2, \"presente\": true, \"cita\": \"after Kressler Motoren canceled the contract that covered almost 60% of production\"}, {\"id\": 3, \"presente\": true, \"cita\": \"The cuts are planned in two phases—190 before September and 150 in the first quarter of 2027\"}, {\"id\": 4, \"presente\": false, \"cita\": \"\"}, {\"id\": 5, \"presente\": false, \"cita\": \"\"}, {\"id\": 6, \"presente\": true, \"cita\": \"receiving public aid of 48 million euros in 2023 to keep employment for five years\"}, {\"id\": 7, \"presente\": false, \"cita\": \"\"}, {\"id\": 8, \"presente\": false, \"cita\": \"\"}], \"invenciones\": [{\"cita\": \"claims the contract commitment covered at least 800 workers\", \"motivo\": \"El texto dice que el compromiso de la ayuda se refería a un mínimo de 800 trabajadores, no que fuera un compromiso de contrato.\"}]}",
+        "segundos": 5.4,
+        "coste_usd": 0.019472,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3922,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 378,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 3922,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 378,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 3922,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 3922
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    },
+    {
+      "id": "02_es_acta_vecinos",
+      "titulo": "Junta de una comunidad de vecinos",
+      "tipo": "acta",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume el acta en una lista de entre 4 y 6 viñetas, de una línea cada una y con 120 palabras como máximo en total. Usa un guion al principio de cada viñeta.",
+      "limites": {
+        "vinetas": [
+          4,
+          6
+        ],
+        "max_palabras": 120
+      },
+      "resumen": "- Se aprobaron las cuentas de 2025-2026 con gasto total de 38.400 euros frente a presupuesto de 35.000, incluyendo reparación urgente del bajante del patio (2.900 euros).  \n- Se aprueba el ascensor con presupuesto Ascensores Turia de 54.500 euros, 14 votos a favor, 2 en contra y 1 abstención; pago por 18 meses desde enero.  \n- Se encargará medición de ruido para el local comercial (presupuesto máximo 600 euros) tras que la presidenta ya envió requerimiento sin respuesta.  \n- No hay acuerdo sobre placas solares; se pedirán dos estudios técnicos sin costo y tratarlas en próxima junta.  \n- Luisa Carrasco no se presenta a reelección; se elige Javier Soler como presidente por unanimidad y Gestiones Mora continúa la administración.",
+      "contenido": "- Se aprobaron las cuentas de 2025-2026 con gasto total de 38.400 euros frente a presupuesto de 35.000, incluyendo reparación urgente del bajante del patio (2.900 euros).  \n- Se aprueba el ascensor con presupuesto Ascensores Turia de 54.500 euros, 14 votos a favor, 2 en contra y 1 abstención; pago por 18 meses desde enero.  \n- Se encargará medición de ruido para el local comercial (presupuesto máximo 600 euros) tras que la presidenta ya envió requerimiento sin respuesta.  \n- No hay acuerdo sobre placas solares; se pedirán dos estudios técnicos sin costo y tratarlas en próxima junta.  \n- Luisa Carrasco no se presenta a reelección; se elige Javier Soler como presidente por unanimidad y Gestiones Mora continúa la administración.",
+      "finish_reason": "stop",
+      "tokens_prompt": 734,
+      "tokens_total": 5228,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 18121,
+      "segundos_generacion": 52.41,
+      "tokens_s": 100.15,
+      "usage": {
+        "completion_tokens": 5228,
+        "prompt_tokens": 734,
+        "total_tokens": 5962,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 734,
+        "prompt_ms": 183.41,
+        "prompt_per_token_ms": 0.24987738419618527,
+        "prompt_per_second": 4001.9628155498613,
+        "predicted_n": 5228,
+        "predicted_ms": 52189.116,
+        "predicted_per_token_ms": 9.98452573177731,
+        "predicted_per_second": 100.15498250631414
+      },
+      "comprobaciones": {
+        "palabras": 114,
+        "frases": 5,
+        "vinetas": 5,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 38,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 6,
+        "hechos_total": 7,
+        "cobertura": 0.857,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "Se aprueba el ascensor con presupuesto Ascensores Turia de 54.500 euros",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "pago por 18 meses desde enero",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "Se aprobaron las cuentas de 2025-2026 con gasto total de 38.400 euros frente a presupuesto de 35.000",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "No hay acuerdo sobre placas solares; se pedirán dos estudios técnicos sin costo y tratarlas en próxima junta.",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "se elige Javier Soler como presidente por unanimidad",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 5,
+        "hechos_total": 7,
+        "cobertura": 0.714,
+        "principales_ok": false,
+        "citas_no_verificadas": 0,
+        "invenciones": [],
+        "n_invenciones": 0,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"Se aprueba el ascensor con presupuesto Ascensores Turia de 54.500 euros\"}, {\"id\": 2, \"presente\": true, \"cita\": \"pago por 18 meses desde enero\"}, {\"id\": 3, \"presente\": false, \"cita\": \"\"}, {\"id\": 4, \"presente\": true, \"cita\": \"Se aprobaron las cuentas de 2025-2026 con gasto total de 38.400 euros frente a presupuesto de 35.000\"}, {\"id\": 5, \"presente\": true, \"cita\": \"No hay acuerdo sobre placas solares; se pedirán dos estudios técnicos sin costo y tratarlas en próxima junta.\"}, {\"id\": 6, \"presente\": true, \"cita\": \"se elige Javier Soler como presidente por unanimidad\"}, {\"id\": 7, \"presente\": false, \"cita\": \"\"}], \"invenciones\": []}",
+        "segundos": 9.9,
+        "coste_usd": 0.018708000000000002,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3876,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 320,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 3876,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 320,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 3876,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 3876
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    },
+    {
+      "id": "03_es_informe_incidente",
+      "titulo": "Informe de una caída del servicio de pagos",
+      "tipo": "informe técnico",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume el siguiente informe en menos de 100 palabras.",
+      "limites": {
+        "max_palabras": 99
+      },
+      "resumen": "En abril Pagalia perdió el 38% de pagos con tarjeta (10:42‑12:19) por error de tiempo agotado; la caída duró 97 min y afectó a 2.300 comercios. La causa fue que dbpool cambió su tamaño máximo del grupo de conexiones de 200 a 20 sin avisar. Se revertió a v4.17.2 y la tasa volvió al normal. Acciones: fijar valor explícitamente (Diego Arenal, 30 abr), añadir alerta >80% (Irene Valcárcel, 15 may), exigir resumen de notas en actualizaciones (Óscar Ledesma, 31 may), despliegues graduales y pruebas ≥300 peticiones (Plataforma/Calidad, 30 jun). No fue error de código.",
+      "contenido": "En abril Pagalia perdió el 38% de pagos con tarjeta (10:42‑12:19) por error de tiempo agotado; la caída duró 97 min y afectó a 2.300 comercios. La causa fue que dbpool cambió su tamaño máximo del grupo de conexiones de 200 a 20 sin avisar. Se revertió a v4.17.2 y la tasa volvió al normal. Acciones: fijar valor explícitamente (Diego Arenal, 30 abr), añadir alerta >80% (Irene Valcárcel, 15 may), exigir resumen de notas en actualizaciones (Óscar Ledesma, 31 may), despliegues graduales y pruebas ≥300 peticiones (Plataforma/Calidad, 30 jun). No fue error de código.",
+      "finish_reason": "stop",
+      "tokens_prompt": 1416,
+      "tokens_total": 5760,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 16434,
+      "segundos_generacion": 58.17,
+      "tokens_s": 99.67,
+      "usage": {
+        "completion_tokens": 5760,
+        "prompt_tokens": 1416,
+        "total_tokens": 7176,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 1416,
+        "prompt_ms": 331.088,
+        "prompt_per_token_ms": 0.23381920903954803,
+        "prompt_per_second": 4276.808582612478,
+        "predicted_n": 5760,
+        "predicted_ms": 57780.362,
+        "predicted_per_token_ms": 10.033054696996006,
+        "predicted_per_second": 99.670542043333
+      },
+      "comprobaciones": {
+        "palabras": 94,
+        "frases": 5,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 26,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 8,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 6,
+        "hechos_total": 8,
+        "cobertura": 0.75,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "En abril Pagalia perdió el 38% de pagos con tarjeta (10:42‑12:19) por error de tiempo agotado",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "la caída duró 97 min y afectó a 2.300 comercios",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "dbpool cambió su tamaño máximo del grupo de conexiones de 200 a 20 sin avisar",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "Se revertió a v4.17.2 y la tasa volvió al normal.",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 8,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "Acciones: fijar valor explícitamente (Diego Arenal, 30 abr), añadir alerta >80% (Irene Valcárcel, 15 may), exigir resumen de notas en actualizaciones (Óscar Ledesma, 31 may), despliegues graduales y pruebas ≥300 peticiones (Plataforma/Calidad, 30 jun).",
+            "cita_verificada": true,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 5,
+        "hechos_total": 8,
+        "cobertura": 0.625,
+        "principales_ok": true,
+        "citas_no_verificadas": 0,
+        "invenciones": [
+          {
+            "cita": "dbpool cambió su tamaño máximo del grupo de conexiones de 200 a 20 sin avisar",
+            "motivo": "El texto dice que el cambio sí estaba documentado en las notas de la versión (cambios incompatibles); lo que nadie advirtió fue en el equipo de Pagalia, no que la biblioteca no avisara.",
+            "cita_verificada": true
+          }
+        ],
+        "n_invenciones": 1,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"En abril Pagalia perdió el 38% de pagos con tarjeta (10:42‑12:19) por error de tiempo agotado\"}, {\"id\": 2, \"presente\": true, \"cita\": \"la caída duró 97 min y afectó a 2.300 comercios\"}, {\"id\": 3, \"presente\": true, \"cita\": \"dbpool cambió su tamaño máximo del grupo de conexiones de 200 a 20 sin avisar\"}, {\"id\": 4, \"presente\": true, \"cita\": \"Se revertió a v4.17.2 y la tasa volvió al normal.\"}, {\"id\": 5, \"presente\": false, \"cita\": \"\"}, {\"id\": 6, \"presente\": false, \"cita\": \"\"}, {\"id\": 7, \"presente\": false, \"cita\": \"\"}, {\"id\": 8, \"presente\": true, \"cita\": \"Acciones: fijar valor explícitamente (Diego Arenal, 30 abr), añadir alerta >80% (Irene Valcárcel, 15 may), exigir resumen de notas en actualizaciones (Óscar Ledesma, 31 may), despliegues graduales y pruebas ≥300 peticiones (Plataforma/Calidad, 30 jun).\"}], \"invenciones\": [{\"cita\": \"dbpool cambió su tamaño máximo del grupo de conexiones de 200 a 20 sin avisar\", \"motivo\": \"El texto dice que el cambio sí estaba documentado en las notas de la versión (cambios incompatibles); lo que nadie advirtió fue en el equipo de Pagalia, no que la biblioteca no avisara.\"}]}",
+        "segundos": 5.1,
+        "coste_usd": 0.025796,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 5038,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 564,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 5038,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 564,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 5038,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 5038
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    },
+    {
+      "id": "04_es_correos_congreso",
+      "titulo": "Cambio de fechas de unas jornadas científicas",
+      "tipo": "hilo de correos",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume este hilo de correos en exactamente 3 frases.",
+      "limites": {
+        "frases": [
+          3,
+          3
+        ]
+      },
+      "resumen": "The auditorium is out from October 19‑23 because of construction, conflicting with the Jornadas on October 21‑22, so organizers suggest using the Mecenas building hall (180 seats) or postponing to November 11‑12. With 245 inscritos and a decision needed by Thursday, Nuria proposes moving to November 12‑13 to avoid the Lisbon congress (November 9‑11), offering full refunds of 150 euros or up to 50 euros for ticket changes and confirming the auditorium is free on November 13. Raúl agrees to inform ponentes, Carmen confirms a group rate of 89 euros per night at Alhambra Centro for November 11‑13 and will share the final speaker list, while Ahmed Benali’s conflict in November requires his call.",
+      "contenido": "The auditorium is out from October 19‑23 because of construction, conflicting with the Jornadas on October 21‑22, so organizers suggest using the Mecenas building hall (180 seats) or postponing to November 11‑12. With 245 inscritos and a decision needed by Thursday, Nuria proposes moving to November 12‑13 to avoid the Lisbon congress (November 9‑11), offering full refunds of 150 euros or up to 50 euros for ticket changes and confirming the auditorium is free on November 13. Raúl agrees to inform ponentes, Carmen confirms a group rate of 89 euros per night at Alhambra Centro for November 11‑13 and will share the final speaker list, while Ahmed Benali’s conflict in November requires his call.",
+      "finish_reason": "stop",
+      "tokens_prompt": 819,
+      "tokens_total": 3539,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 13774,
+      "segundos_generacion": 35.39,
+      "tokens_s": 100.74,
+      "usage": {
+        "completion_tokens": 3539,
+        "prompt_tokens": 819,
+        "total_tokens": 4358,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 819,
+        "prompt_ms": 202.853,
+        "prompt_per_token_ms": 0.2476837606837607,
+        "prompt_per_second": 4037.4063977362916,
+        "predicted_n": 3539,
+        "predicted_ms": 35121.202,
+        "predicted_per_token_ms": 9.926851893725267,
+        "predicted_per_second": 100.7368711355608
+      },
+      "comprobaciones": {
+        "palabras": 114,
+        "frases": 3,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "en",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 38
+        },
+        "idioma_ok": false,
+        "forma_ok": false,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": [
+            "Lisbon"
+          ]
+        },
+        "n_sospechosos": 1,
+        "fiel_ok": false,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": false
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": false
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 3,
+        "hechos_total": 7,
+        "cobertura": 0.429,
+        "principales_ok": false,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "The auditorium is out from October 19‑23 because of construction",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "Nuria proposes moving to November 12‑13",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "to avoid the Lisbon congress (November 9‑11)",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "offering full refunds of 150 euros or up to 50 euros for ticket changes",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "Carmen confirms a group rate of 89 euros per night at Alhambra Centro for November 11‑13",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "Raúl agrees to inform ponentes",
+            "cita_verificada": true,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 6,
+        "hechos_total": 7,
+        "cobertura": 0.857,
+        "principales_ok": true,
+        "citas_no_verificadas": 0,
+        "invenciones": [
+          {
+            "cita": "so organizers suggest using the Mecenas building hall (180 seats) or postponing to November 11‑12",
+            "motivo": "Fue la Facultad quien ofreció las dos opciones, no los organizadores; además, el texto dice que lo que se ofreció fue retrasar al 11 y 12 de noviembre, y Nuria propuso después el 12 y 13.",
+            "cita_verificada": true
+          }
+        ],
+        "n_invenciones": 1,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"The auditorium is out from October 19‑23 because of construction\"}, {\"id\": 2, \"presente\": true, \"cita\": \"Nuria proposes moving to November 12‑13\"}, {\"id\": 3, \"presente\": false, \"cita\": \"\"}, {\"id\": 4, \"presente\": true, \"cita\": \"to avoid the Lisbon congress (November 9‑11)\"}, {\"id\": 5, \"presente\": true, \"cita\": \"offering full refunds of 150 euros or up to 50 euros for ticket changes\"}, {\"id\": 6, \"presente\": true, \"cita\": \"Carmen confirms a group rate of 89 euros per night at Alhambra Centro for November 11‑13\"}, {\"id\": 7, \"presente\": true, \"cita\": \"Raúl agrees to inform ponentes\"}], \"invenciones\": [{\"cita\": \"so organizers suggest using the Mecenas building hall (180 seats) or postponing to November 11‑12\", \"motivo\": \"Fue la Facultad quien ofreció las dos opciones, no los organizadores; además, el texto dice que lo que se ofreció fue retrasar al 11 y 12 de noviembre, y Nuria propuso después el 12 y 13.\"}]}",
+        "segundos": 4.5,
+        "coste_usd": 0.020583999999999998,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 4085,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 424,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 4085,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 424,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 4085,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 4085
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    },
+    {
+      "id": "05_es_divulgacion_pan",
+      "titulo": "Por qué el pan se pone duro",
+      "tipo": "artículo divulgativo",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume el siguiente artículo en menos de 80 palabras.",
+      "limites": {
+        "max_palabras": 79
+      },
+      "resumen": "El pan duro se debe a la retrogradación del almidón: durante el horneado se gelatiniza (absorbe agua y hincha), al enfriarse las cadenas de almidón se reorganizan atrapando humedad. El frío acelera este proceso; el congelador lo frena. Se puede ablandar recalentándolo >60 °C, pero el efecto es temporal. Panaderos usan más agua, fermentación larga o grasa para retrasarlo.",
+      "contenido": "El pan duro se debe a la retrogradación del almidón: durante el horneado se gelatiniza (absorbe agua y hincha), al enfriarse las cadenas de almidón se reorganizan atrapando humedad. El frío acelera este proceso; el congelador lo frena. Se puede ablandar recalentándolo >60 °C, pero el efecto es temporal. Panaderos usan más agua, fermentación larga o grasa para retrasarlo.",
+      "finish_reason": "stop",
+      "tokens_prompt": 722,
+      "tokens_total": 1273,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 4133,
+      "segundos_generacion": 12.73,
+      "tokens_s": 101.4,
+      "usage": {
+        "completion_tokens": 1273,
+        "prompt_tokens": 722,
+        "total_tokens": 1995,
+        "prompt_tokens_details": {
+          "cached_tokens": 206
+        }
+      },
+      "timings": {
+        "cache_n": 206,
+        "prompt_n": 516,
+        "prompt_ms": 128.536,
+        "prompt_per_token_ms": 0.24910077519379845,
+        "prompt_per_second": 4014.439534449493,
+        "predicted_n": 1273,
+        "predicted_ms": 12544.357,
+        "predicted_per_token_ms": 9.861915880503144,
+        "predicted_per_second": 101.40017539360527
+      },
+      "comprobaciones": {
+        "palabras": 59,
+        "frases": 4,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 23,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 4,
+        "hechos_total": 6,
+        "cobertura": 0.667,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "El pan duro se debe a la retrogradación del almidón",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "el congelador lo frena",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "Se puede ablandar recalentándolo >60 °C, pero el efecto es temporal.",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 3,
+        "hechos_total": 6,
+        "cobertura": 0.5,
+        "principales_ok": false,
+        "citas_no_verificadas": 0,
+        "invenciones": [
+          {
+            "cita": "El frío acelera este proceso",
+            "motivo": "El texto dice que la retrogradación es más rápida solo entre 0 y 10 grados (frigorífico); el congelador la frena, así que el frío en general no la acelera.",
+            "cita_verificada": true
+          }
+        ],
+        "n_invenciones": 1,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"El pan duro se debe a la retrogradación del almidón\"}, {\"id\": 2, \"presente\": false, \"cita\": \"\"}, {\"id\": 3, \"presente\": true, \"cita\": \"el congelador lo frena\"}, {\"id\": 4, \"presente\": true, \"cita\": \"Se puede ablandar recalentándolo >60 °C, pero el efecto es temporal.\"}, {\"id\": 5, \"presente\": false, \"cita\": \"\"}, {\"id\": 6, \"presente\": false, \"cita\": \"\"}], \"invenciones\": [{\"cita\": \"El frío acelera este proceso\", \"motivo\": \"El texto dice que la retrogradación es más rápida solo entre 0 y 10 grados (frigorífico); el congelador la frena, así que el frío en general no la acelera.\"}]}",
+        "segundos": 10.6,
+        "coste_usd": 0.017522,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3672,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 283,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 3672,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 283,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 3672,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 3672
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    },
+    {
+      "id": "06_es_noticia_festival",
+      "titulo": "Palmarés de un festival de cine",
+      "tipo": "noticia",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume la siguiente noticia en exactamente 2 frases.",
+      "limites": {
+        "frases": [
+          2,
+          2
+        ]
+      },
+      "resumen": "La película 'Las horas del faro' de la directora gallega Iria Castiñeira ganó la Gaviota de Oro del Festival de Cine de Montesur con un récord de setenta mil cuatro mil espectadores, un 12 % más que el año pasado y la mejor cifra de su historia, y recibió el premio a mejor interpretación para su debutante, además de una mención especial al documental 'Tierra de nadie'. El director Bernardo Lozano atribuyó el aumento de público a la nueva sección de cine al aire libre en la playa de Levante, con proyecciones gratuitas que reunieron a unas quince mil personas en nueve noches, y destacó que la mitad de las películas estaban dirigidas por mujeres, aunque tuvo que suspender dos proyecciones al aire libre por el viento y criticó la accesibilidad de las sedes.",
+      "contenido": "La película 'Las horas del faro' de la directora gallega Iria Castiñeira ganó la Gaviota de Oro del Festival de Cine de Montesur con un récord de setenta mil cuatro mil espectadores, un 12 % más que el año pasado y la mejor cifra de su historia, y recibió el premio a mejor interpretación para su debutante, además de una mención especial al documental 'Tierra de nadie'. El director Bernardo Lozano atribuyó el aumento de público a la nueva sección de cine al aire libre en la playa de Levante, con proyecciones gratuitas que reunieron a unas quince mil personas en nueve noches, y destacó que la mitad de las películas estaban dirigidas por mujeres, aunque tuvo que suspender dos proyecciones al aire libre por el viento y criticó la accesibilidad de las sedes.",
+      "finish_reason": "stop",
+      "tokens_prompt": 566,
+      "tokens_total": 3307,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 13349,
+      "segundos_generacion": 32.94,
+      "tokens_s": 100.91,
+      "usage": {
+        "completion_tokens": 3307,
+        "prompt_tokens": 566,
+        "total_tokens": 3873,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 566,
+        "prompt_ms": 154.121,
+        "prompt_per_token_ms": 0.27229858657243816,
+        "prompt_per_second": 3672.4391873917243,
+        "predicted_n": 3307,
+        "predicted_ms": 32763.11,
+        "predicted_per_token_ms": 9.910196612220206,
+        "predicted_per_second": 100.90617160580909
+      },
+      "comprobaciones": {
+        "palabras": 133,
+        "frases": 2,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 58,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 6,
+        "hechos_total": 7,
+        "cobertura": 0.857,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "La película 'Las horas del faro' de la directora gallega Iria Castiñeira ganó la Gaviota de Oro del Festival de Cine de Montesur",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "recibió el premio a mejor interpretación para su debutante",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "además de una mención especial al documental 'Tierra de nadie'",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "atribuyó el aumento de público a la nueva sección de cine al aire libre en la playa de Levante",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "destacó que la mitad de las películas estaban dirigidas por mujeres",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "criticó la accesibilidad de las sedes",
+            "cita_verificada": true,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 6,
+        "hechos_total": 7,
+        "cobertura": 0.857,
+        "principales_ok": false,
+        "citas_no_verificadas": 0,
+        "invenciones": [
+          {
+            "cita": "un récord de setenta mil cuatro mil espectadores",
+            "motivo": "El texto dice 64.000 espectadores, no setenta mil cuatro mil.",
+            "cita_verificada": true
+          },
+          {
+            "cita": "recibió el premio a mejor interpretación para su debutante",
+            "motivo": "El premio fue para Mateo Villar, un pescador jubilado de 71 años y no la directora debutante; el resumen lo atribuye de forma confusa a la debutante.",
+            "cita_verificada": true
+          },
+          {
+            "cita": "además de una mención especial al documental 'Tierra de nadie'",
+            "motivo": "El texto dice que fue la Gaviota de Plata, premio especial del jurado, no una mención especial.",
+            "cita_verificada": true
+          },
+          {
+            "cita": "aunque tuvo que suspender dos proyecciones al aire libre por el viento y criticó la accesibilidad de las sedes",
+            "motivo": "Quien suspendió las proyecciones fue la organización y quienes criticaron la accesibilidad fueron asociaciones de personas con discapacidad, no el director Lozano.",
+            "cita_verificada": true
+          }
+        ],
+        "n_invenciones": 4,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"La película 'Las horas del faro' de la directora gallega Iria Castiñeira ganó la Gaviota de Oro del Festival de Cine de Montesur\"}, {\"id\": 2, \"presente\": false, \"cita\": \"\"}, {\"id\": 3, \"presente\": true, \"cita\": \"recibió el premio a mejor interpretación para su debutante\"}, {\"id\": 4, \"presente\": true, \"cita\": \"además de una mención especial al documental 'Tierra de nadie'\"}, {\"id\": 5, \"presente\": true, \"cita\": \"atribuyó el aumento de público a la nueva sección de cine al aire libre en la playa de Levante\"}, {\"id\": 6, \"presente\": true, \"cita\": \"destacó que la mitad de las películas estaban dirigidas por mujeres\"}, {\"id\": 7, \"presente\": true, \"cita\": \"criticó la accesibilidad de las sedes\"}], \"invenciones\": [{\"cita\": \"un récord de setenta mil cuatro mil espectadores\", \"motivo\": \"El texto dice 64.000 espectadores, no setenta mil cuatro mil.\"}, {\"cita\": \"recibió el premio a mejor interpretación para su debutante\", \"motivo\": \"El premio fue para Mateo Villar, un pescador jubilado de 71 años y no la directora debutante; el resumen lo atribuye de forma confusa a la debutante.\"}, {\"cita\": \"además de una mención especial al documental 'Tierra de nadie'\", \"motivo\": \"El texto dice que fue la Gaviota de Plata, premio especial del jurado, no una mención especial.\"}, {\"cita\": \"aunque tuvo que suspender dos proyecciones al aire libre por el viento y criticó la accesibilidad de las sedes\", \"motivo\": \"Quien suspendió las proyecciones fue la organización y quienes criticaron la accesibilidad fueron asociaciones de personas con discapacidad, no el director Lozano.\"}]}",
+        "segundos": 5.6,
+        "coste_usd": 0.0213,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3639,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 674,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 3639,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 674,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 3639,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 3639
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    },
+    {
+      "id": "07_es_informe_cooperativa",
+      "titulo": "Informe trimestral de una cooperativa de aceite",
+      "tipo": "informe",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume el siguiente informe en 5 viñetas como máximo. Usa un guion al principio de cada viñeta y no escribas nada más.",
+      "limites": {
+        "vinetas": [
+          3,
+          5
+        ]
+      },
+      "resumen": "- Campaña y producción: La cosecha de aceituna de la campaña 2025‑2026 cerró con 18,4 millones de kilos entregados por los 1,320 socios, un 9 % menos que la anterior; sequía redujo el fruto, pero el rendimiento graso fue alto (21,8 % frente al 20,1 %); se produjeron 4,01 millones de litros de aceite, del cual 62 % virgen extra.  \n- Ventas y precios: Se vendieron 1,3 millones de litros; el precio medio del virgen extra a granel bajó de 6,90 a 5,40 euros por litro respecto al mismo trimestre de 2025; la venta embotellada con marca propia \"Almedina Oro\" creció un 31 % y ya representa el 14 % de la facturación.  \n- Resultado: La facturación del trimestre fue de 8,2 millones de euros, un 18 % menos que hace un año; el resultado es positivo: 410.000 euros gracias a la caída del coste de energía y a la venta de orujo a la planta de biomasa de Linares; liquidación a los socios se mantiene en 0,92 euros por kilo de aceituna, pagadera en dos plazos: diciembre y marzo.  \n- Inversiones: La nueva línea de empaque tiene un coste de 1,1 millones de euros, está instalada y empezará a funcionar en noviembre; permitirá multiplicar por tres la capacidad de embotellado; la inversión está financiada en un 40 % con una ayuda europea de desarrollo rural.  \n- Riesgos y propuestas: La previsión de la próxima cosecha es incierta (las lluvias de septiembre fueron un 30 % inferiores a la media); dos grandes compradores de granel han retrasado sus pagos más de 60 días, deuda pendiente suma 640.000 euros; el contrato con la distribuidora Grupo Merca vence en enero y aún no se ha renovado; propuestas al Consejo Rector: destinar 150.000 euros a campaña de promoción de \"Almedina Oro\" en el mercado alemán, exigir pago anticipado a compradores que acumulen retrasos e abrir una tienda en línea antes de la campaña de Navidad.",
+      "contenido": "- Campaña y producción: La cosecha de aceituna de la campaña 2025‑2026 cerró con 18,4 millones de kilos entregados por los 1,320 socios, un 9 % menos que la anterior; sequía redujo el fruto, pero el rendimiento graso fue alto (21,8 % frente al 20,1 %); se produjeron 4,01 millones de litros de aceite, del cual 62 % virgen extra.  \n- Ventas y precios: Se vendieron 1,3 millones de litros; el precio medio del virgen extra a granel bajó de 6,90 a 5,40 euros por litro respecto al mismo trimestre de 2025; la venta embotellada con marca propia \"Almedina Oro\" creció un 31 % y ya representa el 14 % de la facturación.  \n- Resultado: La facturación del trimestre fue de 8,2 millones de euros, un 18 % menos que hace un año; el resultado es positivo: 410.000 euros gracias a la caída del coste de energía y a la venta de orujo a la planta de biomasa de Linares; liquidación a los socios se mantiene en 0,92 euros por kilo de aceituna, pagadera en dos plazos: diciembre y marzo.  \n- Inversiones: La nueva línea de empaque tiene un coste de 1,1 millones de euros, está instalada y empezará a funcionar en noviembre; permitirá multiplicar por tres la capacidad de embotellado; la inversión está financiada en un 40 % con una ayuda europea de desarrollo rural.  \n- Riesgos y propuestas: La previsión de la próxima cosecha es incierta (las lluvias de septiembre fueron un 30 % inferiores a la media); dos grandes compradores de granel han retrasado sus pagos más de 60 días, deuda pendiente suma 640.000 euros; el contrato con la distribuidora Grupo Merca vence en enero y aún no se ha renovado; propuestas al Consejo Rector: destinar 150.000 euros a campaña de promoción de \"Almedina Oro\" en el mercado alemán, exigir pago anticipado a compradores que acumulen retrasos e abrir una tienda en línea antes de la campaña de Navidad.",
+      "finish_reason": "stop",
+      "tokens_prompt": 721,
+      "tokens_total": 3483,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 10560,
+      "segundos_generacion": 34.72,
+      "tokens_s": 100.94,
+      "usage": {
+        "completion_tokens": 3483,
+        "prompt_tokens": 721,
+        "total_tokens": 4204,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 721,
+        "prompt_ms": 182.547,
+        "prompt_per_token_ms": 0.2531858529819695,
+        "prompt_per_second": 3949.66775679688,
+        "predicted_n": 3483,
+        "predicted_ms": 34496.487,
+        "predicted_per_token_ms": 9.907089890867319,
+        "predicted_per_second": 100.93781433454369
+      },
+      "comprobaciones": {
+        "palabras": 308,
+        "frases": 5,
+        "vinetas": 5,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 123,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 7,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "La facturación del trimestre fue de 8,2 millones de euros, un 18 % menos que hace un año; el resultado es positivo: 410.000 euros",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "La cosecha de aceituna de la campaña 2025‑2026 cerró con 18,4 millones de kilos entregados por los 1,320 socios, un 9 % menos que la anterior; sequía redujo el fruto",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "el precio medio del virgen extra a granel bajó de 6,90 a 5,40 euros por litro",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "la venta embotellada con marca propia \"Almedina Oro\" creció un 31 %",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "liquidación a los socios se mantiene en 0,92 euros por kilo de aceituna",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "La nueva línea de empaque tiene un coste de 1,1 millones de euros, está instalada y empezará a funcionar en noviembre",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "La previsión de la próxima cosecha es incierta (las lluvias de septiembre fueron un 30 % inferiores a la media); dos grandes compradores de granel han retrasado sus pagos más de 60 días, deuda pendiente suma 640.000 euros; el contrato con la distribuidora Grupo Merca vence en enero y aún no se ha renovado",
+            "cita_verificada": true,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 7,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "citas_no_verificadas": 0,
+        "invenciones": [],
+        "n_invenciones": 0,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"La facturación del trimestre fue de 8,2 millones de euros, un 18 % menos que hace un año; el resultado es positivo: 410.000 euros\"}, {\"id\": 2, \"presente\": true, \"cita\": \"La cosecha de aceituna de la campaña 2025‑2026 cerró con 18,4 millones de kilos entregados por los 1,320 socios, un 9 % menos que la anterior; sequía redujo el fruto\"}, {\"id\": 3, \"presente\": true, \"cita\": \"el precio medio del virgen extra a granel bajó de 6,90 a 5,40 euros por litro\"}, {\"id\": 4, \"presente\": true, \"cita\": \"la venta embotellada con marca propia \\\"Almedina Oro\\\" creció un 31 %\"}, {\"id\": 5, \"presente\": true, \"cita\": \"liquidación a los socios se mantiene en 0,92 euros por kilo de aceituna\"}, {\"id\": 6, \"presente\": true, \"cita\": \"La nueva línea de empaque tiene un coste de 1,1 millones de euros, está instalada y empezará a funcionar en noviembre\"}, {\"id\": 7, \"presente\": true, \"cita\": \"La previsión de la próxima cosecha es incierta (las lluvias de septiembre fueron un 30 % inferiores a la media); dos grandes compradores de granel han retrasado sus pagos más de 60 días, deuda pendiente suma 640.000 euros; el contrato con la distribuidora Grupo Merca vence en enero y aún no se ha renovado\"}], \"invenciones\": []}",
+        "segundos": 4.8,
+        "coste_usd": 0.022871999999999997,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 4337,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 552,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 4337,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 552,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 4337,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 4337
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    },
+    {
+      "id": "08_es_acta_consejo_escolar",
+      "titulo": "Consejo escolar de un colegio",
+      "tipo": "acta",
+      "idioma_texto": "es",
+      "idioma_resumen": "es",
+      "instruccion": "Resume el acta en menos de 120 palabras.",
+      "limites": {
+        "max_palabras": 119
+      },
+      "resumen": "",
+      "contenido": "",
+      "finish_reason": "length",
+      "tokens_prompt": 696,
+      "tokens_total": 8192,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 23418,
+      "segundos_generacion": 82.69,
+      "tokens_s": 99.32,
+      "usage": {
+        "completion_tokens": 8192,
+        "prompt_tokens": 696,
+        "total_tokens": 8888,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 696,
+        "prompt_ms": 174.168,
+        "prompt_per_token_ms": 0.25024137931034485,
+        "prompt_per_second": 3996.1416563318176,
+        "predicted_n": 8192,
+        "predicted_ms": 82473.086,
+        "predicted_per_token_ms": 10.068744475644,
+        "predicted_per_second": 99.31724878101446
+      },
+      "comprobaciones": {
+        "palabras": 0,
+        "frases": 0,
+        "vinetas": 0,
+        "longitud_ok": false,
+        "formato_ok": true,
+        "motivos_forma": [
+          "resumen vacío"
+        ],
+        "idioma_detectado": "indeterminado",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 0
+        },
+        "idioma_ok": false,
+        "forma_ok": false,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": false
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": false
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente": false
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 0,
+        "hechos_total": 6,
+        "cobertura": 0.0,
+        "principales_ok": false,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": "respuesta vacía (corte por max_tokens)",
+      "juez": {
+        "error": "sin resumen que juzgar"
+      }
+    },
+    {
+      "id": "09_es_noticia_salud_a_en",
+      "titulo": "Apertura de un centro de salud con retraso (resumen en inglés)",
+      "tipo": "noticia",
+      "idioma_texto": "es",
+      "idioma_resumen": "en",
+      "instruccion": "Summarize the following Spanish news article in English, in fewer than 80 words.",
+      "limites": {
+        "max_palabras": 79
+      },
+      "resumen": "Arroyo Blanco’s new health center opens Jan 12 2027, two years late due to the first builder’s bankruptcy; cost €7.8 M vs €5.9 M budget. The 2,400‑sqm facility will serve ~22,000 patients from El Carmen, offering 14 family medicine visits, 4 pediatric appointments, a physiotherapy unit and an extraction room, open 8 am–9 pm Mon‑Fri with 46 staff (31 hired). The neighborhood association wants full staffing and evening/24‑hour emergency care; El Carmen will extend emergency hours from March.",
+      "contenido": "Arroyo Blanco’s new health center opens Jan 12 2027, two years late due to the first builder’s bankruptcy; cost €7.8 M vs €5.9 M budget. The 2,400‑sqm facility will serve ~22,000 patients from El Carmen, offering 14 family medicine visits, 4 pediatric appointments, a physiotherapy unit and an extraction room, open 8 am–9 pm Mon‑Fri with 46 staff (31 hired). The neighborhood association wants full staffing and evening/24‑hour emergency care; El Carmen will extend emergency hours from March.",
+      "finish_reason": "stop",
+      "tokens_prompt": 617,
+      "tokens_total": 3161,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 10500,
+      "segundos_generacion": 31.44,
+      "tokens_s": 101.2,
+      "usage": {
+        "completion_tokens": 3161,
+        "prompt_tokens": 617,
+        "total_tokens": 3778,
+        "prompt_tokens_details": {
+          "cached_tokens": 101
+        }
+      },
+      "timings": {
+        "cache_n": 101,
+        "prompt_n": 516,
+        "prompt_ms": 125.343,
+        "prompt_per_token_ms": 0.24291279069767444,
+        "prompt_per_second": 4116.7037648691985,
+        "predicted_n": 3161,
+        "predicted_ms": 31224.313,
+        "predicted_per_token_ms": 9.88111170886076,
+        "predicted_per_second": 101.20318740079247
+      },
+      "comprobaciones": {
+        "palabras": 78,
+        "frases": 3,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "en",
+        "idioma_marcas": {
+          "marcas_es": 2,
+          "marcas_en": 14
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [
+            "9"
+          ],
+          "meses": [],
+          "nombres": [
+            "Jan",
+            "Mon",
+            "Fri"
+          ]
+        },
+        "n_sospechosos": 4,
+        "fiel_ok": false,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 7,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "opens Jan 12 2027",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "two years late",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "due to the first builder’s bankruptcy",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "cost €7.8 M vs €5.9 M budget",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "will serve ~22,000 patients from El Carmen",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "46 staff (31 hired). The neighborhood association wants full staffing",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "El Carmen will extend emergency hours from March",
+            "cita_verificada": true,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 7,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "citas_no_verificadas": 0,
+        "invenciones": [
+          {
+            "cita": "wants full staffing and evening/24‑hour emergency care",
+            "motivo": "La asociación vecinal pide urgencias por la tarde, no urgencias de 24 horas; las 24 horas son el plan de El Carmen anunciado por la consejera.",
+            "cita_verificada": true
+          }
+        ],
+        "n_invenciones": 1,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"opens Jan 12 2027\"}, {\"id\": 2, \"presente\": true, \"cita\": \"two years late\"}, {\"id\": 3, \"presente\": true, \"cita\": \"due to the first builder’s bankruptcy\"}, {\"id\": 4, \"presente\": true, \"cita\": \"cost €7.8 M vs €5.9 M budget\"}, {\"id\": 5, \"presente\": true, \"cita\": \"will serve ~22,000 patients from El Carmen\"}, {\"id\": 6, \"presente\": true, \"cita\": \"46 staff (31 hired). The neighborhood association wants full staffing\"}, {\"id\": 7, \"presente\": true, \"cita\": \"El Carmen will extend emergency hours from March\"}], \"invenciones\": [{\"cita\": \"wants full staffing and evening/24‑hour emergency care\", \"motivo\": \"La asociación vecinal pide urgencias por la tarde, no urgencias de 24 horas; las 24 horas son el plan de El Carmen anunciado por la consejera.\"}]}",
+        "segundos": 10.0,
+        "coste_usd": 0.021648,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3636,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 710,
+          "output_tokens_details": {
+            "thinking_tokens": 354
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 3636,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 710,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 3636,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 3636
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    },
+    {
+      "id": "10_en_noticia_carril_bici",
+      "titulo": "A city approves protected bike lanes",
+      "tipo": "noticia",
+      "idioma_texto": "en",
+      "idioma_resumen": "en",
+      "instruccion": "Summarize the following news article in exactly 3 sentences.",
+      "limites": {
+        "frases": [
+          3,
+          3
+        ]
+      },
+      "resumen": "The Harborview city council voted 7–4 to approve building 28 km of protected bike lanes over the next three years, a $46 million project estimated to link the waterfront, university district and suburbs Eastgate and Millbrook after eighteen months of debate. The most contested element is removing 1,150 on‑street parking spaces along Commerce Avenue; supporters cite recent cyclist deaths and have offered concessions such as a new 400‑space garage near that street and $2 million compensation for businesses that can prove revenue losses during construction. Work starts in September with the waterfront section first and the Commerce Avenue segment slated for 2028, and the council may pause the project if shop revenue on affected streets falls more than 15 percent according to six‑month counts.",
+      "contenido": "The Harborview city council voted 7–4 to approve building 28 km of protected bike lanes over the next three years, a $46 million project estimated to link the waterfront, university district and suburbs Eastgate and Millbrook after eighteen months of debate. The most contested element is removing 1,150 on‑street parking spaces along Commerce Avenue; supporters cite recent cyclist deaths and have offered concessions such as a new 400‑space garage near that street and $2 million compensation for businesses that can prove revenue losses during construction. Work starts in September with the waterfront section first and the Commerce Avenue segment slated for 2028, and the council may pause the project if shop revenue on affected streets falls more than 15 percent according to six‑month counts.",
+      "finish_reason": "stop",
+      "tokens_prompt": 520,
+      "tokens_total": 1121,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 4523,
+      "segundos_generacion": 11.19,
+      "tokens_s": 101.75,
+      "usage": {
+        "completion_tokens": 1121,
+        "prompt_tokens": 520,
+        "total_tokens": 1641,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 520,
+        "prompt_ms": 148.116,
+        "prompt_per_token_ms": 0.28483846153846154,
+        "prompt_per_second": 3510.761835318264,
+        "predicted_n": 1121,
+        "predicted_ms": 11007.156,
+        "predicted_per_token_ms": 9.827817857142858,
+        "predicted_per_second": 101.75198752520632
+      },
+      "comprobaciones": {
+        "palabras": 124,
+        "frases": 3,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "en",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 37
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 7,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "approve building 28 km of protected bike lanes",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "voted 7–4",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "concessions such as a new 400‑space garage near that street and $2 million compensation for businesses that can prove revenue losses during construction",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "Work starts in September with the waterfront section first and the Commerce Avenue segment slated for 2028",
+            "cita_verificada": true,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 4,
+        "hechos_total": 7,
+        "cobertura": 0.571,
+        "principales_ok": false,
+        "citas_no_verificadas": 0,
+        "invenciones": [],
+        "n_invenciones": 0,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"approve building 28 km of protected bike lanes\"}, {\"id\": 2, \"presente\": true, \"cita\": \"voted 7–4\"}, {\"id\": 3, \"presente\": false, \"cita\": \"\"}, {\"id\": 4, \"presente\": false, \"cita\": \"\"}, {\"id\": 5, \"presente\": false, \"cita\": \"\"}, {\"id\": 6, \"presente\": true, \"cita\": \"concessions such as a new 400‑space garage near that street and $2 million compensation for businesses that can prove revenue losses during construction\"}, {\"id\": 7, \"presente\": true, \"cita\": \"Work starts in September with the waterfront section first and the Commerce Avenue segment slated for 2028\"}], \"invenciones\": []}",
+        "segundos": 4.1,
+        "coste_usd": 0.0165,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3479,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 258,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 3479,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 258,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 3479,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 3479
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    },
+    {
+      "id": "11_en_acta_retro",
+      "titulo": "Sprint retrospective of a mobile team",
+      "tipo": "acta",
+      "idioma_texto": "en",
+      "idioma_resumen": "en",
+      "instruccion": "Summarize these meeting notes as a list of 4 to 6 bullet points, one line each, with at most 120 words in total. Start each bullet with a hyphen.",
+      "limites": {
+        "vinetas": [
+          4,
+          6
+        ],
+        "max_palabras": 120
+      },
+      "resumen": "",
+      "contenido": "",
+      "finish_reason": "length",
+      "tokens_prompt": 584,
+      "tokens_total": 8192,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 25029,
+      "segundos_generacion": 82.52,
+      "tokens_s": 99.48,
+      "usage": {
+        "completion_tokens": 8192,
+        "prompt_tokens": 584,
+        "total_tokens": 8776,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 584,
+        "prompt_ms": 155.173,
+        "prompt_per_token_ms": 0.2657071917808219,
+        "prompt_per_second": 3763.541337732724,
+        "predicted_n": 8192,
+        "predicted_ms": 82341.874,
+        "predicted_per_token_ms": 10.052725430350383,
+        "predicted_per_second": 99.47551108686207
+      },
+      "comprobaciones": {
+        "palabras": 0,
+        "frases": 0,
+        "vinetas": 0,
+        "longitud_ok": false,
+        "formato_ok": true,
+        "motivos_forma": [
+          "0 viñetas, pedidas 4-6",
+          "resumen vacío"
+        ],
+        "idioma_detectado": "indeterminado",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 0
+        },
+        "idioma_ok": false,
+        "forma_ok": false,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": false
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": false
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 0,
+        "hechos_total": 7,
+        "cobertura": 0.0,
+        "principales_ok": false,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": "respuesta vacía (corte por max_tokens)",
+      "juez": {
+        "error": "sin resumen que juzgar"
+      }
+    },
+    {
+      "id": "12_en_informe_dron",
+      "titulo": "Cold-weather endurance test of an inspection drone",
+      "tipo": "informe técnico",
+      "idioma_texto": "en",
+      "idioma_resumen": "en",
+      "instruccion": "Summarize the following report in fewer than 100 words.",
+      "limites": {
+        "max_palabras": 99
+      },
+      "resumen": "",
+      "contenido": "",
+      "finish_reason": "length",
+      "tokens_prompt": 1402,
+      "tokens_total": 8192,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 22252,
+      "segundos_generacion": 83.03,
+      "tokens_s": 98.91,
+      "usage": {
+        "completion_tokens": 8192,
+        "prompt_tokens": 1402,
+        "total_tokens": 9594,
+        "prompt_tokens_details": {
+          "cached_tokens": 886
+        }
+      },
+      "timings": {
+        "cache_n": 886,
+        "prompt_n": 516,
+        "prompt_ms": 128.463,
+        "prompt_per_token_ms": 0.2489593023255814,
+        "prompt_per_second": 4016.7207678475515,
+        "predicted_n": 8192,
+        "predicted_ms": 82815.628,
+        "predicted_per_token_ms": 10.110563789525088,
+        "predicted_per_second": 98.90645277724636
+      },
+      "comprobaciones": {
+        "palabras": 0,
+        "frases": 0,
+        "vinetas": 0,
+        "longitud_ok": false,
+        "formato_ok": true,
+        "motivos_forma": [
+          "resumen vacío"
+        ],
+        "idioma_detectado": "indeterminado",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 0
+        },
+        "idioma_ok": false,
+        "forma_ok": false,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": false
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": false
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente": false
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 8,
+            "principal": false,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 0,
+        "hechos_total": 8,
+        "cobertura": 0.0,
+        "principales_ok": false,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": "respuesta vacía (corte por max_tokens)",
+      "juez": {
+        "error": "sin resumen que juzgar"
+      }
+    },
+    {
+      "id": "13_en_correos_proveedor",
+      "titulo": "Delayed delivery of laboratory freezers",
+      "tipo": "hilo de correos",
+      "idioma_texto": "en",
+      "idioma_resumen": "en",
+      "instruccion": "Summarize this email thread in fewer than 80 words.",
+      "limites": {
+        "max_palabras": 79
+      },
+      "resumen": "The UF-700 order PS-77812 was delayed; Tom says new delivery is 17 Nov with install next day due to customs. He offers a free UF-500 loan from Thu 5 Nov until arrival. Greta accepts and demands a penalty of 1% per week (order €38,600) for three weeks = €1,158 credit. Tom confirms UF-500 delivery Thu 5 Nov 9–12, will collect at his cost when UF-700 installed, and finance will issue the €1,158 credit on the final invoice.",
+      "contenido": "The UF-700 order PS-77812 was delayed; Tom says new delivery is 17 Nov with install next day due to customs. He offers a free UF-500 loan from Thu 5 Nov until arrival. Greta accepts and demands a penalty of 1% per week (order €38,600) for three weeks = €1,158 credit. Tom confirms UF-500 delivery Thu 5 Nov 9–12, will collect at his cost when UF-700 installed, and finance will issue the €1,158 credit on the final invoice.",
+      "finish_reason": "stop",
+      "tokens_prompt": 618,
+      "tokens_total": 2059,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 6077,
+      "segundos_generacion": 20.46,
+      "tokens_s": 101.83,
+      "usage": {
+        "completion_tokens": 2059,
+        "prompt_tokens": 618,
+        "total_tokens": 2677,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 618,
+        "prompt_ms": 160.62,
+        "prompt_per_token_ms": 0.25990291262135923,
+        "prompt_per_second": 3847.5905864774,
+        "predicted_n": 2059,
+        "predicted_ms": 20211.081,
+        "predicted_per_token_ms": 9.820739067055392,
+        "predicted_per_second": 101.82533037198753
+      },
+      "comprobaciones": {
+        "palabras": 76,
+        "frases": 4,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "en",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 19
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": [
+            "Thu"
+          ]
+        },
+        "n_sospechosos": 1,
+        "fiel_ok": false,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 6,
+        "hechos_total": 6,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "aprobado": false
+      },
+      "aprobado": false,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "The UF-700 order PS-77812 was delayed",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "new delivery is 17 Nov with install next day",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "due to customs",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "He offers a free UF-500 loan from Thu 5 Nov until arrival.",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "finance will issue the €1,158 credit on the final invoice",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 5,
+        "hechos_total": 6,
+        "cobertura": 0.833,
+        "principales_ok": true,
+        "citas_no_verificadas": 0,
+        "invenciones": [],
+        "n_invenciones": 0,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"The UF-700 order PS-77812 was delayed\"}, {\"id\": 2, \"presente\": true, \"cita\": \"new delivery is 17 Nov with install next day\"}, {\"id\": 3, \"presente\": true, \"cita\": \"due to customs\"}, {\"id\": 4, \"presente\": true, \"cita\": \"He offers a free UF-500 loan from Thu 5 Nov until arrival.\"}, {\"id\": 5, \"presente\": true, \"cita\": \"finance will issue the €1,158 credit on the final invoice\"}, {\"id\": 6, \"presente\": false, \"cita\": \"\"}], \"invenciones\": []}",
+        "segundos": 3.3,
+        "coste_usd": 0.016408,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3541,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 224,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 3541,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 224,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 3541,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 3541
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    },
+    {
+      "id": "14_en_divulgacion_pulpo",
+      "titulo": "How octopuses change colour",
+      "tipo": "artículo divulgativo",
+      "idioma_texto": "en",
+      "idioma_resumen": "en",
+      "instruccion": "Summarize the following article in exactly 3 sentences.",
+      "limites": {
+        "frases": [
+          3,
+          3
+        ]
+      },
+      "resumen": "Octopuses can change the color and pattern of their skin in under a second by using up to 230 chromatophores—elastic pigment sacs controlled by nerves—to expand or contract, while underlying iridophore and leucophore layers reflect and scatter light to produce blues, greens, and white tones. Although they appear color‑blind, recent research indicates they detect light via skin opsins or through their U‑shaped pupils that focus different wavelengths at slightly different distances, allowing them to match backgrounds without relying on eyes. The rapid camouflage also serves communication and warning signals, such as darkening before rivals or flashing bright rings, but it costs energy—studies of the related cuttlefish suggest a large share is used at rest—and engineers are still developing artificial materials that replicate its speed and resolution.",
+      "contenido": "Octopuses can change the color and pattern of their skin in under a second by using up to 230 chromatophores—elastic pigment sacs controlled by nerves—to expand or contract, while underlying iridophore and leucophore layers reflect and scatter light to produce blues, greens, and white tones. Although they appear color‑blind, recent research indicates they detect light via skin opsins or through their U‑shaped pupils that focus different wavelengths at slightly different distances, allowing them to match backgrounds without relying on eyes. The rapid camouflage also serves communication and warning signals, such as darkening before rivals or flashing bright rings, but it costs energy—studies of the related cuttlefish suggest a large share is used at rest—and engineers are still developing artificial materials that replicate its speed and resolution.",
+      "finish_reason": "stop",
+      "tokens_prompt": 659,
+      "tokens_total": 1639,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 6978,
+      "segundos_generacion": 16.3,
+      "tokens_s": 101.48,
+      "usage": {
+        "completion_tokens": 1639,
+        "prompt_tokens": 659,
+        "total_tokens": 2298,
+        "prompt_tokens_details": {
+          "cached_tokens": 143
+        }
+      },
+      "timings": {
+        "cache_n": 143,
+        "prompt_n": 516,
+        "prompt_ms": 125.901,
+        "prompt_per_token_ms": 0.24399418604651163,
+        "prompt_per_second": 4098.458312483618,
+        "predicted_n": 1639,
+        "predicted_ms": 16140.781,
+        "predicted_per_token_ms": 9.853956654456654,
+        "predicted_per_second": 101.48207822161764
+      },
+      "comprobaciones": {
+        "palabras": 126,
+        "frases": 3,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "en",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 42
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 7,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "using up to 230 chromatophores—elastic pigment sacs controlled by nerves—to expand or contract",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "in under a second",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "underlying iridophore and leucophore layers reflect and scatter light to produce blues, greens, and white tones",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "Although they appear color‑blind, recent research indicates they detect light via skin opsins",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "or through their U‑shaped pupils that focus different wavelengths at slightly different distances",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "The rapid camouflage also serves communication and warning signals, such as darkening before rivals or flashing bright rings",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "engineers are still developing artificial materials that replicate its speed and resolution",
+            "cita_verificada": true,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 7,
+        "hechos_total": 7,
+        "cobertura": 1.0,
+        "principales_ok": true,
+        "citas_no_verificadas": 0,
+        "invenciones": [
+          {
+            "cita": "using up to 230 chromatophores",
+            "motivo": "El texto dice que hay hasta 230 cromatóforos por milímetro cuadrado de piel, no 230 en total.",
+            "cita_verificada": true
+          },
+          {
+            "cita": "recent research indicates they detect light via skin opsins or through their U‑shaped pupils",
+            "motivo": "El texto presenta estas ideas como explicaciones propuestas o hipótesis (la piel parece detectar luz, las pupilas podrían permitirlo), no como hallazgos establecidos.",
+            "cita_verificada": true
+          },
+          {
+            "cita": "studies of the related cuttlefish suggest a large share is used at rest",
+            "motivo": "El texto dice que es una parte significativa de la energía y que las estimaciones varían mucho entre estudios; el resumen omite esa incertidumbre.",
+            "cita_verificada": true
+          },
+          {
+            "cita": "engineers are still developing artificial materials that replicate its speed and resolution",
+            "motivo": "El texto dice que ningún material artificial se acerca aún a la velocidad y resolución de la piel de pulpo, no que ya la repliquen.",
+            "cita_verificada": true
+          }
+        ],
+        "n_invenciones": 4,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"using up to 230 chromatophores—elastic pigment sacs controlled by nerves—to expand or contract\"}, {\"id\": 2, \"presente\": true, \"cita\": \"in under a second\"}, {\"id\": 3, \"presente\": true, \"cita\": \"underlying iridophore and leucophore layers reflect and scatter light to produce blues, greens, and white tones\"}, {\"id\": 4, \"presente\": true, \"cita\": \"Although they appear color‑blind, recent research indicates they detect light via skin opsins\"}, {\"id\": 5, \"presente\": true, \"cita\": \"or through their U‑shaped pupils that focus different wavelengths at slightly different distances\"}, {\"id\": 6, \"presente\": true, \"cita\": \"The rapid camouflage also serves communication and warning signals, such as darkening before rivals or flashing bright rings\"}, {\"id\": 7, \"presente\": true, \"cita\": \"engineers are still developing artificial materials that replicate its speed and resolution\"}], \"invenciones\": [{\"cita\": \"using up to 230 chromatophores\", \"motivo\": \"El texto dice que hay hasta 230 cromatóforos por milímetro cuadrado de piel, no 230 en total.\"}, {\"cita\": \"recent research indicates they detect light via skin opsins or through their U‑shaped pupils\", \"motivo\": \"El texto presenta estas ideas como explicaciones propuestas o hipótesis (la piel parece detectar luz, las pupilas podrían permitirlo), no como hallazgos establecidos.\"}, {\"cita\": \"studies of the related cuttlefish suggest a large share is used at rest\", \"motivo\": \"El texto dice que es una parte significativa de la energía y que las estimaciones varían mucho entre estudios; el resumen omite esa incertidumbre.\"}, {\"cita\": \"engineers are still developing artificial materials that replicate its speed and resolution\", \"motivo\": \"El texto dice que ningún material artificial se acerca aún a la velocidad y resolución de la piel de pulpo, no que ya la repliquen.\"}]}",
+        "segundos": 7.0,
+        "coste_usd": 0.021932,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3727,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 702,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 3727,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 702,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 3727,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 3727
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    },
+    {
+      "id": "15_en_noticia_biblioteca_a_es",
+      "titulo": "Reapertura de una biblioteca tras una inundación (texto en inglés, resumen en español)",
+      "tipo": "noticia",
+      "idioma_texto": "en",
+      "idioma_resumen": "es",
+      "instruccion": "Resume en español la siguiente noticia, escrita en inglés, en menos de 80 palabras.",
+      "limites": {
+        "max_palabras": 79
+      },
+      "resumen": "Bramley Central Library reabrió 14 meses después de una inundación que destruyó sótano y primer piso; reparaciones costaron £3,2 millones. El archivo pasó al segundo piso; el primer piso es para adolescentes (13‑18 años) con salas de estudio, grabación y juegos. Se reemplazaron más de 22 mil libros por donaciones. Los mayores critican reducción del salón de periódicos a 25 asientos. La biblioteca será una de tres 'espacios cálidos' gratuitos este invierno.",
+      "contenido": "Bramley Central Library reabrió 14 meses después de una inundación que destruyó sótano y primer piso; reparaciones costaron £3,2 millones. El archivo pasó al segundo piso; el primer piso es para adolescentes (13‑18 años) con salas de estudio, grabación y juegos. Se reemplazaron más de 22 mil libros por donaciones. Los mayores critican reducción del salón de periódicos a 25 asientos. La biblioteca será una de tres 'espacios cálidos' gratuitos este invierno.",
+      "finish_reason": "stop",
+      "tokens_prompt": 508,
+      "tokens_total": 3070,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 10607,
+      "segundos_generacion": 30.57,
+      "tokens_s": 100.91,
+      "usage": {
+        "completion_tokens": 3070,
+        "prompt_tokens": 508,
+        "total_tokens": 3578,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 508,
+        "prompt_ms": 129.901,
+        "prompt_per_token_ms": 0.25571062992125987,
+        "prompt_per_second": 3910.670433637924,
+        "predicted_n": 3070,
+        "predicted_ms": 30412.353,
+        "predicted_per_token_ms": 9.909531769305962,
+        "predicted_per_second": 100.91294152741158
+      },
+      "comprobaciones": {
+        "palabras": 72,
+        "frases": 5,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 27,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 5,
+        "hechos_total": 7,
+        "cobertura": 0.714,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "Bramley Central Library reabrió 14 meses después de una inundación",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "reparaciones costaron £3,2 millones",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "el primer piso es para adolescentes (13‑18 años) con salas de estudio, grabación y juegos",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "Los mayores critican reducción del salón de periódicos a 25 asientos",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "La biblioteca será una de tres 'espacios cálidos' gratuitos este invierno.",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 5,
+        "hechos_total": 7,
+        "cobertura": 0.714,
+        "principales_ok": true,
+        "citas_no_verificadas": 0,
+        "invenciones": [
+          {
+            "cita": "una inundación que destruyó sótano y primer piso",
+            "motivo": "El texto dice que la inundación afectó al sótano y a la planta baja (ground floor), no al primer piso.",
+            "cita_verificada": true
+          },
+          {
+            "cita": "Se reemplazaron más de 22 mil libros por donaciones.",
+            "motivo": "El texto dice que se han repuesto unos 22.000 libros, muchos (no todos) por donaciones, y no habla de «más de» esa cifra.",
+            "cita_verificada": true
+          }
+        ],
+        "n_invenciones": 2,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"Bramley Central Library reabrió 14 meses después de una inundación\"}, {\"id\": 2, \"presente\": false, \"cita\": \"\"}, {\"id\": 3, \"presente\": true, \"cita\": \"reparaciones costaron £3,2 millones\"}, {\"id\": 4, \"presente\": true, \"cita\": \"el primer piso es para adolescentes (13‑18 años) con salas de estudio, grabación y juegos\"}, {\"id\": 5, \"presente\": true, \"cita\": \"Los mayores critican reducción del salón de periódicos a 25 asientos\"}, {\"id\": 6, \"presente\": true, \"cita\": \"La biblioteca será una de tres 'espacios cálidos' gratuitos este invierno.\"}, {\"id\": 7, \"presente\": false, \"cita\": \"\"}], \"invenciones\": [{\"cita\": \"una inundación que destruyó sótano y primer piso\", \"motivo\": \"El texto dice que la inundación afectó al sótano y a la planta baja (ground floor), no al primer piso.\"}, {\"cita\": \"Se reemplazaron más de 22 mil libros por donaciones.\", \"motivo\": \"El texto dice que se han repuesto unos 22.000 libros, muchos (no todos) por donaciones, y no habla de «más de» esa cifra.\"}]}",
+        "segundos": 5.4,
+        "coste_usd": 0.018043999999999998,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3385,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 450,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 3385,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 450,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 3385,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 3385
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    },
+    {
+      "id": "16_en_correos_microscopio_a_es",
+      "titulo": "Nuevas normas de reserva de un microscopio (texto en inglés, resumen en español)",
+      "tipo": "hilo de correos",
+      "idioma_texto": "en",
+      "idioma_resumen": "es",
+      "instruccion": "Resume en español este hilo de correos, escrito en inglés, en una lista de 3 a 5 viñetas. Usa un guion al principio de cada viñeta y no escribas nada más.",
+      "limites": {
+        "vinetas": [
+          3,
+          5
+        ]
+      },
+      "resumen": "- A partir del 1 de mayo, el microscopio confocal Zeiss en la sala B214 tiene nuevas reglas: máximo de 4 horas por sesión y 12 horas semanales por grupo; las sesiones nocturnas (de 8 p.m. a 8 a.m.) solo pueden reservarse si se completó entrenamiento avanzado.  \n- Si no se inicia sesión dentro de los 30 minutos del inicio de la reserva, el horario se libera y se cobra una tarifa por ausencia de £40; la multa comenzará el 1 de junio en lugar del 1 de mayo.  \n- Se permite reservar experimentos de tiempo-lapse hasta 8 horas si se solicita por correo al menos 48 horas antes; estos siguen contando hacia el límite semanal de 12 horas y cada grupo puede solicitar una excepción mensual.  \n- La tarifa por hora sigue a £28 para usuarios internos; se programó una sesión adicional de entrenamiento avanzado para el 12 y 13 de mayo con 6 plazas, priorizando a estudiantes que dependen de imagen nocturna.",
+      "contenido": "- A partir del 1 de mayo, el microscopio confocal Zeiss en la sala B214 tiene nuevas reglas: máximo de 4 horas por sesión y 12 horas semanales por grupo; las sesiones nocturnas (de 8 p.m. a 8 a.m.) solo pueden reservarse si se completó entrenamiento avanzado.  \n- Si no se inicia sesión dentro de los 30 minutos del inicio de la reserva, el horario se libera y se cobra una tarifa por ausencia de £40; la multa comenzará el 1 de junio en lugar del 1 de mayo.  \n- Se permite reservar experimentos de tiempo-lapse hasta 8 horas si se solicita por correo al menos 48 horas antes; estos siguen contando hacia el límite semanal de 12 horas y cada grupo puede solicitar una excepción mensual.  \n- La tarifa por hora sigue a £28 para usuarios internos; se programó una sesión adicional de entrenamiento avanzado para el 12 y 13 de mayo con 6 plazas, priorizando a estudiantes que dependen de imagen nocturna.",
+      "finish_reason": "stop",
+      "tokens_prompt": 606,
+      "tokens_total": 3685,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 13565,
+      "segundos_generacion": 36.7,
+      "tokens_s": 100.92,
+      "usage": {
+        "completion_tokens": 3685,
+        "prompt_tokens": 606,
+        "total_tokens": 4291,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 606,
+        "prompt_ms": 156.178,
+        "prompt_per_token_ms": 0.2577194719471947,
+        "prompt_per_second": 3880.18799062608,
+        "predicted_n": 3685,
+        "predicted_ms": 36505.362,
+        "predicted_per_token_ms": 9.909164495114007,
+        "predicted_per_second": 100.91668177403638
+      },
+      "comprobaciones": {
+        "palabras": 160,
+        "frases": 4,
+        "vinetas": 4,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 62,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 4,
+        "hechos_total": 7,
+        "cobertura": 0.571,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "máximo de 4 horas por sesión y 12 horas semanales por grupo",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "se cobra una tarifa por ausencia de £40; la multa comenzará el 1 de junio en lugar del 1 de mayo",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "Se permite reservar experimentos de tiempo-lapse hasta 8 horas si se solicita por correo al menos 48 horas antes",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "se programó una sesión adicional de entrenamiento avanzado para el 12 y 13 de mayo con 6 plazas",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "las sesiones nocturnas (de 8 p.m. a 8 a.m.) solo pueden reservarse si se completó entrenamiento avanzado",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 5,
+        "hechos_total": 7,
+        "cobertura": 0.714,
+        "principales_ok": true,
+        "citas_no_verificadas": 0,
+        "invenciones": [],
+        "n_invenciones": 0,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"máximo de 4 horas por sesión y 12 horas semanales por grupo\"}, {\"id\": 2, \"presente\": false, \"cita\": \"\"}, {\"id\": 3, \"presente\": true, \"cita\": \"se cobra una tarifa por ausencia de £40; la multa comenzará el 1 de junio en lugar del 1 de mayo\"}, {\"id\": 4, \"presente\": true, \"cita\": \"Se permite reservar experimentos de tiempo-lapse hasta 8 horas si se solicita por correo al menos 48 horas antes\"}, {\"id\": 5, \"presente\": true, \"cita\": \"se programó una sesión adicional de entrenamiento avanzado para el 12 y 13 de mayo con 6 plazas\"}, {\"id\": 6, \"presente\": true, \"cita\": \"las sesiones nocturnas (de 8 p.m. a 8 a.m.) solo pueden reservarse si se completó entrenamiento avanzado\"}, {\"id\": 7, \"presente\": false, \"cita\": \"\"}], \"invenciones\": []}",
+        "segundos": 4.0,
+        "coste_usd": 0.018656,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3733,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 372,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 3733,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 372,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 3733,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 3733
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    },
+    {
+      "id": "17_en_informe_agua_a_es",
+      "titulo": "Informe anual de calidad del agua (texto en inglés, resumen en español)",
+      "tipo": "informe técnico",
+      "idioma_texto": "en",
+      "idioma_resumen": "es",
+      "instruccion": "Resume en español el siguiente informe, escrito en inglés, en exactamente 3 frases.",
+      "limites": {
+        "frases": [
+          3,
+          3
+        ]
+      },
+      "resumen": "En 2025 la Autoridad de Agua de Glenmoor suministró un promedio de 41 millones de litros al día a unos 186,000 residentes y analizó 9,412 muestras en las plantas Ashford y Kilnbrook para 64 sustancias, con el 99,94 % cumpliendo los estándares legales. Sin embargo, seis pruebas no cumplieron el estándar: cuatro muestras del pueblo de Dunlow contenían manganeso superior al límite de 50 microgramos por litro (máximo 71) por un secado prolongado, y dos muestras de casas en el antiguo pueblo de Glenmoor mostraron plomo por encima del límite de 10 microgramos por litro debido a tuberías internas de propiedad de los propietarios. El plan incluye la sustitución de 1,240 conexiones de plomo en 2025 con meta de eliminar todas las tuberías de plomo para 2030, un primer ensayo de PFAS donde todos los resultados estuvieron por debajo del valor de referencia (18 nanogramos por litro el más alto) y se prevé una inversión de £27 millones en 2025 y £31 millones en 2026, además de pruebas mensuales en Kilnbrook en 2026.",
+      "contenido": "En 2025 la Autoridad de Agua de Glenmoor suministró un promedio de 41 millones de litros al día a unos 186,000 residentes y analizó 9,412 muestras en las plantas Ashford y Kilnbrook para 64 sustancias, con el 99,94 % cumpliendo los estándares legales. Sin embargo, seis pruebas no cumplieron el estándar: cuatro muestras del pueblo de Dunlow contenían manganeso superior al límite de 50 microgramos por litro (máximo 71) por un secado prolongado, y dos muestras de casas en el antiguo pueblo de Glenmoor mostraron plomo por encima del límite de 10 microgramos por litro debido a tuberías internas de propiedad de los propietarios. El plan incluye la sustitución de 1,240 conexiones de plomo en 2025 con meta de eliminar todas las tuberías de plomo para 2030, un primer ensayo de PFAS donde todos los resultados estuvieron por debajo del valor de referencia (18 nanogramos por litro el más alto) y se prevé una inversión de £27 millones en 2025 y £31 millones en 2026, además de pruebas mensuales en Kilnbrook en 2026.",
+      "finish_reason": "stop",
+      "tokens_prompt": 686,
+      "tokens_total": 4914,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 18327,
+      "segundos_generacion": 49.18,
+      "tokens_s": 100.32,
+      "usage": {
+        "completion_tokens": 4914,
+        "prompt_tokens": 686,
+        "total_tokens": 5600,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 686,
+        "prompt_ms": 170.873,
+        "prompt_per_token_ms": 0.2490860058309038,
+        "prompt_per_second": 4014.677567550169,
+        "predicted_n": 4914,
+        "predicted_ms": 48974.887,
+        "predicted_per_token_ms": 9.968428048035824,
+        "predicted_per_second": 100.3167194648147
+      },
+      "comprobaciones": {
+        "palabras": 172,
+        "frases": 3,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "es",
+        "idioma_marcas": {
+          "marcas_es": 71,
+          "marcas_en": 0
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 6,
+        "hechos_total": 7,
+        "cobertura": 0.857,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "con el 99,94 % cumpliendo los estándares legales",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 3,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "dos muestras de casas en el antiguo pueblo de Glenmoor mostraron plomo por encima del límite de 10 microgramos por litro debido a tuberías internas de propiedad de los propietarios",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "un primer ensayo de PFAS donde todos los resultados estuvieron por debajo del valor de referencia",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          }
+        ],
+        "hechos_presentes": 3,
+        "hechos_total": 7,
+        "cobertura": 0.429,
+        "principales_ok": true,
+        "citas_no_verificadas": 0,
+        "invenciones": [
+          {
+            "cita": "por un secado prolongado",
+            "motivo": "El texto dice que la causa fue un cambio en el agua del embalse durante un periodo seco prolongado, no un secado.",
+            "cita_verificada": true
+          },
+          {
+            "cita": "se prevé una inversión de £27 millones en 2025 y £31 millones en 2026",
+            "motivo": "El texto dice que en 2025 ya se invirtieron £27 millones (no se preveían) y que en 2026 se planean £31 millones.",
+            "cita_verificada": true
+          },
+          {
+            "cita": "El plan incluye la sustitución de 1,240 conexiones de plomo en 2025",
+            "motivo": "El texto dice que en 2025 ya se sustituyeron 1.240 conexiones, superando las 1.000 previstas; no era un plan.",
+            "cita_verificada": true
+          }
+        ],
+        "n_invenciones": 3,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"con el 99,94 % cumpliendo los estándares legales\"}, {\"id\": 2, \"presente\": false, \"cita\": \"\"}, {\"id\": 3, \"presente\": true, \"cita\": \"dos muestras de casas en el antiguo pueblo de Glenmoor mostraron plomo por encima del límite de 10 microgramos por litro debido a tuberías internas de propiedad de los propietarios\"}, {\"id\": 4, \"presente\": false, \"cita\": \"\"}, {\"id\": 5, \"presente\": true, \"cita\": \"un primer ensayo de PFAS donde todos los resultados estuvieron por debajo del valor de referencia\"}, {\"id\": 6, \"presente\": false, \"cita\": \"\"}, {\"id\": 7, \"presente\": false, \"cita\": \"\"}], \"invenciones\": [{\"cita\": \"por un secado prolongado\", \"motivo\": \"El texto dice que la causa fue un cambio en el agua del embalse durante un periodo seco prolongado, no un secado.\"}, {\"cita\": \"se prevé una inversión de £27 millones en 2025 y £31 millones en 2026\", \"motivo\": \"El texto dice que en 2025 ya se invirtieron £27 millones (no se preveían) y que en 2026 se planean £31 millones.\"}, {\"cita\": \"El plan incluye la sustitución de 1,240 conexiones de plomo en 2025\", \"motivo\": \"El texto dice que en 2025 ya se sustituyeron 1.240 conexiones, superando las 1.000 previstas; no era un plan.\"}]}",
+        "segundos": 5.5,
+        "coste_usd": 0.021072,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3927,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 536,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 3927,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 536,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 3927,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 3927
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    },
+    {
+      "id": "18_en_noticia_compra",
+      "titulo": "A meal-kit company buys a rival",
+      "tipo": "noticia",
+      "idioma_texto": "en",
+      "idioma_resumen": "en",
+      "instruccion": "Summarize the following news article in fewer than 60 words.",
+      "limites": {
+        "max_palabras": 59
+      },
+      "resumen": "Tidewell Foods will buy FreshCrate for $410 million cash, forming North America’s second-largest meal-kit firm with ~2.1 M subscribers. Tidewell pays $14.50/share (37% premium), closes Ohio distribution center and moves ops to Indiana, saving $45 M yearly; deal expected Q4 pending regulators. Analysts mixed; Food Shoppers Alliance warns of possible price hikes in 14 rural states.",
+      "contenido": "Tidewell Foods will buy FreshCrate for $410 million cash, forming North America’s second-largest meal-kit firm with ~2.1 M subscribers. Tidewell pays $14.50/share (37% premium), closes Ohio distribution center and moves ops to Indiana, saving $45 M yearly; deal expected Q4 pending regulators. Analysts mixed; Food Shoppers Alliance warns of possible price hikes in 14 rural states.",
+      "finish_reason": "stop",
+      "tokens_prompt": 529,
+      "tokens_total": 2405,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 9254,
+      "segundos_generacion": 23.92,
+      "tokens_s": 101.28,
+      "usage": {
+        "completion_tokens": 2405,
+        "prompt_tokens": 529,
+        "total_tokens": 2934,
+        "prompt_tokens_details": {
+          "cached_tokens": 49
+        }
+      },
+      "timings": {
+        "cache_n": 49,
+        "prompt_n": 480,
+        "prompt_ms": 122.804,
+        "prompt_per_token_ms": 0.2558416666666667,
+        "prompt_per_second": 3908.66747011498,
+        "predicted_n": 2405,
+        "predicted_ms": 23735.638,
+        "predicted_per_token_ms": 9.873393510815307,
+        "predicted_per_second": 101.28229963736388
+      },
+      "comprobaciones": {
+        "palabras": 56,
+        "frases": 3,
+        "vinetas": 0,
+        "longitud_ok": true,
+        "formato_ok": true,
+        "motivos_forma": [],
+        "idioma_detectado": "en",
+        "idioma_marcas": {
+          "marcas_es": 0,
+          "marcas_en": 7
+        },
+        "idioma_ok": true,
+        "forma_ok": true,
+        "sospechosos": {
+          "cifras": [],
+          "meses": [],
+          "nombres": []
+        },
+        "n_sospechosos": 0,
+        "fiel_ok": true,
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente": false
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 6,
+        "hechos_total": 7,
+        "cobertura": 0.857,
+        "principales_ok": true,
+        "aprobado": true
+      },
+      "aprobado": true,
+      "error": null,
+      "juez": {
+        "hechos": [
+          {
+            "id": 1,
+            "principal": true,
+            "presente_juez": true,
+            "cita": "Tidewell Foods will buy FreshCrate for $410 million cash",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 2,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "forming North America’s second-largest meal-kit firm with ~2.1 M subscribers",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 3,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "Tidewell pays $14.50/share (37% premium)",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 4,
+            "principal": false,
+            "presente_juez": false,
+            "cita": "",
+            "cita_verificada": null,
+            "presente": false
+          },
+          {
+            "id": 5,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "saving $45 M yearly",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 6,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "closes Ohio distribution center and moves ops to Indiana",
+            "cita_verificada": true,
+            "presente": true
+          },
+          {
+            "id": 7,
+            "principal": false,
+            "presente_juez": true,
+            "cita": "deal expected Q4 pending regulators",
+            "cita_verificada": true,
+            "presente": true
+          }
+        ],
+        "hechos_presentes": 6,
+        "hechos_total": 7,
+        "cobertura": 0.857,
+        "principales_ok": true,
+        "citas_no_verificadas": 0,
+        "invenciones": [
+          {
+            "cita": "Food Shoppers Alliance warns of possible price hikes in 14 rural states",
+            "motivo": "El texto dice que la alianza pedirá a los reguladores revisar si podría subir precios en los 14 estados donde ambas son las únicas que reparten a zonas rurales, no que advierta de subidas en 14 estados rurales.",
+            "cita_verificada": true
+          }
+        ],
+        "n_invenciones": 1,
+        "respuesta_cruda": "{\"hechos\": [{\"id\": 1, \"presente\": true, \"cita\": \"Tidewell Foods will buy FreshCrate for $410 million cash\"}, {\"id\": 2, \"presente\": true, \"cita\": \"forming North America’s second-largest meal-kit firm with ~2.1 M subscribers\"}, {\"id\": 3, \"presente\": true, \"cita\": \"Tidewell pays $14.50/share (37% premium)\"}, {\"id\": 4, \"presente\": false, \"cita\": \"\"}, {\"id\": 5, \"presente\": true, \"cita\": \"saving $45 M yearly\"}, {\"id\": 6, \"presente\": true, \"cita\": \"closes Ohio distribution center and moves ops to Indiana\"}, {\"id\": 7, \"presente\": true, \"cita\": \"deal expected Q4 pending regulators\"}], \"invenciones\": [{\"cita\": \"Food Shoppers Alliance warns of possible price hikes in 14 rural states\", \"motivo\": \"El texto dice que la alianza pedirá a los reguladores revisar si podría subir precios en los 14 estados donde ambas son las únicas que reparten a zonas rurales, no que advierta de subidas en 14 estados rurales.\"}]}",
+        "segundos": 6.9,
+        "coste_usd": 0.017816,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3458,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 398,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 3458,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 398,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 3458,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 3458
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "intentos_fallidos": [],
+        "error": null
+      }
+    }
+  ],
+  "juez": {
+    "backend": "claude",
+    "modelo": "sonnet",
+    "prompt": "juez-v1",
+    "fecha": "2026-10-28T02:55:13"
+  },
+  "resumen_juez": {
+    "items": 18,
+    "juzgados": 15,
+    "errores_juez": 3,
+    "hechos_presentes": 78,
+    "hechos_total": 105,
+    "cobertura_media": 0.745,
+    "principales_ok": 11,
+    "items_con_invenciones": 10,
+    "invenciones_total": 19,
+    "citas_no_verificadas": 0,
+    "acuerdo_con_claves": 0.79,
+    "coste_usd": 0.2983
+  }
+}

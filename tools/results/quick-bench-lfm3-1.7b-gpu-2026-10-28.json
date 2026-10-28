@@ -1,0 +1,144 @@
+{
+  "tool": "quick-bench",
+  "date": "2026-10-28T10:23:53",
+  "recipe": "lfm3-1.7b",
+  "machine": "gpu",
+  "system": {
+    "os": "Linux-7.0.0-38-generic-x86_64-desconocido-with-glibc2.43",
+    "python": "3.14.4",
+    "cpu": "Intel(R) Core(TM) i5-9400 CPU @ 2.90GHz",
+    "logical_cpus": 6,
+    "ram_gb": 15.0,
+    "gpu": "NVIDIA GeForce RTX 3050, 6144 MiB, 595.91.07",
+    "llama_cpp": "b11946 (8ca4060b7)"
+  },
+  "command": [
+    "--host",
+    "127.0.0.1",
+    "-m",
+    "/data/ai-lab/models/llm/LFM3-1.7B-Q4_K_M-b3f2ae5.gguf",
+    "-ngl",
+    "99",
+    "-np",
+    "1",
+    "-c",
+    "131072",
+    "--temp",
+    "0.1",
+    "--top-k",
+    "50",
+    "--repeat-penalty",
+    "1.1",
+    "--port",
+    "53245"
+  ],
+  "files_sha256": {
+    "LFM3-1.7B-Q4_K_M-b3f2ae5.gguf": "3793e1e6e2266919d6e015287221b41100175a98eddaba92e111aed3b05c93c4"
+  },
+  "load_seconds": 7.1,
+  "memory": {
+    "vram_mib": 2885,
+    "vram_mib_server": 2884
+  },
+  "results": [
+    {
+      "prompt_tokens": 77,
+      "prefill_tok_s": 1713.5,
+      "decode_tok_s": 102.9,
+      "decode_min": 102.6,
+      "decode_max": 103.0,
+      "runs": [
+        {
+          "prompt_tokens": 79,
+          "prefill_tok_s": 1663.3,
+          "decode_tokens": 1024,
+          "decode_tok_s": 102.9
+        },
+        {
+          "prompt_tokens": 77,
+          "prefill_tok_s": 1801.7,
+          "decode_tokens": 1024,
+          "decode_tok_s": 103.0
+        },
+        {
+          "prompt_tokens": 74,
+          "prefill_tok_s": 1713.5,
+          "decode_tokens": 1024,
+          "decode_tok_s": 102.6
+        }
+      ]
+    },
+    {
+      "prompt_tokens": 4096,
+      "prefill_tok_s": 4438.9,
+      "decode_tok_s": 99.4,
+      "decode_min": 98.8,
+      "decode_max": 99.6,
+      "runs": [
+        {
+          "prompt_tokens": 4183,
+          "prefill_tok_s": 4438.9,
+          "decode_tokens": 1024,
+          "decode_tok_s": 99.4
+        },
+        {
+          "prompt_tokens": 4181,
+          "prefill_tok_s": 4454.0,
+          "decode_tokens": 1024,
+          "decode_tok_s": 99.6
+        },
+        {
+          "prompt_tokens": 4178,
+          "prefill_tok_s": 4435.4,
+          "decode_tokens": 1024,
+          "decode_tok_s": 98.8
+        }
+      ]
+    },
+    {
+      "prompt_tokens": 32768,
+      "prefill_tok_s": 3729.6,
+      "decode_tok_s": 81.0,
+      "decode_min": 80.5,
+      "decode_max": 81.0,
+      "runs": [
+        {
+          "prompt_tokens": 32855,
+          "prefill_tok_s": 3735.1,
+          "decode_tokens": 1024,
+          "decode_tok_s": 81.0
+        },
+        {
+          "prompt_tokens": 32853,
+          "prefill_tok_s": 3729.6,
+          "decode_tokens": 1024,
+          "decode_tok_s": 81.0
+        },
+        {
+          "prompt_tokens": 32850,
+          "prefill_tok_s": 3723.2,
+          "decode_tokens": 1024,
+          "decode_tok_s": 80.5
+        }
+      ]
+    }
+  ],
+  "reference": {
+    "hw": "RTX 3050 6 GB, i5-9400, 16 GB",
+    "mem": "2884 MiB VRAM",
+    "rows": {
+      "0": [
+        1713.5,
+        102.9
+      ],
+      "4096": [
+        4438.9,
+        99.4
+      ],
+      "32768": [
+        3729.6,
+        81.0
+      ]
+    }
+  }
+}

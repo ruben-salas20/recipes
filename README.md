@@ -14,9 +14,9 @@ Measured recipes for running open models on modest local hardware. Each folder i
 
 ## Text models · *Modelos de texto*
 
-Three models with [llama.cpp](https://github.com/ggml-org/llama.cpp) and 128k context, each measured on two machines. Each recipe covers both.
+Four models with [llama.cpp](https://github.com/ggml-org/llama.cpp) and 128k context, each measured on two machines. Each recipe covers both.
 
-*Tres modelos con llama.cpp y 128k de contexto, medidos en dos máquinas. Cada receta cubre las dos.*
+*Cuatro modelos con llama.cpp y 128k de contexto, medidos en dos máquinas. Cada receta cubre las dos.*
 
 ### Measured with a GPU · *Medidos con GPU*
 
@@ -27,6 +27,7 @@ Desktop: **RTX 3050 6 GB VRAM** · i5-9400 · **16 GB RAM** · llama.cpp b11580 
 | LFM2.5-24B-A2B | QAD-Q4_0, experts partly in RAM | 33.7 tok/s | 906 tok/s | 6 / 9 | [English](LFM2.5-24B-A2B/README.md) · [Español](LFM2.5-24B-A2B/README.es.md) |
 | MiniCPM5-2B | Q4_K_M + DSpark draft | 93.8 tok/s | 2356 tok/s | **7 / 9** | [English](MiniCPM5-2B/README.md) · [Español](MiniCPM5-2B/README.es.md) |
 | LFM2.5-2.6B | Q4_K_M + DSpark draft | **128 tok/s** | 2477 tok/s | 1 / 9 | [English](LFM2.5-2.6B/README.md) · [Español](LFM2.5-2.6B/README.es.md) |
+| LFM3-1.7B ¹ | Q4_K_M | 120 tok/s | **~4450 tok/s** | 5 / 9 ² | [English](LFM3-1.7B/README.md) · [Español](LFM3-1.7B/README.es.md) |
 
 ### Measured on CPU only · *Medidos solo con CPU*
 
@@ -36,13 +37,18 @@ Laptop: **no GPU** · i7-13620H · **24 GB RAM** · llama.cpp b11588 (CPU)
 |---|---|---|---|---|---|---|
 | LFM2.5-24B-A2B | QAD-Q4_0 | 26–30 tok/s | ~72 tok/s | 15.6 GB | **7.0 / 11** | [English](LFM2.5-24B-A2B/README.md) · [Español](LFM2.5-24B-A2B/README.es.md) |
 | MiniCPM5-2B | IQ4_NL | 28–30 tok/s | ~98 tok/s | 7.0 GB | 6.3 / 11 | [English](MiniCPM5-2B/README.md) · [Español](MiniCPM5-2B/README.es.md) |
-| LFM2.5-2.6B | QAD-Q4_0 | 29.2 tok/s | ~98 tok/s | **3.7 GB** | 6.3 / 11 | [English](LFM2.5-2.6B/README.md) · [Español](LFM2.5-2.6B/README.es.md) |
+| LFM2.5-2.6B | QAD-Q4_0 | 29.2 tok/s | ~98 tok/s | 3.7 GB | 6.3 / 11 | [English](LFM2.5-2.6B/README.md) · [Español](LFM2.5-2.6B/README.es.md) |
+| LFM3-1.7B ¹ | QAD-Q4_0 | **37 tok/s** | **~153 tok/s** | **2.6 GB** | 4.7 / 11 | [English](LFM3-1.7B/README.md) · [Español](LFM3-1.7B/README.es.md) |
 
 **Try it on your machine:** [`tools/quick-bench.py`](tools/README.md) runs a recipe and measures prefill, decode and decode with a full context in a few minutes, with a table you can share. *Pruébalo en tu máquina: [quick-bench](tools/README.es.md) mide una receta en pocos minutos y da una tabla para compartir.*
 
 Prompt processing on the GPU is with a 4k prompt; on the CPU, with 512–2048 tokens. The coding benchmark is 11 Python tasks with hidden tests (mean of 3 runs); the agent test is Pi on a small project, 3 tasks × 3 runs.
 
 *La lectura del prompt en la GPU es con un prompt de 4k; en la CPU, con 512-2048 tokens. El mini-benchmark son 11 tareas de Python con tests ocultos (media de 3 pasadas); la prueba de agente es Pi en un proyecto pequeño, 3 tareas × 3 pasadas.*
+
+¹ LFM3-1.7B: llama.cpp b11940 on both machines, and coding benchmark with 8192 tokens per answer, like the others (6.0 / 11 with 32,768). It needs `max_tokens` 32768 to do well: see its recipe. ² With Pi 1.4.0; the others with Pi 1.0.3.
+
+*¹ LFM3-1.7B: llama.cpp b11940 en las dos máquinas, y mini-benchmark con 8192 tokens por respuesta, como los demás (6,0 / 11 con 32 768). Necesita `max_tokens` 32768 para rendir: ver su receta. ² Con Pi 1.4.0; los demás, con Pi 1.0.3.*
 
 Contributions, especially results from other hardware, are welcome: see [CONTRIBUTING](CONTRIBUTING.md). *Las contribuciones, sobre todo resultados en otros equipos, son bienvenidas.*
 

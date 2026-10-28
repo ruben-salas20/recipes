@@ -1,0 +1,1694 @@
+{
+  "modelo": "lfm3-q4km-32k",
+  "base_url": "http://127.0.0.1:8090/v1",
+  "fecha": "2026-10-28T03:44:20",
+  "parametros": {
+    "temperature": 0.1,
+    "max_tokens": 32768,
+    "top_k": 50,
+    "repeat_penalty": 1.1,
+    "json_schema_servidor": false
+  },
+  "resumen": {
+    "items_total": 24,
+    "nota_media_pct": 96.7,
+    "nota_media_pct_es": 95.8,
+    "nota_media_pct_en": 97.7,
+    "nota_media_pct_por_dificultad": {
+      "facil": 96.2,
+      "media": 99.0,
+      "dificil": 95.0
+    },
+    "perfectos": 15,
+    "json_validos": 24,
+    "cumplen_esquema": 24,
+    "solo_json": 24,
+    "cortados": 0,
+    "aciertos": 433,
+    "campos": 447,
+    "pct_campos": 96.9,
+    "tiempo_total_s": 2115.4,
+    "tiempo_medio_s": 88.1,
+    "tokens_s_medio": 99.06
+  },
+  "items": [
+    {
+      "id": "01_es_correo_reunion",
+      "titulo": "Correo que cambia una reunión",
+      "idioma": "es",
+      "dificultad": "facil",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 10,
+      "campos": 10,
+      "fallos": [],
+      "json_extraido": {
+        "fecha": "2026-11-12",
+        "hora_inicio": "10:30",
+        "duracion_minutos": 90,
+        "sala": "Bilbao",
+        "planta": 2,
+        "organizadora_nombre": "Lucía Ferrer Gil",
+        "organizadora_email": "lferrer@talleresnorte.es",
+        "proveedores_mencionados": [
+          "Aceros del Cantábrico",
+          "Plásticos Ribera"
+        ],
+        "no_asiste": "Andrés Molina"
+      },
+      "respuesta": "```json\n{\n  \"fecha\": \"2026-11-12\",\n  \"hora_inicio\": \"10:30\",\n  \"duracion_minutos\": 90,\n  \"sala\": \"Bilbao\",\n  \"planta\": 2,\n  \"organizadora_nombre\": \"Lucía Ferrer Gil\",\n  \"organizadora_email\": \"lferrer@talleresnorte.es\",\n  \"proveedores_mencionados\": [\n    \"Aceros del Cantábrico\",\n    \"Plásticos Ribera\"\n  ],\n  \"no_asiste\": \"Andrés Molina\"\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 813,
+      "tokens_total": 2823,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 8809,
+      "segundos_generacion": 28.18,
+      "segundos_total": 28.18,
+      "tokens_s": 101.01,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 813,
+        "prompt_ms": 232.64,
+        "prompt_per_token_ms": 0.286150061500615,
+        "prompt_per_second": 3494.669876203576,
+        "predicted_n": 2823,
+        "predicted_ms": 27937.157,
+        "predicted_per_token_ms": 9.899772147413183,
+        "predicted_per_second": 101.01242585278095
+      },
+      "error": null
+    },
+    {
+      "id": "02_es_ficha_producto",
+      "titulo": "Ficha de una cafetera en oferta",
+      "idioma": "es",
+      "dificultad": "facil",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 13,
+      "campos": 13,
+      "fallos": [],
+      "json_extraido": {
+        "nombre": "CAFETERA EXPRESS BARISTA PRO 20",
+        "marca": "Cafelia",
+        "referencia": "CF-BP20-NEG",
+        "precio_actual_eur": 89.95,
+        "precio_anterior_eur": 129.0,
+        "presion_bar": 20,
+        "potencia_w": 1350,
+        "deposito_litros": 1.2,
+        "color": "negro mate",
+        "garantia_anios": 3,
+        "peso_kg": 4.6,
+        "en_stock": false,
+        "compatible_capsulas": false
+      },
+      "respuesta": "```json\n{\n  \"nombre\": \"CAFETERA EXPRESS BARISTA PRO 20\",\n  \"marca\": \"Cafelia\",\n  \"referencia\": \"CF-BP20-NEG\",\n  \"precio_actual_eur\": 89.95,\n  \"precio_anterior_eur\": 129.00,\n  \"presion_bar\": 20,\n  \"potencia_w\": 1350,\n  \"deposito_litros\": 1.2,\n  \"color\": \"negro mate\",\n  \"garantia_anios\": 3,\n  \"peso_kg\": 4.6,\n  \"en_stock\": false,\n  \"compatible_capsulas\": false\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 694,
+      "tokens_total": 4635,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 13895,
+      "segundos_generacion": 46.04,
+      "segundos_total": 46.04,
+      "tokens_s": 101.13,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 694,
+        "prompt_ms": 177.986,
+        "prompt_per_token_ms": 0.2564639769452449,
+        "prompt_per_second": 3899.183081815424,
+        "predicted_n": 4635,
+        "predicted_ms": 45822.909,
+        "predicted_per_token_ms": 9.888413681484678,
+        "predicted_per_second": 101.12845520130554
+      },
+      "error": null
+    },
+    {
+      "id": "03_es_oferta_empleo",
+      "titulo": "Oferta de empleo de técnico de mantenimiento",
+      "idioma": "es",
+      "dificultad": "facil",
+      "nota": 0.8333,
+      "perfecto": false,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 10,
+      "campos": 12,
+      "fallos": [
+        {
+          "campo": "$.carne_conducir_requerido",
+          "esperado": true,
+          "obtenido": false
+        },
+        {
+          "campo": "$.ingles_obligatorio",
+          "esperado": false,
+          "obtenido": true
+        }
+      ],
+      "json_extraido": {
+        "puesto": "Técnico/a de mantenimiento industrial",
+        "empresa": "Grupo Alvento",
+        "ciudad": "Zaragoza",
+        "modalidad": "presencial",
+        "salario_min_anual_eur": 26000,
+        "salario_max_anual_eur": 30000,
+        "anios_experiencia_min": 2,
+        "dias_vacaciones": 23,
+        "carne_conducir_requerido": false,
+        "ingles_obligatorio": true,
+        "fecha_limite": "2026-12-15",
+        "email_contacto": "rrhh@alvento-grupo.es"
+      },
+      "respuesta": "```json\n{\n  \"puesto\": \"Técnico/a de mantenimiento industrial\",\n  \"empresa\": \"Grupo Alvento\",\n  \"ciudad\": \"Zaragoza\",\n  \"modalidad\": \"presencial\",\n  \"salario_min_anual_eur\": 26000,\n  \"salario_max_anual_eur\": 30000,\n  \"anios_experiencia_min\": 2,\n  \"dias_vacaciones\": 23,\n  \"carne_conducir_requerido\": false,\n  \"ingles_obligatorio\": true,\n  \"fecha_limite\": \"2026-12-15\",\n  \"email_contacto\": \"rrhh@alvento-grupo.es\"\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 691,
+      "tokens_total": 2064,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 6530,
+      "segundos_generacion": 20.51,
+      "segundos_total": 20.51,
+      "tokens_s": 101.7,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 691,
+        "prompt_ms": 177.122,
+        "prompt_per_token_ms": 0.25632706222865415,
+        "prompt_per_second": 3901.265794198349,
+        "predicted_n": 2064,
+        "predicted_ms": 20286.079,
+        "predicted_per_token_ms": 9.833290838584587,
+        "predicted_per_second": 101.6953547306998
+      },
+      "error": null
+    },
+    {
+      "id": "04_es_factura",
+      "titulo": "Factura de instalación eléctrica",
+      "idioma": "es",
+      "dificultad": "media",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 28,
+      "campos": 28,
+      "fallos": [],
+      "json_extraido": {
+        "numero_factura": "2026/0417",
+        "fecha_emision": "2026-02-03",
+        "fecha_vencimiento": "2026-03-05",
+        "emisor_nombre": "Instalaciones Eléctricas Duero, S.L.",
+        "emisor_nif": "B47123456",
+        "cliente_nombre": "Comunidad de Propietarios Plaza Mayor 8",
+        "cliente_nif": "H47998877",
+        "lineas": [
+          {
+            "concepto": "Sustitución cuadro general",
+            "cantidad": 1,
+            "precio_unitario": 640.0,
+            "importe": 640.0
+          },
+          {
+            "concepto": "Luminaria LED portal (18 W)",
+            "cantidad": 6,
+            "precio_unitario": 42.5,
+            "importe": 255.0
+          },
+          {
+            "concepto": "Mano de obra (horas)",
+            "cantidad": 7.5,
+            "precio_unitario": 38.0,
+            "importe": 285.0
+          },
+          {
+            "concepto": "Desplazamiento",
+            "cantidad": 1,
+            "precio_unitario": 25.0,
+            "importe": 25.0
+          }
+        ],
+        "base_imponible": 1205.0,
+        "iva_porcentaje": 21,
+        "iva_importe": 253.05,
+        "total": 1458.05,
+        "forma_pago": "transferencia"
+      },
+      "respuesta": "```json\n{\n  \"numero_factura\": \"2026/0417\",\n  \"fecha_emision\": \"2026-02-03\",\n  \"fecha_vencimiento\": \"2026-03-05\",\n  \"emisor_nombre\": \"Instalaciones Eléctricas Duero, S.L.\",\n  \"emisor_nif\": \"B47123456\",\n  \"cliente_nombre\": \"Comunidad de Propietarios Plaza Mayor 8\",\n  \"cliente_nif\": \"H47998877\",\n  \"lineas\": [\n    {\n      \"concepto\": \"Sustitución cuadro general\",\n      \"cantidad\": 1,\n      \"precio_unitario\": 640.00,\n      \"importe\": 640.00\n    },\n    {\n      \"concepto\": \"Luminaria LED portal (18 W)\",\n      \"cantidad\": 6,\n      \"precio_unitario\": 42.50,\n      \"importe\": 255.00\n    },\n    {\n      \"concepto\": \"Mano de obra (horas)\",\n      \"cantidad\": 7.5,\n      \"precio_unitario\": 38.00,\n      \"importe\": 285.00\n    },\n    {\n      \"concepto\": \"Desplazamiento\",\n      \"cantidad\": 1,\n      \"precio_unitario\": 25.00,\n      \"importe\": 25.00\n    }\n  ],\n  \"base_imponible\": 1205.00,\n  \"iva_porcentaje\": 21,\n  \"iva_importe\": 253.05,\n  \"total\": 1458.05,\n  \"forma_pago\": \"transferencia\"\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 954,
+      "tokens_total": 5186,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 14713,
+      "segundos_generacion": 52.47,
+      "segundos_total": 52.48,
+      "tokens_s": 99.32,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 954,
+        "prompt_ms": 237.198,
+        "prompt_per_token_ms": 0.24863522012578618,
+        "prompt_per_second": 4021.9563402726835,
+        "predicted_n": 5186,
+        "predicted_ms": 52206.946,
+        "predicted_per_token_ms": 10.068842044358728,
+        "predicted_per_second": 99.31628638074328
+      },
+      "error": null
+    },
+    {
+      "id": "05_es_parte_incidencia",
+      "titulo": "Parte de incidencia informática",
+      "idioma": "es",
+      "dificultad": "facil",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 13,
+      "campos": 13,
+      "fallos": [],
+      "json_extraido": {
+        "id": "#INC-20931",
+        "fecha_apertura": "2026-10-21",
+        "hora_apertura": "08:47",
+        "reportado_por": "Marta Quiles",
+        "departamento": "Contabilidad",
+        "extension": "4412",
+        "codigo_error": "503",
+        "prioridad": "alta",
+        "sistema": "Nóminas",
+        "servidor": "APP-NOM-02",
+        "tecnico": "Iván Rojo",
+        "estado": "en_curso",
+        "fecha_resolucion": null
+      },
+      "respuesta": "```json\n{\n  \"id\": \"#INC-20931\",\n  \"fecha_apertura\": \"2026-10-21\",\n  \"hora_apertura\": \"08:47\",\n  \"reportado_por\": \"Marta Quiles\",\n  \"departamento\": \"Contabilidad\",\n  \"extension\": \"4412\",\n  \"codigo_error\": \"503\",\n  \"prioridad\": \"alta\",\n  \"sistema\": \"Nóminas\",\n  \"servidor\": \"APP-NOM-02\",\n  \"tecnico\": \"Iván Rojo\",\n  \"estado\": \"en_curso\",\n  \"fecha_resolucion\": null\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 793,
+      "tokens_total": 5508,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 17378,
+      "segundos_generacion": 55.41,
+      "segundos_total": 55.41,
+      "tokens_s": 99.84,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 793,
+        "prompt_ms": 198.425,
+        "prompt_per_token_ms": 0.2502206809583859,
+        "prompt_per_second": 3996.4722187224393,
+        "predicted_n": 5508,
+        "predicted_ms": 55157.553,
+        "predicted_per_token_ms": 10.015898492827311,
+        "predicted_per_second": 99.84126743258534
+      },
+      "error": null
+    },
+    {
+      "id": "06_es_inscripcion_curso",
+      "titulo": "Correo de inscripción a un curso",
+      "idioma": "es",
+      "dificultad": "media",
+      "nota": 0.9524,
+      "perfecto": false,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 20,
+      "campos": 21,
+      "fallos": [
+        {
+          "campo": "$.contacto_telefono",
+          "esperado": "612345678",
+          "obtenido": "6123435678"
+        }
+      ],
+      "json_extraido": {
+        "curso": "primeros auxilios",
+        "fecha": "2026-11-07",
+        "hora_inicio": "09:00",
+        "hora_fin": "14:00",
+        "contacto_nombre": "Pilar Navarro Ruiz",
+        "contacto_telefono": "6123435678",
+        "metodo_pago": "bizum",
+        "participantes": [
+          {
+            "nombre": "Pilar Navarro Ruiz",
+            "edad": 52,
+            "dni": "12345678Z",
+            "con_descuento": false
+          },
+          {
+            "nombre": "Daniel Ortega Navarro",
+            "edad": 17,
+            "dni": "87654321X",
+            "con_descuento": true
+          },
+          {
+            "nombre": "Rosa Benítez",
+            "edad": 67,
+            "dni": null,
+            "con_descuento": true
+          }
+        ],
+        "precio_por_persona_eur": 35,
+        "importe_total_eur": 91
+      },
+      "respuesta": "```json\n{\n  \"curso\": \"primeros auxilios\",\n  \"fecha\": \"2026-11-07\",\n  \"hora_inicio\": \"09:00\",\n  \"hora_fin\": \"14:00\",\n  \"contacto_nombre\": \"Pilar Navarro Ruiz\",\n  \"contacto_telefono\": \"6123435678\",\n  \"metodo_pago\": \"bizum\",\n  \"participantes\": [\n    {\n      \"nombre\": \"Pilar Navarro Ruiz\",\n      \"edad\": 52,\n      \"dni\": \"12345678Z\",\n      \"con_descuento\": false\n    },\n    {\n      \"nombre\": \"Daniel Ortega Navarro\",\n      \"edad\": 17,\n      \"dni\": \"87654321X\",\n      \"con_descuento\": true\n    },\n    {\n      \"nombre\": \"Rosa Benítez\",\n      \"edad\": 67,\n      \"dni\": null,\n      \"con_descuento\": true\n    }\n  ],\n  \"precio_por_persona_eur\": 35,\n  \"importe_total_eur\": 91\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 970,
+      "tokens_total": 6006,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 18329,
+      "segundos_generacion": 61.07,
+      "segundos_total": 61.07,
+      "tokens_s": 98.81,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 970,
+        "prompt_ms": 239.12,
+        "prompt_per_token_ms": 0.24651546391752577,
+        "prompt_per_second": 4056.540649046504,
+        "predicted_n": 6006,
+        "predicted_ms": 60770.842,
+        "predicted_per_token_ms": 10.120040299750208,
+        "predicted_per_second": 98.81383575366621
+      },
+      "error": null
+    },
+    {
+      "id": "07_es_anuncio_piso",
+      "titulo": "Anuncio de alquiler de un piso",
+      "idioma": "es",
+      "dificultad": "media",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 16,
+      "campos": 16,
+      "fallos": [],
+      "json_extraido": {
+        "precio_mensual_eur": 950,
+        "barrio": "Benimaclet",
+        "ciudad": "Valencia",
+        "metros_utiles": 85,
+        "habitaciones": 3,
+        "banos": 2,
+        "planta": 4,
+        "ascensor": false,
+        "calefaccion": false,
+        "aire_acondicionado": true,
+        "mascotas_permitidas": null,
+        "meses_fianza": 2,
+        "gastos_comunidad_incluidos": true,
+        "disponible_desde": "2026-12-01",
+        "duracion_minima_meses": 12,
+        "telefono_contacto": "600112233"
+      },
+      "respuesta": "```json\n{\n  \"precio_mensual_eur\": 950,\n  \"barrio\": \"Benimaclet\",\n  \"ciudad\": \"Valencia\",\n  \"metros_utiles\": 85,\n  \"habitaciones\": 3,\n  \"banos\": 2,\n  \"planta\": 4,\n  \"ascensor\": false,\n  \"calefaccion\": false,\n  \"aire_acondicionado\": true,\n  \"mascotas_permitidas\": null,\n  \"meses_fianza\": 2,\n  \"gastos_comunidad_incluidos\": true,\n  \"disponible_desde\": \"2026-12-01\",\n  \"duracion_minima_meses\": 12,\n  \"telefono_contacto\": \"600112233\"\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 829,
+      "tokens_total": 12503,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 37644,
+      "segundos_generacion": 127.85,
+      "segundos_total": 127.86,
+      "tokens_s": 97.99,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 829,
+        "prompt_ms": 205.729,
+        "prompt_per_token_ms": 0.2481652593486128,
+        "prompt_per_second": 4029.572884717273,
+        "predicted_n": 12503,
+        "predicted_ms": 127585.562,
+        "predicted_per_token_ms": 10.20521212605983,
+        "predicted_per_second": 97.98914394404595
+      },
+      "error": null
+    },
+    {
+      "id": "08_es_pedido_whatsapp",
+      "titulo": "Pedido por WhatsApp con cambios",
+      "idioma": "es",
+      "dificultad": "dificil",
+      "nota": 0.9375,
+      "perfecto": false,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 15,
+      "campos": 16,
+      "fallos": [
+        {
+          "campo": "$.productos[1].producto",
+          "esperado": "empanada de pisto",
+          "obtenido": "pisto"
+        }
+      ],
+      "json_extraido": {
+        "cliente": "Carmen",
+        "productos": [
+          {
+            "producto": "empanada de atún",
+            "cantidad": 3,
+            "precio_unitario_eur": 9.5
+          },
+          {
+            "producto": "pisto",
+            "cantidad": 1,
+            "precio_unitario_eur": 8.9
+          },
+          {
+            "producto": "croquetas de jamón",
+            "cantidad": 24,
+            "precio_unitario_eur": 0.85
+          }
+        ],
+        "entrega_a_domicilio": true,
+        "direccion": "c/ Río Tajo 23, 1ºA",
+        "franja_inicio": "13:00",
+        "franja_fin": "13:30",
+        "total_eur": 57.8,
+        "metodo_pago": "efectivo"
+      },
+      "respuesta": "```json\n{\n  \"cliente\": \"Carmen\",\n  \"productos\": [\n    {\n      \"producto\": \"empanada de atún\",\n      \"cantidad\": 3,\n      \"precio_unitario_eur\": 9.5\n    },\n    {\n      \"producto\": \"pisto\",\n      \"cantidad\": 1,\n      \"precio_unitario_eur\": 8.9\n    },\n    {\n      \"producto\": \"croquetas de jamón\",\n      \"cantidad\": 24,\n      \"precio_unitario_eur\": 0.85\n    }\n  ],\n  \"entrega_a_domicilio\": true,\n  \"direccion\": \"c/ Río Tajo 23, 1ºA\",\n  \"franja_inicio\": \"13:00\",\n  \"franja_fin\": \"13:30\",\n  \"total_eur\": 57.8,\n  \"metodo_pago\": \"efectivo\"\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 984,
+      "tokens_total": 6513,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 19880,
+      "segundos_generacion": 65.86,
+      "segundos_total": 65.86,
+      "tokens_s": 99.4,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 984,
+        "prompt_ms": 242.448,
+        "prompt_per_token_ms": 0.24639024390243902,
+        "prompt_per_second": 4058.6022569788165,
+        "predicted_n": 6513,
+        "predicted_ms": 65509.822,
+        "predicted_per_token_ms": 10.059862100737101,
+        "predicted_per_second": 99.40494113997134
+      },
+      "error": null
+    },
+    {
+      "id": "09_es_reclamacion_seguro",
+      "titulo": "Reclamación a un seguro de hogar",
+      "idioma": "es",
+      "dificultad": "dificil",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 19,
+      "campos": 19,
+      "fallos": [],
+      "json_extraido": {
+        "numero_poliza": "HG-7781-2023",
+        "numero_expediente": "EXP-55302",
+        "asegurada_nombre": "Elena Sáez Corbalán",
+        "asegurada_dni": "23456789D",
+        "fecha_carta": "2026-09-02",
+        "fecha_siniestro": "2026-08-28",
+        "hora_siniestro": "23:00",
+        "tipo_danio": "agua",
+        "direccion_siniestro": "Calle Almendros 5",
+        "ciudad": "Murcia",
+        "presupuestos": [
+          {
+            "proveedor": "Fontanería Segura",
+            "importe_eur": 310
+          },
+          {
+            "proveedor": "Suelos Martínez",
+            "importe_eur": 2875.4
+          }
+        ],
+        "importe_total_presupuestado_eur": 3185.4,
+        "terceros_afectados": [
+          {
+            "nombre": "Tomás Llorente",
+            "importe_estimado_eur": null
+          }
+        ],
+        "franquicia_eur": 150,
+        "telefono": "699887766"
+      },
+      "respuesta": "```json\n{\n  \"numero_poliza\": \"HG-7781-2023\",\n  \"numero_expediente\": \"EXP-55302\",\n  \"asegurada_nombre\": \"Elena Sáez Corbalán\",\n  \"asegurada_dni\": \"23456789D\",\n  \"fecha_carta\": \"2026-09-02\",\n  \"fecha_siniestro\": \"2026-08-28\",\n  \"hora_siniestro\": \"23:00\",\n  \"tipo_danio\": \"agua\",\n  \"direccion_siniestro\": \"Calle Almendros 5\",\n  \"ciudad\": \"Murcia\",\n  \"presupuestos\": [\n    {\n      \"proveedor\": \"Fontanería Segura\",\n      \"importe_eur\": 310\n    },\n    {\n      \"proveedor\": \"Suelos Martínez\",\n      \"importe_eur\": 2875.40\n    }\n  ],\n  \"importe_total_presupuestado_eur\": 3185.40,\n  \"terceros_afectados\": [\n    {\n      \"nombre\": \"Tomás Llorente\",\n      \"importe_estimado_eur\": null\n    }\n  ],\n  \"franquicia_eur\": 150,\n  \"telefono\": \"699887766\"\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 1256,
+      "tokens_total": 18020,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 58059,
+      "segundos_generacion": 189.07,
+      "segundos_total": 189.07,
+      "tokens_s": 95.49,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 1256,
+        "prompt_ms": 305.154,
+        "prompt_per_token_ms": 0.24295700636942674,
+        "prompt_per_second": 4115.954567202134,
+        "predicted_n": 18020,
+        "predicted_ms": 188701.435,
+        "predicted_per_token_ms": 10.472358898940008,
+        "predicted_per_second": 95.48946991314612
+      },
+      "error": null
+    },
+    {
+      "id": "10_es_acta_fechas_relativas",
+      "titulo": "Acta con fechas relativas",
+      "idioma": "es",
+      "dificultad": "dificil",
+      "nota": 0.8824,
+      "perfecto": false,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 15,
+      "campos": 17,
+      "fallos": [
+        {
+          "campo": "$.tareas[1].fecha_limite",
+          "esperado": "2026-03-20",
+          "obtenido": "2026-03-13"
+        },
+        {
+          "campo": "$.tareas[+]",
+          "esperado": "(nada)",
+          "obtenido": {
+            "responsable": "Nuria",
+            "fecha_limite": "2026-03-27"
+          }
+        }
+      ],
+      "json_extraido": {
+        "fecha_reunion": "2026-03-09",
+        "hora_reunion": "09:30",
+        "asistentes": [
+          "Nuria",
+          "Óscar",
+          "Belén",
+          "Hugo"
+        ],
+        "ausentes": [
+          "Samuel"
+        ],
+        "jefa_proyecto": "Nuria",
+        "fecha_lanzamiento": "2026-03-27",
+        "tareas": [
+          {
+            "responsable": "Nuria",
+            "fecha_limite": "2026-03-27"
+          },
+          {
+            "responsable": "Óscar",
+            "fecha_limite": "2026-03-11"
+          },
+          {
+            "responsable": "Belén",
+            "fecha_limite": "2026-03-13"
+          },
+          {
+            "responsable": "Hugo",
+            "fecha_limite": null
+          }
+        ],
+        "proxima_reunion": "2026-03-16"
+      },
+      "respuesta": "```json\n{\n  \"fecha_reunion\": \"2026-03-09\",\n  \"hora_reunion\": \"09:30\",\n  \"asistentes\": [\n    \"Nuria\",\n    \"Óscar\",\n    \"Belén\",\n    \"Hugo\"\n  ],\n  \"ausentes\": [\n    \"Samuel\"\n  ],\n  \"jefa_proyecto\": \"Nuria\",\n  \"fecha_lanzamiento\": \"2026-03-27\",\n  \"tareas\": [\n    {\n      \"responsable\": \"Nuria\",\n      \"fecha_limite\": \"2026-03-27\"\n    },\n    {\n      \"responsable\": \"Óscar\",\n      \"fecha_limite\": \"2026-03-11\"\n    },\n    {\n      \"responsable\": \"Belén\",\n      \"fecha_limite\": \"2026-03-13\"\n    },\n    {\n      \"responsable\": \"Hugo\",\n      \"fecha_limite\": null\n    }\n  ],\n  \"proxima_reunion\": \"2026-03-16\"\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 754,
+      "tokens_total": 8906,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 30876,
+      "segundos_generacion": 90.27,
+      "segundos_total": 90.27,
+      "tokens_s": 99.03,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 754,
+        "prompt_ms": 191.35,
+        "prompt_per_token_ms": 0.25377984084880634,
+        "prompt_per_second": 3940.4233080742097,
+        "predicted_n": 8906,
+        "predicted_ms": 89924.443,
+        "predicted_per_token_ms": 10.098196855699046,
+        "predicted_per_second": 99.0275802987181
+      },
+      "error": null
+    },
+    {
+      "id": "11_es_curriculum",
+      "titulo": "Currículum con fechas en formatos mezclados",
+      "idioma": "es",
+      "dificultad": "media",
+      "nota": 0.9643,
+      "perfecto": false,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 27,
+      "campos": 28,
+      "fallos": [
+        {
+          "campo": "$.experiencia[+]",
+          "esperado": "(nada)",
+          "obtenido": {
+            "empresa": "Ayuntamiento de Palma",
+            "puesto": "Estadística",
+            "inicio": "2019-06",
+            "fin": "2019-09"
+          }
+        }
+      ],
+      "json_extraido": {
+        "nombre": "Alejandro Vidal Pons",
+        "email": "alejandro.vidal.pons@correo.es",
+        "telefono": "+34655443322",
+        "ciudad": "Palma",
+        "experiencia": [
+          {
+            "empresa": "Turismo Balear Data",
+            "puesto": "Analista de datos",
+            "inicio": "2023-02",
+            "fin": null
+          },
+          {
+            "empresa": "Hoteles Mediterrània",
+            "puesto": "Técnico de BI",
+            "inicio": "2020-09",
+            "fin": "2023-01"
+          },
+          {
+            "empresa": "Ayuntamiento de Palma",
+            "puesto": "Estadística",
+            "inicio": "2019-06",
+            "fin": "2019-09"
+          }
+        ],
+        "formacion": [
+          {
+            "titulo": "Grado en Matemáticas",
+            "centro": "Universitat de les Illes Balears",
+            "anio_fin": 2019
+          },
+          {
+            "titulo": "Máster en Ciencia de Datos",
+            "centro": "UOC",
+            "anio_fin": 2021
+          }
+        ],
+        "idiomas": [
+          {
+            "idioma": "catalán",
+            "nivel": "nativo"
+          },
+          {
+            "idioma": "castellano",
+            "nivel": "nativo"
+          },
+          {
+            "idioma": "inglés",
+            "nivel": "C1"
+          },
+          {
+            "idioma": "alemán",
+            "nivel": "A2"
+          }
+        ],
+        "carne_conducir": true
+      },
+      "respuesta": "```json\n{\n  \"nombre\": \"Alejandro Vidal Pons\",\n  \"email\": \"alejandro.vidal.pons@correo.es\",\n  \"telefono\": \"+34655443322\",\n  \"ciudad\": \"Palma\",\n  \"experiencia\": [\n    {\n      \"empresa\": \"Turismo Balear Data\",\n      \"puesto\": \"Analista de datos\",\n      \"inicio\": \"2023-02\",\n      \"fin\": null\n    },\n    {\n      \"empresa\": \"Hoteles Mediterrània\",\n      \"puesto\": \"Técnico de BI\",\n      \"inicio\": \"2020-09\",\n      \"fin\": \"2023-01\"\n    },\n    {\n      \"empresa\": \"Ayuntamiento de Palma\",\n      \"puesto\": \"Estadística\",\n      \"inicio\": \"2019-06\",\n      \"fin\": \"2019-09\"\n    }\n  ],\n  \"formacion\": [\n    {\n      \"titulo\": \"Grado en Matemáticas\",\n      \"centro\": \"Universitat de les Illes Balears\",\n      \"anio_fin\": 2019\n    },\n    {\n      \"titulo\": \"Máster en Ciencia de Datos\",\n      \"centro\": \"UOC\",\n      \"anio_fin\": 2021\n    }\n  ],\n  \"idiomas\": [\n    {\"idioma\":\"catalán\",\"nivel\":\"nativo\"},\n    {\"idioma\":\"castellano\",\"nivel\":\"nativo\"},\n    {\"idioma\":\"inglés\",\"nivel\":\"C1\"},\n    {\"idioma\":\"alemán\",\"nivel\":\"A2\"}\n  ],\n  \"carne_conducir\": true\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 1019,
+      "tokens_total": 16843,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 55756,
+      "segundos_generacion": 175.7,
+      "segundos_total": 175.7,
+      "tokens_s": 96.04,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 1019,
+        "prompt_ms": 249.707,
+        "prompt_per_token_ms": 0.24505103042198234,
+        "prompt_per_second": 4080.7826772977933,
+        "predicted_n": 16843,
+        "predicted_ms": 175368.143,
+        "predicted_per_token_ms": 10.412548569053557,
+        "predicted_per_second": 96.03796739753354
+      },
+      "error": null
+    },
+    {
+      "id": "12_es_extracto_bancario",
+      "titulo": "Extracto bancario de un mes",
+      "idioma": "es",
+      "dificultad": "dificil",
+      "nota": 0.9231,
+      "perfecto": false,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 24,
+      "campos": 26,
+      "fallos": [
+        {
+          "campo": "$.iban",
+          "esperado": "ES7600001111222233334444",
+          "obtenido": "ES76000011112222333444"
+        },
+        {
+          "campo": "$.titular",
+          "esperado": "Miguel García López",
+          "obtenido": "GARCÍA LÓPEZ, MIGUEL"
+        }
+      ],
+      "json_extraido": {
+        "iban": "ES76000011112222333444",
+        "titular": "GARCÍA LÓPEZ, MIGUEL",
+        "periodo_inicio": "2027-01-01",
+        "periodo_fin": "2027-01-31",
+        "saldo_inicial_eur": 2340.15,
+        "saldo_final_eur": 3195.06,
+        "movimientos": [
+          {
+            "fecha_operacion": "2027-01-02",
+            "fecha_valor": "2027-01-02",
+            "importe_eur": -64.3
+          },
+          {
+            "fecha_operacion": "2027-01-05",
+            "fecha_valor": "2027-01-04",
+            "importe_eur": 150.0
+          },
+          {
+            "fecha_operacion": "2027-01-09",
+            "fecha_valor": "2027-01-09",
+            "importe_eur": -87.45
+          },
+          {
+            "fecha_operacion": "2027-01-15",
+            "fecha_valor": "2027-01-15",
+            "importe_eur": -1050.0
+          },
+          {
+            "fecha_operacion": "2027-01-28",
+            "fecha_valor": "2027-01-31",
+            "importe_eur": 1912.66
+          },
+          {
+            "fecha_operacion": "2027-01-30",
+            "fecha_valor": "2027-01-30",
+            "importe_eur": -6.0
+          }
+        ],
+        "total_cargos_eur": 1207.75,
+        "total_abonos_eur": 2062.66
+      },
+      "respuesta": "```json\n{\n  \"iban\": \"ES76000011112222333444\",\n  \"titular\": \"GARCÍA LÓPEZ, MIGUEL\",\n  \"periodo_inicio\": \"2027-01-01\",\n  \"periodo_fin\": \"2027-01-31\",\n  \"saldo_inicial_eur\": 2340.15,\n  \"saldo_final_eur\": 3195.06,\n  \"movimientos\": [\n    {\n      \"fecha_operacion\": \"2027-01-02\",\n      \"fecha_valor\": \"2027-01-02\",\n      \"importe_eur\": -64.30\n    },\n    {\n      \"fecha_operacion\": \"2027-01-05\",\n      \"fecha_valor\": \"2027-01-04\",\n      \"importe_eur\": 150.00\n    },\n    {\n      \"fecha_operacion\": \"2027-01-09\",\n      \"fecha_valor\": \"2027-01-09\",\n      \"importe_eur\": -87.45\n    },\n    {\n      \"fecha_operacion\": \"2027-01-15\",\n      \"fecha_valor\": \"2027-01-15\",\n      \"importe_eur\": -1050.00\n    },\n    {\n      \"fecha_operacion\": \"2027-01-28\",\n      \"fecha_valor\": \"2027-01-31\",\n      \"importe_eur\": 1912.66\n    },\n    {\n      \"fecha_operacion\": \"2027-01-30\",\n      \"fecha_valor\": \"2027-01-30\",\n      \"importe_eur\": -6.00\n    }\n  ],\n  \"total_cargos_eur\": 1207.75,\n  \"total_abonos_eur\": 2062.66\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 941,
+      "tokens_total": 29988,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 90896,
+      "segundos_generacion": 327.72,
+      "segundos_total": 327.72,
+      "tokens_s": 91.61,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 941,
+        "prompt_ms": 238.049,
+        "prompt_per_token_ms": 0.25297449521785337,
+        "prompt_per_second": 3952.9676663207997,
+        "predicted_n": 29988,
+        "predicted_ms": 327338.364,
+        "predicted_per_token_ms": 10.916009070597259,
+        "predicted_per_second": 91.60857173465924
+      },
+      "error": null
+    },
+    {
+      "id": "13_en_aviso_envio",
+      "titulo": "Shipping notification",
+      "idioma": "en",
+      "dificultad": "facil",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 16,
+      "campos": 16,
+      "fallos": [],
+      "json_extraido": {
+        "order_number": "A-448812",
+        "carrier": "UPS",
+        "tracking_number": "1Z999AA10123456784",
+        "estimated_delivery": "2026-10-29",
+        "items_shipped": [
+          {
+            "description": "Trail running shoes",
+            "size": "10.5",
+            "quantity": 1
+          },
+          {
+            "description": "Merino socks (3-pack)",
+            "size": null,
+            "quantity": 2
+          }
+        ],
+        "items_pending": [
+          "Waterproof jacket"
+        ],
+        "recipient_name": "Jordan Blake",
+        "street": "4417 Cedar Lane, Apt 2C",
+        "city": "Portland",
+        "state": "OR",
+        "zip": "97211"
+      },
+      "respuesta": "```json\n{\n  \"order_number\": \"A-448812\",\n  \"carrier\": \"UPS\",\n  \"tracking_number\": \"1Z999AA10123456784\",\n  \"estimated_delivery\": \"2026-10-29\",\n  \"items_shipped\": [\n    {\n      \"description\": \"Trail running shoes\",\n      \"size\": \"10.5\",\n      \"quantity\": 1\n    },\n    {\n      \"description\": \"Merino socks (3-pack)\",\n      \"size\": null,\n      \"quantity\": 2\n    }\n  ],\n  \"items_pending\": [\n    \"Waterproof jacket\"\n  ],\n  \"recipient_name\": \"Jordan Blake\",\n  \"street\": \"4417 Cedar Lane, Apt 2C\",\n  \"city\": \"Portland\",\n  \"state\": \"OR\",\n  \"zip\": \"97211\"\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 745,
+      "tokens_total": 9439,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 31489,
+      "segundos_generacion": 96.01,
+      "segundos_total": 96.01,
+      "tokens_s": 98.75,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 745,
+        "prompt_ms": 191.149,
+        "prompt_per_token_ms": 0.25657583892617447,
+        "prompt_per_second": 3897.4831152661013,
+        "predicted_n": 9439,
+        "predicted_ms": 95579.173,
+        "predicted_per_token_ms": 10.127057957194321,
+        "predicted_per_second": 98.74536160717774
+      },
+      "error": null
+    },
+    {
+      "id": "14_en_cartel_evento",
+      "titulo": "Jazz night flyer",
+      "idioma": "en",
+      "dificultad": "facil",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 14,
+      "campos": 14,
+      "fallos": [],
+      "json_extraido": {
+        "event_name": "RIVERSIDE JAZZ NIGHT",
+        "date": "2026-11-14",
+        "doors_open": "19:00",
+        "start_time": "20:00",
+        "end_time": "23:30",
+        "venue": "The Old Mill Warehouse",
+        "city": "Leeds",
+        "performers": [
+          "The Marlowe Trio",
+          "Ines Duarte"
+        ],
+        "price_advance_gbp": 18,
+        "price_door_gbp": 22,
+        "price_student_gbp": 12,
+        "min_age": 18,
+        "free_entry": false
+      },
+      "respuesta": "```json\n{\n  \"event_name\": \"RIVERSIDE JAZZ NIGHT\",\n  \"date\": \"2026-11-14\",\n  \"doors_open\": \"19:00\",\n  \"start_time\": \"20:00\",\n  \"end_time\": \"23:30\",\n  \"venue\": \"The Old Mill Warehouse\",\n  \"city\": \"Leeds\",\n  \"performers\": [\n    \"The Marlowe Trio\",\n    \"Ines Duarte\"\n  ],\n  \"price_advance_gbp\": 18,\n  \"price_door_gbp\": 22,\n  \"price_student_gbp\": 12,\n  \"min_age\": 18,\n  \"free_entry\": false\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 750,
+      "tokens_total": 2965,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 8539,
+      "segundos_generacion": 29.38,
+      "segundos_total": 29.38,
+      "tokens_s": 101.83,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 750,
+        "prompt_ms": 187.353,
+        "prompt_per_token_ms": 0.249804,
+        "prompt_per_second": 4003.138460553073,
+        "predicted_n": 2965,
+        "predicted_ms": 29108.236,
+        "predicted_per_token_ms": 9.820592442645074,
+        "predicted_per_second": 101.8268506549143
+      },
+      "error": null
+    },
+    {
+      "id": "15_en_anuncio_portatil",
+      "titulo": "Second-hand laptop listing",
+      "idioma": "en",
+      "dificultad": "facil",
+      "nota": 0.8667,
+      "perfecto": false,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 13,
+      "campos": 15,
+      "fallos": [
+        {
+          "campo": "$.negotiable",
+          "esperado": true,
+          "obtenido": false
+        },
+        {
+          "campo": "$.city",
+          "esperado": "Austin",
+          "obtenido": "Austin, TX"
+        }
+      ],
+      "json_extraido": {
+        "brand": "Lenovo",
+        "model": "ThinkPad X1 Carbon Gen 11",
+        "cpu": "Intel Core i7-1365U",
+        "ram_gb": 32,
+        "storage_gb": 1000,
+        "screen_inches": 14,
+        "battery_health_pct": 91,
+        "asking_price_usd": 1150,
+        "original_price_usd": 1899,
+        "negotiable": false,
+        "shipping_available": false,
+        "city": "Austin, TX",
+        "payment_methods": [
+          "cash",
+          "Zelle"
+        ],
+        "purchase_month": "2025-02"
+      },
+      "respuesta": "```json\n{\n  \"brand\": \"Lenovo\",\n  \"model\": \"ThinkPad X1 Carbon Gen 11\",\n  \"cpu\": \"Intel Core i7-1365U\",\n  \"ram_gb\": 32,\n  \"storage_gb\": 1000,\n  \"screen_inches\": 14,\n  \"battery_health_pct\": 91,\n  \"asking_price_usd\": 1150,\n  \"original_price_usd\": 1899,\n  \"negotiable\": false,\n  \"shipping_available\": false,\n  \"city\": \"Austin, TX\",\n  \"payment_methods\": [\n    \"cash\",\n    \"Zelle\"\n  ],\n  \"purchase_month\": \"2025-02\"\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 709,
+      "tokens_total": 3838,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 11655,
+      "segundos_generacion": 38.07,
+      "segundos_total": 38.07,
+      "tokens_s": 101.36,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 709,
+        "prompt_ms": 181.721,
+        "prompt_per_token_ms": 0.2563060648801128,
+        "prompt_per_second": 3901.5853973949074,
+        "predicted_n": 3838,
+        "predicted_ms": 37853.828,
+        "predicted_per_token_ms": 9.865475110763617,
+        "predicted_per_second": 101.3635926068032
+      },
+      "error": null
+    },
+    {
+      "id": "16_en_ticket_soporte",
+      "titulo": "Support email asking for a refund",
+      "idioma": "en",
+      "dificultad": "facil",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 9,
+      "campos": 9,
+      "fallos": [],
+      "json_extraido": {
+        "customer_name": "Priya Raman",
+        "customer_email": "priya.raman@mailbox.example",
+        "customer_phone": null,
+        "product": "PowerMix 600",
+        "order_id": "77-3021-55",
+        "purchase_date": "2026-09-03",
+        "issue_category": "defect",
+        "requested_resolution": "refund",
+        "troubleshooting_done": true
+      },
+      "respuesta": "```json\n{\n  \"customer_name\": \"Priya Raman\",\n  \"customer_email\": \"priya.raman@mailbox.example\",\n  \"customer_phone\": null,\n  \"product\": \"PowerMix 600\",\n  \"order_id\": \"77-3021-55\",\n  \"purchase_date\": \"2026-09-03\",\n  \"issue_category\": \"defect\",\n  \"requested_resolution\": \"refund\",\n  \"troubleshooting_done\": true\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 584,
+      "tokens_total": 3204,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 11402,
+      "segundos_generacion": 31.93,
+      "segundos_total": 31.93,
+      "tokens_s": 100.93,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 584,
+        "prompt_ms": 152.599,
+        "prompt_per_token_ms": 0.26129965753424655,
+        "prompt_per_second": 3827.023768176725,
+        "predicted_n": 3204,
+        "predicted_ms": 31735.944,
+        "predicted_per_token_ms": 9.908193568529503,
+        "predicted_per_second": 100.9265708308535
+      },
+      "error": null
+    },
+    {
+      "id": "17_en_factura",
+      "titulo": "US design studio invoice",
+      "idioma": "en",
+      "dificultad": "media",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 28,
+      "campos": 28,
+      "fallos": [],
+      "json_extraido": {
+        "invoice_number": "BLC-2026-118",
+        "invoice_date": "2026-10-04",
+        "due_date": "2026-11-03",
+        "vendor_name": "BRIGHTLINE CREATIVE LLC",
+        "client_name": "Harbor Coffee Co.",
+        "client_contact": "Mia Chen",
+        "line_items": [
+          {
+            "description": "Brand refresh – logo concepts",
+            "quantity": 12,
+            "unit_price": 95.0,
+            "amount": 1140.0
+          },
+          {
+            "description": "Packaging design (3 SKUs)",
+            "quantity": 3,
+            "unit_price": 450.0,
+            "amount": 1350.0
+          },
+          {
+            "description": "Stock photo license",
+            "quantity": 1,
+            "unit_price": 79.0,
+            "amount": 79.0
+          },
+          {
+            "description": "Rush fee",
+            "quantity": 1,
+            "unit_price": 200.0,
+            "amount": 200.0
+          }
+        ],
+        "subtotal": 2769.0,
+        "discount_amount": 138.45,
+        "tax_amount": 0,
+        "total": 2630.55,
+        "payment_method": "ach",
+        "late_fee_monthly_pct": 1.5
+      },
+      "respuesta": "```json\n{\n  \"invoice_number\": \"BLC-2026-118\",\n  \"invoice_date\": \"2026-10-04\",\n  \"due_date\": \"2026-11-03\",\n  \"vendor_name\": \"BRIGHTLINE CREATIVE LLC\",\n  \"client_name\": \"Harbor Coffee Co.\",\n  \"client_contact\": \"Mia Chen\",\n  \"line_items\": [\n    {\n      \"description\": \"Brand refresh – logo concepts\",\n      \"quantity\": 12,\n      \"unit_price\": 95.00,\n      \"amount\": 1140.00\n    },\n    {\n      \"description\": \"Packaging design (3 SKUs)\",\n      \"quantity\": 3,\n      \"unit_price\": 450.00,\n      \"amount\": 1350.00\n    },\n    {\n      \"description\": \"Stock photo license\",\n      \"quantity\": 1,\n      \"unit_price\": 79.00,\n      \"amount\": 79.00\n    },\n    {\n      \"description\": \"Rush fee\",\n      \"quantity\": 1,\n      \"unit_price\": 200.00,\n      \"amount\": 200.00\n    }\n  ],\n  \"subtotal\": 2769.00,\n  \"discount_amount\": 138.45,\n  \"tax_amount\": 0,\n  \"total\": 2630.55,\n  \"payment_method\": \"ach\",\n  \"late_fee_monthly_pct\": 1.5\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 886,
+      "tokens_total": 4422,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 13754,
+      "segundos_generacion": 43.97,
+      "segundos_total": 43.98,
+      "tokens_s": 101.13,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 886,
+        "prompt_ms": 220.494,
+        "prompt_per_token_ms": 0.2488645598194131,
+        "prompt_per_second": 4018.2499297033023,
+        "predicted_n": 4422,
+        "predicted_ms": 43717.624,
+        "predicted_per_token_ms": 9.888627912237052,
+        "predicted_per_second": 101.12626431848172
+      },
+      "error": null
+    },
+    {
+      "id": "18_en_oferta_empleo",
+      "titulo": "Remote backend job post",
+      "idioma": "en",
+      "dificultad": "media",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 19,
+      "campos": 19,
+      "fallos": [],
+      "json_extraido": {
+        "title": "Senior Backend Engineer (Go)",
+        "company": "Northwind Logistics",
+        "headquarters_city": "Rotterdam",
+        "location_type": "remote",
+        "salary_min_eur": 70000,
+        "salary_max_eur": 85000,
+        "equity": true,
+        "min_years_experience": 5,
+        "required_skills": [
+          "Go",
+          "PostgreSQL",
+          "Kubernetes"
+        ],
+        "nice_to_have_skills": [
+          "Kafka",
+          "Rust",
+          "Logistics"
+        ],
+        "pto_days": 30,
+        "learning_budget_eur": 1500,
+        "visa_sponsorship": false,
+        "application_deadline": "2026-11-30",
+        "interview_rounds": 3
+      },
+      "respuesta": "```json\n{\n  \"title\": \"Senior Backend Engineer (Go)\",\n  \"company\": \"Northwind Logistics\",\n  \"headquarters_city\": \"Rotterdam\",\n  \"location_type\": \"remote\",\n  \"salary_min_eur\": 70000,\n  \"salary_max_eur\": 85000,\n  \"equity\": true,\n  \"min_years_experience\": 5,\n  \"required_skills\": [\"Go\", \"PostgreSQL\", \"Kubernetes\"],\n  \"nice_to_have_skills\": [\"Kafka\", \"Rust\", \"Logistics\"],\n  \"pto_days\": 30,\n  \"learning_budget_eur\": 1500,\n  \"visa_sponsorship\": false,\n  \"application_deadline\": \"2026-11-30\",\n  \"interview_rounds\": 3\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 780,
+      "tokens_total": 6578,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 21782,
+      "segundos_generacion": 65.89,
+      "segundos_total": 65.89,
+      "tokens_s": 100.19,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 780,
+        "prompt_ms": 196.117,
+        "prompt_per_token_ms": 0.25143205128205126,
+        "prompt_per_second": 3977.217681282092,
+        "predicted_n": 6578,
+        "predicted_ms": 65642.218,
+        "predicted_per_token_ms": 9.980571385129997,
+        "predicted_per_second": 100.19466435457743
+      },
+      "error": null
+    },
+    {
+      "id": "19_en_notas_reunion",
+      "titulo": "Product sync notes",
+      "idioma": "en",
+      "dificultad": "media",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 17,
+      "campos": 17,
+      "fallos": [],
+      "json_extraido": {
+        "meeting_date": "2026-09-15",
+        "note_taker": "Sam K.",
+        "attendees": [
+          "Sam K.",
+          "Leah",
+          "Marco",
+          "Dev"
+        ],
+        "absent": [
+          "Grace"
+        ],
+        "open_bugs": 143,
+        "feature_cut": "dark mode",
+        "action_items": [
+          {
+            "owner": "Leah",
+            "due_date": "2026-09-29"
+          },
+          {
+            "owner": "Marco",
+            "due_date": "2026-09-18"
+          },
+          {
+            "owner": "Sam",
+            "due_date": "2026-09-30"
+          }
+        ],
+        "next_meeting_date": "2026-09-23",
+        "next_meeting_time": "15:00"
+      },
+      "respuesta": "```json\n{\n  \"meeting_date\": \"2026-09-15\",\n  \"note_taker\": \"Sam K.\",\n  \"attendees\": [\n    \"Sam K.\",\n    \"Leah\",\n    \"Marco\",\n    \"Dev\"\n  ],\n  \"absent\": [\n    \"Grace\"\n  ],\n  \"open_bugs\": 143,\n  \"feature_cut\": \"dark mode\",\n  \"action_items\": [\n    {\n      \"owner\": \"Leah\",\n      \"due_date\": \"2026-09-29\"\n    },\n    {\n      \"owner\": \"Marco\",\n      \"due_date\": \"2026-09-18\"\n    },\n    {\n      \"owner\": \"Sam\",\n      \"due_date\": \"2026-09-30\"\n    }\n  ],\n  \"next_meeting_date\": \"2026-09-23\",\n  \"next_meeting_time\": \"15:00\"\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 756,
+      "tokens_total": 4113,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 12606,
+      "segundos_generacion": 41.39,
+      "segundos_total": 41.39,
+      "tokens_s": 99.95,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 756,
+        "prompt_ms": 188.181,
+        "prompt_per_token_ms": 0.24891666666666667,
+        "prompt_per_second": 4017.4087713424838,
+        "predicted_n": 4113,
+        "predicted_ms": 41141.919,
+        "predicted_per_token_ms": 10.00533049610895,
+        "predicted_per_second": 99.94672343796117
+      },
+      "error": null
+    },
+    {
+      "id": "20_en_itinerario_vuelos",
+      "titulo": "Family flight itinerary",
+      "idioma": "en",
+      "dificultad": "media",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 25,
+      "campos": 25,
+      "fallos": [],
+      "json_extraido": {
+        "booking_reference": "QX7P2L",
+        "passengers": [
+          {
+            "name": "Anna Kowalski",
+            "type": "adult"
+          },
+          {
+            "name": "Piotr Kowalski",
+            "type": "adult"
+          },
+          {
+            "name": "Leo Kowalski",
+            "type": "child"
+          }
+        ],
+        "segments": [
+          {
+            "flight_number": "LO334",
+            "origin": "WAW",
+            "destination": "CDG",
+            "date": "2026-12-18",
+            "departure_time": "06:40"
+          },
+          {
+            "flight_number": "AF1148",
+            "origin": "CDG",
+            "destination": "LIS",
+            "date": "2026-12-18",
+            "departure_time": "10:20"
+          },
+          {
+            "flight_number": "TP1238",
+            "origin": "LIS",
+            "destination": "WAW",
+            "date": "2027-01-03",
+            "departure_time": "13:15"
+          }
+        ],
+        "checked_bags_total": 2,
+        "total_paid": 6482.0,
+        "currency": "PLN"
+      },
+      "respuesta": "```json\n{\n  \"booking_reference\": \"QX7P2L\",\n  \"passengers\": [\n    {\n      \"name\": \"Anna Kowalski\",\n      \"type\": \"adult\"\n    },\n    {\n      \"name\": \"Piotr Kowalski\",\n      \"type\": \"adult\"\n    },\n    {\n      \"name\": \"Leo Kowalski\",\n      \"type\": \"child\"\n    }\n  ],\n  \"segments\": [\n    {\n      \"flight_number\": \"LO334\",\n      \"origin\": \"WAW\",\n      \"destination\": \"CDG\",\n      \"date\": \"2026-12-18\",\n      \"departure_time\": \"06:40\"\n    },\n    {\n      \"flight_number\": \"AF1148\",\n      \"origin\": \"CDG\",\n      \"destination\": \"LIS\",\n      \"date\": \"2026-12-18\",\n      \"departure_time\": \"10:20\"\n    },\n    {\n      \"flight_number\": \"TP1238\",\n      \"origin\": \"LIS\",\n      \"destination\": \"WAW\",\n      \"date\": \"2027-01-03\",\n      \"departure_time\": \"13:15\"\n    }\n  ],\n  \"checked_bags_total\": 2,\n  \"total_paid\": 6482.0,\n  \"currency\": \"PLN\"\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 822,
+      "tokens_total": 6758,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 20358,
+      "segundos_generacion": 68.58,
+      "segundos_total": 68.58,
+      "tokens_s": 98.89,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 822,
+        "prompt_ms": 204.126,
+        "prompt_per_token_ms": 0.2483284671532847,
+        "prompt_per_second": 4026.924546603568,
+        "predicted_n": 6758,
+        "predicted_ms": 68330.077,
+        "predicted_per_token_ms": 10.112487346455529,
+        "predicted_per_second": 98.88763918705959
+      },
+      "error": null
+    },
+    {
+      "id": "21_en_hilo_pedido",
+      "titulo": "Email thread where the order changes",
+      "idioma": "en",
+      "dificultad": "dificil",
+      "nota": 0.9286,
+      "perfecto": false,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 13,
+      "campos": 14,
+      "fallos": [
+        {
+          "campo": "$.buyer_contact",
+          "esperado": "Ravi Patel",
+          "obtenido": "ravi@greenleafgrocers.example"
+        }
+      ],
+      "json_extraido": {
+        "buyer_company": "Greenleaf Grocers",
+        "buyer_contact": "ravi@greenleafgrocers.example",
+        "supplier": "Millbrook Farms",
+        "items": [
+          {
+            "product": "Honeycrisp apples",
+            "cases": 50,
+            "price_per_case_usd": 38.5
+          },
+          {
+            "product": "Bartlett pears",
+            "cases": 15,
+            "price_per_case_usd": 41.0
+          }
+        ],
+        "order_total_usd": 2540,
+        "original_delivery_date": "2026-10-16",
+        "final_delivery_date": "2026-10-15",
+        "delivery_store": "Oak Avenue",
+        "payment_terms_days": 15
+      },
+      "respuesta": "```json\n{\n  \"buyer_company\": \"Greenleaf Grocers\",\n  \"buyer_contact\": \"ravi@greenleafgrocers.example\",\n  \"supplier\": \"Millbrook Farms\",\n  \"items\": [\n    {\n      \"product\": \"Honeycrisp apples\",\n      \"cases\": 50,\n      \"price_per_case_usd\": 38.5\n    },\n    {\n      \"product\": \"Bartlett pears\",\n      \"cases\": 15,\n      \"price_per_case_usd\": 41.0\n    }\n  ],\n  \"order_total_usd\": 2540,\n  \"original_delivery_date\": \"2026-10-16\",\n  \"final_delivery_date\": \"2026-10-15\",\n  \"delivery_store\": \"Oak Avenue\",\n  \"payment_terms_days\": 15\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 890,
+      "tokens_total": 5987,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 19915,
+      "segundos_generacion": 60.03,
+      "segundos_total": 60.03,
+      "tokens_s": 100.2,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 890,
+        "prompt_ms": 221.251,
+        "prompt_per_token_ms": 0.24859662921348316,
+        "prompt_per_second": 4022.5806889008413,
+        "predicted_n": 5987,
+        "predicted_ms": 59741.789,
+        "predicted_per_token_ms": 9.980252088205813,
+        "predicted_per_second": 100.19786986961506
+      },
+      "error": null
+    },
+    {
+      "id": "22_en_ticket_compra",
+      "titulo": "Supermarket receipt",
+      "idioma": "en",
+      "dificultad": "dificil",
+      "nota": 0.931,
+      "perfecto": false,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 27,
+      "campos": 29,
+      "fallos": [
+        {
+          "campo": "$.items[2].quantity",
+          "esperado": 1,
+          "obtenido": 12
+        },
+        {
+          "campo": "$.items[+]",
+          "esperado": "(nada)",
+          "obtenido": {
+            "name": "OAT MILK MULTIBUY",
+            "quantity": 2,
+            "line_total_gbp": -0.6
+          }
+        }
+      ],
+      "json_extraido": {
+        "store_name": "FRESHWAY MARKET",
+        "city": "Bristol",
+        "vat_number": "GB123456789",
+        "date": "2026-11-14",
+        "time": "17:42",
+        "items": [
+          {
+            "name": "SOURDOUGH LOAF",
+            "quantity": 1,
+            "line_total_gbp": 2.4
+          },
+          {
+            "name": "BANANAS LOOSE",
+            "quantity": 0.912,
+            "line_total_gbp": 1.0
+          },
+          {
+            "name": "FREE RANGE EGGS",
+            "quantity": 12,
+            "line_total_gbp": 3.85
+          },
+          {
+            "name": "OAT MILK",
+            "quantity": 2,
+            "line_total_gbp": 3.6
+          },
+          {
+            "name": "OAT MILK MULTIBUY",
+            "quantity": 2,
+            "line_total_gbp": -0.6
+          },
+          {
+            "name": "CHEDDAR MATURE 400G",
+            "quantity": 1,
+            "line_total_gbp": 4.25
+          },
+          {
+            "name": "BAG FOR LIFE",
+            "quantity": 1,
+            "line_total_gbp": 0.5
+          }
+        ],
+        "discounts_total_gbp": 0.6,
+        "total_gbp": 15.0,
+        "payment_method": "card",
+        "card_last4": "8812",
+        "loyalty_points": 15
+      },
+      "respuesta": "```json\n{\n  \"store_name\": \"FRESHWAY MARKET\",\n  \"city\": \"Bristol\",\n  \"vat_number\": \"GB123456789\",\n  \"date\": \"2026-11-14\",\n  \"time\": \"17:42\",\n  \"items\": [\n    {\"name\":\"SOURDOUGH LOAF\",\"quantity\":1,\"line_total_gbp\":2.4},\n    {\"name\":\"BANANAS LOOSE\",\"quantity\":0.912,\"line_total_gbp\":1.0},\n    {\"name\":\"FREE RANGE EGGS\",\"quantity\":12,\"line_total_gbp\":3.85},\n    {\"name\":\"OAT MILK\",\"quantity\":2,\"line_total_gbp\":3.6},\n    {\"name\":\"OAT MILK MULTIBUY\",\"quantity\":2,\"line_total_gbp\":-0.6},\n    {\"name\":\"CHEDDAR MATURE 400G\",\"quantity\":1,\"line_total_gbp\":4.25},\n    {\"name\":\"BAG FOR LIFE\",\"quantity\":1,\"line_total_gbp\":0.5}\n  ],\n  \"discounts_total_gbp\": 0.6,\n  \"total_gbp\": 15.0,\n  \"payment_method\": \"card\",\n  \"card_last4\": \"8812\",\n  \"loyalty_points\": 15\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 878,
+      "tokens_total": 22182,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 63909,
+      "segundos_generacion": 235.78,
+      "segundos_total": 235.78,
+      "tokens_s": 94.19,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 878,
+        "prompt_ms": 219.593,
+        "prompt_per_token_ms": 0.25010592255125286,
+        "prompt_per_second": 3998.3059569294105,
+        "predicted_n": 22182,
+        "predicted_ms": 235498.182,
+        "predicted_per_token_ms": 10.617112934493486,
+        "predicted_per_second": 94.18756362204104
+      },
+      "error": null
+    },
+    {
+      "id": "23_en_contrato",
+      "titulo": "Consulting agreement with an amendment",
+      "idioma": "en",
+      "dificultad": "dificil",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 16,
+      "campos": 16,
+      "fallos": [],
+      "json_extraido": {
+        "client_name": "Halcyon Robotics Inc.",
+        "client_state_of_incorporation": "Delaware",
+        "consultant_name": "Mireille Fontaine",
+        "consultant_city": "Montréal",
+        "signing_date": "2027-01-12",
+        "effective_date": "2027-02-01",
+        "term_months": 6,
+        "initial_monthly_fee_usd": 9500,
+        "current_monthly_fee_usd": 11000,
+        "fee_change_effective_date": "2027-04-01",
+        "payment_terms_days": 30,
+        "expense_cap_usd_per_quarter": 2000,
+        "auto_renewal": false,
+        "termination_notice_days": 15,
+        "governing_law": "New York",
+        "non_compete_months": null
+      },
+      "respuesta": "```json\n{\n  \"client_name\": \"Halcyon Robotics Inc.\",\n  \"client_state_of_incorporation\": \"Delaware\",\n  \"consultant_name\": \"Mireille Fontaine\",\n  \"consultant_city\": \"Montréal\",\n  \"signing_date\": \"2027-01-12\",\n  \"effective_date\": \"2027-02-01\",\n  \"term_months\": 6,\n  \"initial_monthly_fee_usd\": 9500,\n  \"current_monthly_fee_usd\": 11000,\n  \"fee_change_effective_date\": \"2027-04-01\",\n  \"payment_terms_days\": 30,\n  \"expense_cap_usd_per_quarter\": 2000,\n  \"auto_renewal\": false,\n  \"termination_notice_days\": 15,\n  \"governing_law\": \"New York\",\n  \"non_compete_months\": null\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 958,
+      "tokens_total": 6200,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 19869,
+      "segundos_generacion": 62.18,
+      "segundos_total": 62.18,
+      "tokens_s": 100.38,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 958,
+        "prompt_ms": 239.415,
+        "prompt_per_token_ms": 0.24991127348643005,
+        "prompt_per_second": 4001.420128229225,
+        "predicted_n": 6200,
+        "predicted_ms": 61757.458,
+        "predicted_per_token_ms": 9.962487175350862,
+        "predicted_per_second": 100.37654075723131
+      },
+      "error": null
+    },
+    {
+      "id": "24_en_gastos_chat",
+      "titulo": "Expense receipts dumped in a chat",
+      "idioma": "en",
+      "dificultad": "dificil",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 26,
+      "campos": 26,
+      "fallos": [],
+      "json_extraido": {
+        "employee": "Tom",
+        "trip_city": "Berlin",
+        "trip_start": "2026-10-19",
+        "trip_end": "2026-10-21",
+        "expenses": [
+          {
+            "date": "2026-10-19",
+            "category": "transport",
+            "amount": 38.4,
+            "currency": "EUR"
+          },
+          {
+            "date": "2026-10-19",
+            "category": "meals",
+            "amount": 212.0,
+            "currency": "EUR"
+          },
+          {
+            "date": "2026-10-20",
+            "category": "workspace",
+            "amount": 25.0,
+            "currency": "EUR"
+          },
+          {
+            "date": "2026-10-21",
+            "category": "transport",
+            "amount": 59.9,
+            "currency": "EUR"
+          },
+          {
+            "date": "2026-10-21",
+            "category": "transport",
+            "amount": 189.0,
+            "currency": "USD"
+          }
+        ],
+        "eur_expenses_total": 335.3,
+        "dinner_attendees": 6
+      },
+      "respuesta": "```json\n{\n  \"employee\": \"Tom\",\n  \"trip_city\": \"Berlin\",\n  \"trip_start\": \"2026-10-19\",\n  \"trip_end\": \"2026-10-21\",\n  \"expenses\": [\n    {\n      \"date\": \"2026-10-19\",\n      \"category\": \"transport\",\n      \"amount\": 38.4,\n      \"currency\": \"EUR\"\n    },\n    {\n      \"date\": \"2026-10-19\",\n      \"category\": \"meals\",\n      \"amount\": 212.0,\n      \"currency\": \"EUR\"\n    },\n    {\n      \"date\": \"2026-10-20\",\n      \"category\": \"workspace\",\n      \"amount\": 25.0,\n      \"currency\": \"EUR\"\n    },\n    {\n      \"date\": \"2026-10-21\",\n      \"category\": \"transport\",\n      \"amount\": 59.9,\n      \"currency\": \"EUR\"\n    },\n    {\n      \"date\": \"2026-10-21\",\n      \"category\": \"transport\",\n      \"amount\": 189.0,\n      \"currency\": \"USD\"\n    }\n  ],\n  \"eur_expenses_total\": 335.3,\n  \"dinner_attendees\": 6\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 786,
+      "tokens_total": 10010,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 35257,
+      "segundos_generacion": 102.05,
+      "segundos_total": 102.05,
+      "tokens_s": 98.33,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 786,
+        "prompt_ms": 197.788,
+        "prompt_per_token_ms": 0.25163867684478375,
+        "prompt_per_second": 3973.951908103626,
+        "predicted_n": 10010,
+        "predicted_ms": 101789.281,
+        "predicted_per_token_ms": 10.169775302227995,
+        "predicted_per_second": 98.33058944585727
+      },
+      "error": null
+    }
+  ]
+}

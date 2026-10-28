@@ -1,0 +1,93 @@
+{
+  "modelo": "lfm3-qad",
+  "base_url": "http://127.0.0.1:8091/v1",
+  "fecha": "2026-10-28T03:12:35",
+  "parametros": {
+    "temperature": 0.1,
+    "max_tokens": 8192,
+    "top_k": 50,
+    "repeat_penalty": 1.1,
+    "json_schema_servidor": false
+  },
+  "resumen": {
+    "items_total": 1,
+    "nota_media_pct": 91.7,
+    "nota_media_pct_es": 91.7,
+    "nota_media_pct_en": null,
+    "nota_media_pct_por_dificultad": {
+      "facil": 91.7,
+      "media": null,
+      "dificil": null
+    },
+    "perfectos": 0,
+    "json_validos": 1,
+    "cumplen_esquema": 1,
+    "solo_json": 1,
+    "cortados": 0,
+    "aciertos": 11,
+    "campos": 12,
+    "pct_campos": 91.7,
+    "tiempo_total_s": 78.9,
+    "tiempo_medio_s": 78.9,
+    "tokens_s_medio": 35.3
+  },
+  "items": [
+    {
+      "id": "03_es_oferta_empleo",
+      "titulo": "Oferta de empleo de técnico de mantenimiento",
+      "idioma": "es",
+      "dificultad": "facil",
+      "nota": 0.9167,
+      "perfecto": false,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 11,
+      "campos": 12,
+      "fallos": [
+        {
+          "campo": "$.ingles_obligatorio",
+          "esperado": false,
+          "obtenido": true
+        }
+      ],
+      "json_extraido": {
+        "puesto": "Técnico/a de mantenimiento industrial",
+        "empresa": "Grupo Alvento",
+        "ciudad": "Zaragoza",
+        "modalidad": "presencial",
+        "salario_min_anual_eur": 26000,
+        "salario_max_anual_eur": 30000,
+        "anios_experiencia_min": 2,
+        "dias_vacaciones": 23,
+        "carne_conducir_requerido": true,
+        "ingles_obligatorio": true,
+        "fecha_limite": "2026-12-15",
+        "email_contacto": "rrhh@alvento-grupo.es"
+      },
+      "respuesta": "```json\n{\n  \"puesto\": \"Técnico/a de mantenimiento industrial\",\n  \"empresa\": \"Grupo Alvento\",\n  \"ciudad\": \"Zaragoza\",\n  \"modalidad\": \"presencial\",\n  \"salario_min_anual_eur\": 26000,\n  \"salario_max_anual_eur\": 30000,\n  \"anios_experiencia_min\": 2,\n  \"dias_vacaciones\": 23,\n  \"carne_conducir_requerido\": true,\n  \"ingles_obligatorio\": true,\n  \"fecha_limite\": \"2026-12-15\",\n  \"email_contacto\": \"rrhh@alvento-grupo.es\"\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 691,
+      "tokens_total": 2636,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 8827,
+      "segundos_generacion": 78.92,
+      "segundos_total": 78.92,
+      "tokens_s": 35.3,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 691,
+        "prompt_ms": 4249.468,
+        "prompt_per_token_ms": 6.149736613603473,
+        "prompt_per_second": 162.60859006350913,
+        "predicted_n": 2636,
+        "predicted_ms": 74655.892,
+        "predicted_per_token_ms": 28.33240683111955,
+        "predicted_per_second": 35.2952718052046
+      },
+      "error": null
+    }
+  ]
+}

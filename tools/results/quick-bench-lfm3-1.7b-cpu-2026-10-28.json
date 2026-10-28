@@ -1,0 +1,149 @@
+{
+  "tool": "quick-bench",
+  "date": "2026-10-28T17:12:18",
+  "recipe": "lfm3-1.7b",
+  "machine": "cpu",
+  "system": {
+    "os": "Linux-7.2.8-9-omarchy-x86_64-with-glibc2.44",
+    "python": "3.15.2",
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13620H",
+    "logical_cpus": 16,
+    "ram_gb": 23.1,
+    "gpu": "none detected",
+    "llama_cpp": "b11940 (eb7818c0b)"
+  },
+  "command": [
+    "--host",
+    "127.0.0.1",
+    "-m",
+    "~/models/LFM3-1.7B-QAD-Q4_0-b3f2ae5.gguf",
+    "-lm",
+    "none",
+    "-tb",
+    "16",
+    "-np",
+    "1",
+    "-c",
+    "131072",
+    "-fa",
+    "off",
+    "--temp",
+    "0.1",
+    "--top-k",
+    "50",
+    "--repeat-penalty",
+    "1.1",
+    "-t",
+    "6",
+    "--port",
+    "50269"
+  ],
+  "files_sha256": {
+    "LFM3-1.7B-QAD-Q4_0-b3f2ae5.gguf": "43a7d09a0e9cba91b63eb7052488b9564569bddfd65754d2e426465e572a7452"
+  },
+  "load_seconds": 3.0,
+  "memory": {
+    "rss_gb": 3.49
+  },
+  "results": [
+    {
+      "prompt_tokens": 77,
+      "prefill_tok_s": 141.4,
+      "decode_tok_s": 33.2,
+      "decode_min": 33.0,
+      "decode_max": 33.2,
+      "runs": [
+        {
+          "prompt_tokens": 79,
+          "prefill_tok_s": 141.4,
+          "decode_tokens": 256,
+          "decode_tok_s": 33.2
+        },
+        {
+          "prompt_tokens": 77,
+          "prefill_tok_s": 136.0,
+          "decode_tokens": 256,
+          "decode_tok_s": 33.2
+        },
+        {
+          "prompt_tokens": 74,
+          "prefill_tok_s": 142.1,
+          "decode_tokens": 256,
+          "decode_tok_s": 33.0
+        }
+      ]
+    },
+    {
+      "prompt_tokens": 2048,
+      "prefill_tok_s": 153.3,
+      "decode_tok_s": 32.8,
+      "decode_min": 32.8,
+      "decode_max": 32.9,
+      "runs": [
+        {
+          "prompt_tokens": 2135,
+          "prefill_tok_s": 153.1,
+          "decode_tokens": 256,
+          "decode_tok_s": 32.9
+        },
+        {
+          "prompt_tokens": 2133,
+          "prefill_tok_s": 154.1,
+          "decode_tokens": 256,
+          "decode_tok_s": 32.8
+        },
+        {
+          "prompt_tokens": 2130,
+          "prefill_tok_s": 153.3,
+          "decode_tokens": 256,
+          "decode_tok_s": 32.8
+        }
+      ]
+    },
+    {
+      "prompt_tokens": 8192,
+      "prefill_tok_s": 134.8,
+      "decode_tok_s": 27.0,
+      "decode_min": 24.8,
+      "decode_max": 27.9,
+      "runs": [
+        {
+          "prompt_tokens": 8279,
+          "prefill_tok_s": 132.8,
+          "decode_tokens": 256,
+          "decode_tok_s": 27.0
+        },
+        {
+          "prompt_tokens": 8277,
+          "prefill_tok_s": 135.4,
+          "decode_tokens": 256,
+          "decode_tok_s": 27.9
+        },
+        {
+          "prompt_tokens": 8273,
+          "prefill_tok_s": 134.8,
+          "decode_tokens": 256,
+          "decode_tok_s": 24.8
+        }
+      ]
+    }
+  ],
+  "reference": {
+    "hw": "i7-13620H, 24 GB, -t 6",
+    "mem": "3.5 GB RAM",
+    "rows": {
+      "0": [
+        141.4,
+        33.2
+      ],
+      "2048": [
+        153.3,
+        32.8
+      ],
+      "8192": [
+        134.8,
+        27.0
+      ]
+    }
+  }
+}

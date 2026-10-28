@@ -1,0 +1,42 @@
+{
+  "modelo": "lfm3-Q8_0",
+  "base_url": "http://127.0.0.1:8090/v1",
+  "fecha": "2026-10-28T04:59:19",
+  "parametros": {
+    "temperature": 0.1,
+    "max_tokens": 32768,
+    "top_k": 50,
+    "repeat_penalty": 1.1
+  },
+  "resumen": {
+    "tareas_aprobadas": 0,
+    "tareas_total": 1,
+    "tests_pasados": 4,
+    "tests_total": 8,
+    "pct_tests": 50.0,
+    "tiempo_total_s": 29.1,
+    "tiempo_medio_s": 29.1,
+    "tokens_s_medio": 69.47
+  },
+  "tareas": [
+    {
+      "id": "01_comprimir_repeticiones",
+      "titulo": "Comprimir repeticiones",
+      "dificultad": "facil",
+      "aprobada": false,
+      "tests_pasados": 4,
+      "tests_total": 8,
+      "finish_reason": "stop",
+      "tokens_total": 1985,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 5880,
+      "segundos_generacion": 28.67,
+      "segundos_total": 29.09,
+      "tokens_s": 69.47,
+      "error": null,
+      "detalle": "___________\ntest_solucion.py:25: in test_espacios_cuentan\n    assert f(\"    \") == \" 4\"\nE   AssertionError: assert ' 1' == ' 4'\nE     \nE     -  4\nE     +  1\n_________________________________ test_unicode _________________________________\ntest_solucion.py:33: in test_unicode\n    assert f(\"ññññ\") == \"ñ4\"\nE   AssertionError: assert 'ñ1' == 'ñ4'\nE     \nE     - ñ4\nE     + ñ1\n=========================== short test summary info ============================\nFAILED test_solucion.py::test_ejemplo_basico - AssertionError: assert 'a1b1c1...\nFAILED test_solucion.py::test_grupo_largo - AssertionError: assert 'a1' == 'a12'\nFAILED test_solucion.py::test_espacios_cuentan - AssertionError: assert ' 1' ...\nFAILED test_solucion.py::test_unicode - AssertionError: assert 'ñ1' == 'ñ4'\n4 failed, 4 passed in 0.03s\n",
+      "codigo": "def comprimir_repeticiones(texto: str) -> str:\n    \"\"\"\n    Agrupa caracteres consecutivos iguales y reemplaza cada grupo por el carácter\n    seguido del número de veces que aparece en ese grupo.\n\n    Parameters:\n    - texto: str\n        Cadena de entrada a comprimir.\n\n    Returns:\n        str: Cadena con los grupos comprimidos (ej. \"aaabcc\" -> \"a3b1c2\").\n    \"\"\"\n    if not texto:\n        return \"\"\n    \n    resultado = []\n    i = 0\n    n = len(texto)\n    while i < n:\n        char = texto[i]\n        count = 1\n        j = i + 1\n        while j < n and texto[j] == char:\n            j += 1\n        resultado.append(f\"{char}{count}\")\n        i = j\n    \n    return \"\".join(resultado)\n"
+    }
+  ]
+}

@@ -69,6 +69,7 @@ quick-bench en las dos máquinas de prueba de las recetas (2026-10-14). Son las 
 | LFM2.5-24B-A2B | 52 / 29,9 tok/s | 647 / 29,5 tok/s | 753 / 24,1 tok/s | 5588 MiB |
 | MiniCPM5-2B | 1812 / 78,6 tok/s | 2303 / 84,9 tok/s | 1279 / 43,6 tok/s | 5670 MiB |
 | LFM2.5-2.6B | 1283 / 121,0 tok/s | 2477 / 103,2 tok/s | 2109 / 74,6 tok/s | 4606 MiB |
+| LFM3-1.7B ¹ | 1714 / 102,9 tok/s | 4439 / 99,4 tok/s | 3730 / 81,0 tok/s | 2884 MiB |
 
 **Portátil · solo CPU, sin VRAM + 24 GB de RAM** (i7-13620H, `--threads 6 --cpu-mask 0x555`, llama.cpp b11588)
 
@@ -77,8 +78,11 @@ quick-bench en las dos máquinas de prueba de las recetas (2026-10-14). Son las 
 | LFM2.5-24B-A2B | 64 / 25,5 tok/s | 70 / 23,4 tok/s | 64 / 15,9 tok/s | 15,9 GB |
 | MiniCPM5-2B | 110 / 25,0 tok/s | 99 / 19,4 tok/s | 66 / 10,8 tok/s | 8,0 GB |
 | LFM2.5-2.6B | 130 / 24,9 tok/s | 96 / 21,6 tok/s | 88 / 16,0 tok/s | 4,2 GB |
+| LFM3-1.7B ² | 141 / 33,2 tok/s | 153 / 32,8 tok/s | 135 / 27,0 tok/s | 3,5 GB |
 
 El prefill del 24B con un prompt mínimo es bajo en la GPU (52 tok/s) porque los expertos que quedan en la RAM se envían a la GPU en cada lote, por pequeño que sea. El portátil usó la versión anterior del GGUF del 24B (commit `f97fc8a`); el sobremesa, la actual.
+
+¹ LFM3-1.7B se midió el 2026-10-28 con llama.cpp b11946 (`8ca4060b7`). ² En el portátil, el 2026-10-28 con llama.cpp b11940 (`eb7818c0b`) y `--threads 6` sin `--cpu-mask`, como en su receta.
 
 ## Cómo leer los números
 

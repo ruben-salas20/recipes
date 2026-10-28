@@ -1,0 +1,42 @@
+{
+  "modelo": "lfm3-BF16",
+  "base_url": "http://127.0.0.1:8090/v1",
+  "fecha": "2026-10-28T05:06:23",
+  "parametros": {
+    "temperature": 0.1,
+    "max_tokens": 32768,
+    "top_k": 50,
+    "repeat_penalty": 1.1
+  },
+  "resumen": {
+    "tareas_aprobadas": 1,
+    "tareas_total": 1,
+    "tests_pasados": 8,
+    "tests_total": 8,
+    "pct_tests": 100.0,
+    "tiempo_total_s": 52.4,
+    "tiempo_medio_s": 52.4,
+    "tokens_s_medio": 40.9
+  },
+  "tareas": [
+    {
+      "id": "01_comprimir_repeticiones",
+      "titulo": "Comprimir repeticiones",
+      "dificultad": "facil",
+      "aprobada": true,
+      "tests_pasados": 8,
+      "tests_total": 8,
+      "finish_reason": "stop",
+      "tokens_total": 2114,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 6844,
+      "segundos_generacion": 51.95,
+      "segundos_total": 52.36,
+      "tokens_s": 40.9,
+      "error": null,
+      "detalle": null,
+      "codigo": "def comprimir_repeticiones(texto: str) -> str:\n    if not texto:\n        return \"\"\n    result = []\n    i = 0\n    n = len(texto)\n    while i < n:\n        char = texto[i]\n        count = 1\n        j = i + 1\n        while j < n and texto[j] == char:\n            count += 1\n            j += 1\n        result.append(f\"{char}{count}\")\n        i = j\n    return \"\".join(result)\n"
+    }
+  ]
+}

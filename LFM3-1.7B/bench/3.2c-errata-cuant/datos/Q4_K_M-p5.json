@@ -1,0 +1,42 @@
+{
+  "modelo": "lfm3-Q4_K_M",
+  "base_url": "http://127.0.0.1:8090/v1",
+  "fecha": "2026-10-28T04:54:20",
+  "parametros": {
+    "temperature": 0.1,
+    "max_tokens": 32768,
+    "top_k": 50,
+    "repeat_penalty": 1.1
+  },
+  "resumen": {
+    "tareas_aprobadas": 0,
+    "tareas_total": 1,
+    "tests_pasados": 0,
+    "tests_total": 8,
+    "pct_tests": 0.0,
+    "tiempo_total_s": 46.5,
+    "tiempo_medio_s": 46.5,
+    "tokens_s_medio": 100.81
+  },
+  "tareas": [
+    {
+      "id": "01_comprimir_repeticiones",
+      "titulo": "Comprimir repeticiones",
+      "dificultad": "facil",
+      "aprobada": false,
+      "tests_pasados": 0,
+      "tests_total": 8,
+      "finish_reason": "stop",
+      "tokens_total": 4632,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 16987,
+      "segundos_generacion": 46.05,
+      "segundos_total": 46.51,
+      "tokens_s": 100.81,
+      "error": null,
+      "detalle": "pwh/test_solucion.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n~/.local/share/uv/python/cpython-3.13.13-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntest_solucion.py:1: in <module>\n    from solucion import comprimir_repeticiones as f\nE   ImportError: cannot import name 'comprimir_repeticiones' from 'solucion' (/tmp/minibench_jckvspwh/solucion.py). Did you mean: 'compressir_repeticiones'?\n=========================== short test summary info ============================\nERROR test_solucion.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.07s\n",
+      "codigo": "def compressir_repeticiones(texto: str) -> str:\n    if not texto:\n        return \"\"\n    result = []\n    prev_char = texto[0]\n    count = 1\n    for ch in texto[1:]:\n        if ch == prev_char:\n            count += 1\n        else:\n            result.append(f\"{prev_char}{count}\")\n            prev_char = ch\n            count = 1\n    # add the last group\n    result.append(f\"{prev_char}{count}\")\n    return \"\".join(result)\n"
+    }
+  ]
+}

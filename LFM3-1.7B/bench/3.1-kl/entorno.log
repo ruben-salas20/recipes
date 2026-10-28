@@ -1,0 +1,8 @@
+2026-10-27T20:48:30-05:00
+173c87a53759e0201f33e0ccf978e510c2042d7f2cb78229d9a50d79b9e7dd08  ~/otros/pruebas/lfm3-3.1/wiki.test.raw
+BF16: 0.48.059.996 I Final estimate: PPL = 21.6450 +/- 0.42565
+QAD-Q4_0: Mean KLD: 0.185899 ± 0.001936
+Q4_K_M: Mean KLD: 0.117067 ± 0.001324
+Q8_0: Mean KLD: 0.003113 ± 0.000076
+-rw-rw-r-- 1 user user 6528408820 Oct 27 20:49 ~/otros/pruebas/lfm3-3.1/base-bf16.kld
+hecho: 2026-10-27T20:51:05-05:00

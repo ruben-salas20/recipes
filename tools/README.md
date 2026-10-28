@@ -67,6 +67,7 @@ quick-bench on the recipes' two test machines (2026-10-14). These are the number
 | LFM2.5-24B-A2B | 52 / 29.9 tok/s | 647 / 29.5 tok/s | 753 / 24.1 tok/s | 5588 MiB |
 | MiniCPM5-2B | 1812 / 78.6 tok/s | 2303 / 84.9 tok/s | 1279 / 43.6 tok/s | 5670 MiB |
 | LFM2.5-2.6B | 1283 / 121.0 tok/s | 2477 / 103.2 tok/s | 2109 / 74.6 tok/s | 4606 MiB |
+| LFM3-1.7B ¹ | 1714 / 102.9 tok/s | 4439 / 99.4 tok/s | 3730 / 81.0 tok/s | 2884 MiB |
 
 **Laptop · CPU only, no VRAM + 24 GB RAM** (i7-13620H, `--threads 6 --cpu-mask 0x555`, llama.cpp b11588)
 
@@ -75,8 +76,11 @@ quick-bench on the recipes' two test machines (2026-10-14). These are the number
 | LFM2.5-24B-A2B | 64 / 25.5 tok/s | 70 / 23.4 tok/s | 64 / 15.9 tok/s | 15.9 GB |
 | MiniCPM5-2B | 110 / 25.0 tok/s | 99 / 19.4 tok/s | 66 / 10.8 tok/s | 8.0 GB |
 | LFM2.5-2.6B | 130 / 24.9 tok/s | 96 / 21.6 tok/s | 88 / 16.0 tok/s | 4.2 GB |
+| LFM3-1.7B ² | 141 / 33.2 tok/s | 153 / 32.8 tok/s | 135 / 27.0 tok/s | 3.5 GB |
 
 The 24B's prefill with a tiny prompt is low on the GPU (52 tok/s) because the experts kept in RAM are sent to the GPU for every batch, however small. The laptop ran the previous release of the 24B GGUF (commit `f97fc8a`); the desktop, the current one.
+
+¹ LFM3-1.7B was measured on 2026-10-28 with llama.cpp b11946 (`8ca4060b7`). ² On the laptop, on 2026-10-28 with llama.cpp b11940 (`eb7818c0b`) and `--threads 6` without `--cpu-mask`, as in its recipe.
 
 ## Reading the numbers
 

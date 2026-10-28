@@ -92,6 +92,15 @@
 !LFM2.5-2.6B/bench/*/*.json
 !LFM2.5-2.6B/bench/*/*.txt
 !LFM2.5-2.6B/bench/*/*.md
+
+!LFM3-1.7B/README.md
+!LFM3-1.7B/README.es.md
+!LFM3-1.7B/SHA256SUMS
+!LFM3-1.7B/assets/*.webp
+!LFM3-1.7B/scripts/*.sh
+!LFM3-1.7B/bench/**/*.csv
+!LFM3-1.7B/bench/**/*.json
+!LFM3-1.7B/bench/3.1-kl/*.log
 !MiniCPM5-2B/bench/2.4c-calidad/*.log
 !LFM2.5-2.6B/bench/2.6b-calidad/*.log
 !LFM2.5-2.6B/bench/2.6c-verifica-calidad/*.log

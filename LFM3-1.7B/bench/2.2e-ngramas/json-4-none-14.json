@@ -1,0 +1,91 @@
+{
+  "modelo": "lfm3-qad",
+  "base_url": "http://127.0.0.1:8091/v1",
+  "fecha": "2026-10-28T03:13:53",
+  "parametros": {
+    "temperature": 0.1,
+    "max_tokens": 8192,
+    "top_k": 50,
+    "repeat_penalty": 1.1,
+    "json_schema_servidor": false
+  },
+  "resumen": {
+    "items_total": 1,
+    "nota_media_pct": 100.0,
+    "nota_media_pct_es": null,
+    "nota_media_pct_en": 100.0,
+    "nota_media_pct_por_dificultad": {
+      "facil": 100.0,
+      "media": null,
+      "dificil": null
+    },
+    "perfectos": 1,
+    "json_validos": 1,
+    "cumplen_esquema": 1,
+    "solo_json": 1,
+    "cortados": 0,
+    "aciertos": 14,
+    "campos": 14,
+    "pct_campos": 100.0,
+    "tiempo_total_s": 63.1,
+    "tiempo_medio_s": 63.1,
+    "tokens_s_medio": 35.6
+  },
+  "items": [
+    {
+      "id": "14_en_cartel_evento",
+      "titulo": "Jazz night flyer",
+      "idioma": "en",
+      "dificultad": "facil",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 14,
+      "campos": 14,
+      "fallos": [],
+      "json_extraido": {
+        "event_name": "RIVERSIDE JAZZ NIGHT",
+        "date": "2026-11-14",
+        "doors_open": "19:00",
+        "start_time": "20:00",
+        "end_time": "23:30",
+        "venue": "The Old Mill Warehouse",
+        "city": "Leeds",
+        "performers": [
+          "The Marlowe Trio",
+          "Ines Duarte"
+        ],
+        "price_advance_gbp": 18,
+        "price_door_gbp": 22,
+        "price_student_gbp": 12,
+        "min_age": 18,
+        "free_entry": false
+      },
+      "respuesta": "```json\n{\n  \"event_name\": \"RIVERSIDE JAZZ NIGHT\",\n  \"date\": \"2026-11-14\",\n  \"doors_open\": \"19:00\",\n  \"start_time\": \"20:00\",\n  \"end_time\": \"23:30\",\n  \"venue\": \"The Old Mill Warehouse\",\n  \"city\": \"Leeds\",\n  \"performers\": [\n    \"The Marlowe Trio\",\n    \"Ines Duarte\"\n  ],\n  \"price_advance_gbp\": 18,\n  \"price_door_gbp\": 22,\n  \"price_student_gbp\": 12,\n  \"min_age\": 18,\n  \"free_entry\": false\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 750,
+      "tokens_total": 2083,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 6117,
+      "segundos_generacion": 63.12,
+      "segundos_total": 63.12,
+      "tokens_s": 35.6,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 750,
+        "prompt_ms": 4611.518,
+        "prompt_per_token_ms": 6.148690666666667,
+        "prompt_per_second": 162.63625123007216,
+        "predicted_n": 2083,
+        "predicted_ms": 58485.06,
+        "predicted_per_token_ms": 28.090806916426512,
+        "predicted_per_second": 35.59883498452425
+      },
+      "error": null
+    }
+  ]
+}

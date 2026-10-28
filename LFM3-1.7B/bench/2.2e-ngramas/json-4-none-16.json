@@ -1,0 +1,84 @@
+{
+  "modelo": "lfm3-qad",
+  "base_url": "http://127.0.0.1:8091/v1",
+  "fecha": "2026-10-28T03:14:47",
+  "parametros": {
+    "temperature": 0.1,
+    "max_tokens": 8192,
+    "top_k": 50,
+    "repeat_penalty": 1.1,
+    "json_schema_servidor": false
+  },
+  "resumen": {
+    "items_total": 1,
+    "nota_media_pct": 100.0,
+    "nota_media_pct_es": null,
+    "nota_media_pct_en": 100.0,
+    "nota_media_pct_por_dificultad": {
+      "facil": 100.0,
+      "media": null,
+      "dificil": null
+    },
+    "perfectos": 1,
+    "json_validos": 1,
+    "cumplen_esquema": 1,
+    "solo_json": 1,
+    "cortados": 0,
+    "aciertos": 9,
+    "campos": 9,
+    "pct_campos": 100.0,
+    "tiempo_total_s": 42.9,
+    "tiempo_medio_s": 42.9,
+    "tokens_s_medio": 36.02
+  },
+  "items": [
+    {
+      "id": "16_en_ticket_soporte",
+      "titulo": "Support email asking for a refund",
+      "idioma": "en",
+      "dificultad": "facil",
+      "nota": 1.0,
+      "perfecto": true,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 9,
+      "campos": 9,
+      "fallos": [],
+      "json_extraido": {
+        "customer_name": "Priya Raman",
+        "customer_email": "priya.raman@mailbox.example",
+        "customer_phone": null,
+        "product": "PowerMix 600",
+        "order_id": "77-3021-55",
+        "purchase_date": "2026-09-03",
+        "issue_category": "defect",
+        "requested_resolution": "refund",
+        "troubleshooting_done": true
+      },
+      "respuesta": "```json\n{\n  \"customer_name\": \"Priya Raman\",\n  \"customer_email\": \"priya.raman@mailbox.example\",\n  \"customer_phone\": null,\n  \"product\": \"PowerMix 600\",\n  \"order_id\": \"77-3021-55\",\n  \"purchase_date\": \"2026-09-03\",\n  \"issue_category\": \"defect\",\n  \"requested_resolution\": \"refund\",\n  \"troubleshooting_done\": true\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 584,
+      "tokens_total": 1414,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 4711,
+      "segundos_generacion": 42.93,
+      "segundos_total": 42.93,
+      "tokens_s": 36.02,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 584,
+        "prompt_ms": 3675.682,
+        "prompt_per_token_ms": 6.29397602739726,
+        "prompt_per_second": 158.8820795705396,
+        "predicted_n": 1414,
+        "predicted_ms": 39230.952,
+        "predicted_per_token_ms": 27.764297239915074,
+        "predicted_per_second": 36.01747925974369
+      },
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "modelo": "lfm3-qad",
+  "base_url": "http://127.0.0.1:8091/v1",
+  "fecha": "2026-10-28T03:11:04",
+  "parametros": {
+    "temperature": 0.1,
+    "max_tokens": 8192,
+    "top_k": 50,
+    "repeat_penalty": 1.1,
+    "json_schema_servidor": false
+  },
+  "resumen": {
+    "items_total": 1,
+    "nota_media_pct": 88.9,
+    "nota_media_pct_es": null,
+    "nota_media_pct_en": 88.9,
+    "nota_media_pct_por_dificultad": {
+      "facil": 88.9,
+      "media": null,
+      "dificil": null
+    },
+    "perfectos": 0,
+    "json_validos": 1,
+    "cumplen_esquema": 1,
+    "solo_json": 1,
+    "cortados": 0,
+    "aciertos": 8,
+    "campos": 9,
+    "pct_campos": 88.9,
+    "tiempo_total_s": 36.9,
+    "tiempo_medio_s": 36.9,
+    "tokens_s_medio": 36.25
+  },
+  "items": [
+    {
+      "id": "16_en_ticket_soporte",
+      "titulo": "Support email asking for a refund",
+      "idioma": "en",
+      "dificultad": "facil",
+      "nota": 0.8889,
+      "perfecto": false,
+      "json_valido": true,
+      "formato": "solo_json",
+      "cumple_esquema": true,
+      "errores_esquema": [],
+      "aciertos": 8,
+      "campos": 9,
+      "fallos": [
+        {
+          "campo": "$.product",
+          "esperado": "PowerMix 600",
+          "obtenido": "PowerMix 600 blender"
+        }
+      ],
+      "json_extraido": {
+        "customer_name": "Priya Raman",
+        "customer_email": "priya.raman@mailbox.example",
+        "customer_phone": null,
+        "product": "PowerMix 600 blender",
+        "order_id": "77-3021-55",
+        "purchase_date": "2026-09-03",
+        "issue_category": "defect",
+        "requested_resolution": "refund",
+        "troubleshooting_done": true
+      },
+      "respuesta": "```json\n{\n  \"customer_name\": \"Priya Raman\",\n  \"customer_email\": \"priya.raman@mailbox.example\",\n  \"customer_phone\": null,\n  \"product\": \"PowerMix 600 blender\",\n  \"order_id\": \"77-3021-55\",\n  \"purchase_date\": \"2026-09-03\",\n  \"issue_category\": \"defect\",\n  \"requested_resolution\": \"refund\",\n  \"troubleshooting_done\": true\n}\n```",
+      "finish_reason": "stop",
+      "tokens_prompt": 584,
+      "tokens_total": 1205,
+      "tokens_razonamiento": null,
+      "tokens_respuesta": null,
+      "caracteres_razonamiento": 4000,
+      "segundos_generacion": 36.88,
+      "segundos_total": 36.88,
+      "tokens_s": 36.25,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 584,
+        "prompt_ms": 3636.781,
+        "prompt_per_token_ms": 6.227364726027397,
+        "prompt_per_second": 160.5815692503893,
+        "predicted_n": 1205,
+        "predicted_ms": 33214.925,
+        "predicted_per_token_ms": 27.58714700996678,
+        "predicted_per_second": 36.24876467431433,
+        "draft_n": 480,
+        "draft_n_accepted": 199
+      },
+      "error": null
+    }
+  ]
+}
